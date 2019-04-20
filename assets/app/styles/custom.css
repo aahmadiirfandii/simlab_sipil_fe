@@ -1,0 +1,26 @@
+/* 
+    Custom CSS for SILAB Sipil UNHAS
+*/
+
+#big-title{
+    font-size: 32px;
+    vertical-align: middle;
+    color: #e5e5e5;
+}
+
+#mini-title {
+    font-size: 18px;
+    vertical-align: middle;
+    color: #333333;
+}
+
+.btn--masuk{
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.header-menu-link{
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+}

@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                "id_kegiatan": 1,
+                "nama_kegiatan": "Analisis kekerasan aspal",
+                "jenis": "Penelitian",
+                "tempat": "Laboratorium Jalan dan Aspal",
+                "waktu": "21 April 2019",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_kegiatan": 2,
+                "nama_kegiatan": "Evaluasi kelayakan gedung dan struktur taman pintar",
+                "jenis": "Penagbdian Masyarakat",
+                "tempat": "Laboratorium Struktur dan Bahan",
+                "waktu": "30 April 2019",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_kegiatan": 3,
+                "nama_kegiatan": "Estimasi gaya pada harga jembatan gantung dengan metode vibrasi",
+                "jenis": "Praktikum",
+                "tempat": "Laboratorium Struktur dan Bahan",
+                "waktu": "30 April 2019",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            }
+    ]
+}
