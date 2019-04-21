@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                "id_appmt": 1,
+                "nama": "Ahmad Irfandi",
+                "lab": "Laboratorium Jalan dan Aspal",
+                "waktu": "2019-04-30 15",
+                "keperluan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_appmt": 2,
+                "nama": "Sidik Permana",
+                "lab": "Laboratorium Struktur dan Bahan",
+                "waktu": "2019-04-30 15",
+                "keperluan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_appmt": 3,
+                "nama": "Darnilia",
+                "lab": "Laboratorium Mekanika Tanah",
+                "waktu": "2019-04-30 15",
+                "keperluan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            }
+    ]
+}

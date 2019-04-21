@@ -30,7 +30,7 @@ var KTDatatablesDataSourceAjaxServer = function() {
                               <i class="la la-ellipsis-h"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>
+                                <a class="dropdown-item" href="master_data-lab-edit.html"><i class="la la-edit"></i> Edit Details</a>
                                 <a class="dropdown-item" href="#"><i class="la la-trash"></i> Delete Record</a>
                             </div>
                         </span>`;

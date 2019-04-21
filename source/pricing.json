@@ -1,0 +1,34 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                "id_paket": 1,
+                "nama_paket": "Paket 1",
+                "users": "Mahasiswa, Dosen",
+                "harga": "Gratis",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_paket": 2,
+                "nama_paket": "Paket 2",
+                "users": "Pascasarjana, Doktor",
+                "harga": "1.000.000",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            },
+            {
+                "id_paket": 3,
+                "nama_paket": "Paket 3",
+                "users": "Umum",
+                "harga": "2.000.000",
+                "iat": "2019-04-18",
+                "uat": "2019-04-18",
+                "actions": null
+            }
+    ]
+}

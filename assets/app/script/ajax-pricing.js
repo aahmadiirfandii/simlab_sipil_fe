@@ -10,12 +10,12 @@ var KTDatatablesDataSourceAjaxServer = function() {
 			searchDelay: 500,
 			processing: true,
 			serverSide: true,
-			ajax: '../source/tools.json',
+			ajax: '../source/pricing.json',
 			columns: [
-				{data: 'id_alat'},
-				{data: 'nama_alat'},
-				{data: 'deskripsi'},
-				{data: 'kondisi'},
+				{data: 'id_paket'},
+				{data: 'nama_paket'},
+				{data: 'users'},
+				{data: 'harga'},
 				{data: 'actions', responsivePriority: -1},
 			],
 			columnDefs: [
@@ -29,7 +29,7 @@ var KTDatatablesDataSourceAjaxServer = function() {
                               <i class="la la-ellipsis-h"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="master_data-tools-edit.html"><i class="la la-edit"></i> Edit Details</a>
+                                <a class="dropdown-item" href="master_data-pricing-edit.html"><i class="la la-edit"></i> Edit Details</a>
                                 <a class="dropdown-item" href="#"><i class="la la-trash"></i> Delete Record</a>
                             </div>
                         </span>`;
@@ -38,10 +38,6 @@ var KTDatatablesDataSourceAjaxServer = function() {
 				{
 					targets: [0, -1],
 					className: 'text-center'
-				}, 
-				{
-					targets: 1,
-					width: '200px'
 				}
 			],
 		});
