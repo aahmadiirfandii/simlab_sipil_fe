@@ -1,0 +1,86 @@
+
+.registration {
+	font-size: 1.3rem !important;
+}
+.kt-subheader {
+	display: block !important;
+}
+.btn_appointment:hover {
+	background-color: #FF6D00 !important;
+	color: white !important;
+	border-color: transparent !important;
+}
+
+.kt-subheader__title {
+	font-size: 4rem !important;
+}
+
+.kt-quick-search .kt-quick-search__form {
+	background-color: #d8d8d8;
+	border-radius: 5px;
+}
+.kt-quick-search {
+	padding: 0.8rem;
+}
+.kt-portlet .kt-portlet__body {
+	flex-direction: row !important;
+}
+.kt-quick-search .kt-quick-search__form .form-control {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.ketengah {
+	align-content: center;
+}
+.gambar-lab {
+	width: inherit;
+	height: 160px;
+	background-color: #FB8C00;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	font-size: 1rem;
+	font-weight: 500;
+	color: white;
+}
+.kt-scrolltop {
+	background: #FB8C00;
+}
+.kt-footer .kt-footer__bottom .kt-footer__logo .kt-footer__copyright {
+	color: #FB8C00;
+}
+.btn-secondary:active,
+.btn-secondary:focus {
+	background-color: transparent !important;
+}
+.informasi_pencarian {
+	font-size: 1.3rem !important; 
+}
+.hasil_pencarian {
+	margin-bottom: 25px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding-bottom: 25px;
+}
+.badge-color-red {
+	background-color: #F50057 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-blue {
+	background-color: #1565C0 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-yellow {
+	background-color: #FFA000 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-green {
+	background-color: #558B2F !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.login {
+	margin-bottom: 20px;
+}
