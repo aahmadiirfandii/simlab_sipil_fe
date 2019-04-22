@@ -126,6 +126,18 @@
 			border: 2px solid #ebedf2;
 			padding: 10px 5rem  !important;
 		}
+		.informasi_pencarian p {
+			font-size: 1.2rem;
+		}
+		@media (max-width: 768px) {
+			.kt-header .kt-header__top {
+				height: 0px;
+			}
+			.badge-color-blue,.badge-color-blue,.badge-color-yellow,.badge-color-green {
+				font-size: 0.8rem !important;
+			}
+			
+		}
 	</style>
 	<style type="text/css">
 		.badge-color-red {
@@ -148,6 +160,13 @@
 			color: white !important;
 			font-size: 1rem;
 		}
+	</style>
+	<style type="text/css">
+		.ts  {border-collapse:collapse;border-spacing:0;}
+		.ts td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.ts th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.ts .ts-xldj{border-color:inherit;text-align:left;font-weight: 600}
+		.ts .ts-0pky{border-color:inherit;text-align:left;vertical-align:top}
 	</style>
 </head>
 <!-- end::Head -->
@@ -212,8 +231,8 @@
 					<div style="" class="kt-content kt-grid__item ">
 						<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
 							<div class="kt-portlet__body">
-								<div class="col-xl-12 row">
-									<div class="col-3">
+								<div class="col-sm-12 row">
+									<div class="col-sm-3">
 										<select d class="form-control kt-input" data-col-index="2">
 											<option value="">--Pilih Jenis--</option>
 											<option value="1">Alat</option>
@@ -221,10 +240,10 @@
 											<option value="3">Paket Pengujian</option>
 										</select>
 									</div>
-									<div class="col-8">
+									<div class="col-sm-8">
 										<input id="searchbar" type="text" class="form-control kt-input" placeholder="cari disini">		
 									</div>
-									<div class="col-1">
+									<div class="col-sm-1">
 										<button style="width: 100%" class="btn btn-warning">
 											<span style="color: #424242" class="fa fa-search"></span>
 										</button>
@@ -251,12 +270,12 @@
 										</div>
 									</div>
 									<div class="col-xl-12 row hasil_pencarian">
-										<div class="col-2">
+										<div class="col-3">
 											<img style="height: auto;width: inherit" src="https://image.indonetwork.co.id/products/thumbs/600x600/2016/03/12/0cb1a43fff6fe1df9c7e722035a8cf9e.jpg">
 										</div>
-										<div class="col-8 informasi_pencarian">
-											<p>Nama : <span id="nama_barang" >Barang A</span> </p>
-											<p>Jenis : <span id="jenis_barang" >Jenis Barang A </span> </p>
+										<div class="col-7 informasi_pencarian">
+											<p>Nama Alat: <span id="nama_barang" >Barang A</span> </p>
+											<p>Jenis Alat: <span id="jenis_barang" >Jenis Barang A </span> </p>
 											<span></span>
 											<p>Lokasi :</p>
 											<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-blue">
@@ -267,18 +286,16 @@
 											</span>
 										</div>
 										<div align="center" class="col-2">
-											<button data-toggle="modal" data-target="#rincian_alat" style="width: auto;margin-top: 40px" class="btn btn-success">
+											<button data-toggle="modal" data-target="#rincian_alat" style="width: auto;margin-top: 40px" class="btn btn-success btn_rincian">
 												Rincian
 											</button>
 										</div>
 									</div>
 									<div class="col-xl-12 row hasil_pencarian">
-										<div class="col-2">
-											<img style="height: auto;width: inherit" src="https://image.indonetwork.co.id/products/thumbs/600x600/2016/03/12/0cb1a43fff6fe1df9c7e722035a8cf9e.jpg">
-										</div>
-										<div class="col-8 informasi_pencarian">
-											<p>Nama : <span id="nama_barang" >Barang A</span> </p>
-											<p>Jenis : <span id="jenis_barang" >Jenis Barang A </span> </p>
+										<div class="offset-1 col-9 informasi_pencarian">
+											<h3>Kegiatan</h3>
+											<p>Nama Kegiatan: <span id="nama_kegiatan" >Kegiatan A</span> </p>
+											<p>Jenis Kegiatan: <span id="jenis_kegiatan" >Jenis Kegiatan A </span> </p>
 											<span></span>
 											<p>Lokasi :</p>
 											<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-blue">
@@ -289,7 +306,25 @@
 											</span>
 										</div>
 										<div align="center" class="col-2">
-											<button data-toggle="modal" data-target="#rincian_alat" style="width: auto;margin-top: 40px" class="btn btn-success">
+											<button data-toggle="modal" data-target="#rincian_kegiatan" style="width: auto;margin-top: 40px" class="btn btn-success btn_rincian">
+												Rincian
+											</button>
+										</div>
+									</div>
+									<div class="col-xl-12 row hasil_pencarian">
+										<div class="offset-1 col-9 informasi_pencarian">
+											<h3>Paket Pengujian</h3>
+											<p>Nama Paket: <span id="nama_paket" >Paket A</span> </p>
+											<p>Lokasi :</p>
+											<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-blue">
+												LAB Hidrolika
+											</span>
+											<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-yellow">
+												LAB Struktur dan Bahan
+											</span>
+										</div>
+										<div align="center" class="col-2">
+											<button data-toggle="modal" data-target="#rincian_kegiatan" style="width: auto;margin-top: 40px" class="btn btn-success btn_rincian">
 												Rincian
 											</button>
 										</div>
@@ -414,6 +449,46 @@
 						</div>
 					</div>
 				</div>
+				<!-- Rincian Kegiatan -->
+					<div class="modal fade" id="rincian_kegiatan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Rincian Kegiatan</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div class="modal-body">
+									<table style="width: 100%;" class="ts">
+										<tr>
+											<th class="ts-xldj">Nama Kegiatan</th>
+											<th class="ts-0pky">Analisis Desain Balok Kopel Hibrida</th>
+										</tr>
+										<tr>
+											<td class="ts-xldj">Jenis</td>
+											<td class="ts-0pky">Penelitian</td>
+										</tr>
+										<tr>
+											<td class="ts-xldj">Waktu</td>
+											<td class="ts-0pky">19 Maret</td>
+										</tr>
+										<tr>
+											<td class="ts-xldj">Penanggung Jawab</td>
+											<td class="ts-0pky">Darnilia/11140930000019</td>
+										</tr>
+										<tr>
+											<td class="ts-xldj">Kontak</td>
+											<td class="ts-0pky">085298xxx</td>
+										</tr>
+										<tr>
+											<td class="ts-xldj">Deskripsi</td>
+											<td class="ts-0pky">Dalam rangka penyusunan disertasi</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 				<!--end::Modal-->
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
