@@ -1,0 +1,28 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_alat": 1,
+                 "gambar_alat": "gambar disini",
+                 "nama_alat": "Load Cell",
+                 "fungsi_utama": "Membaca beban",
+                 "jumlah_alat": "4"
+             },
+             {
+                 "id_alat": 2,
+                 "gambar_alat": "gambar disini",
+                 "nama_alat": "Load Cell",
+                 "fungsi_utama": "Membaca beban",
+                 "jumlah_alat": "4"
+             },
+             {
+                 "id_alat": 3,
+                 "gambar_alat": "gambar disini",
+                 "nama_alat": "Load Cell",
+                 "fungsi_utama": "Membaca beban",
+                 "jumlah_alat": "4"
+             }
+]
+}

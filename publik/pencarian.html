@@ -68,6 +68,9 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
 	<style>
+		.kt-header .kt-header__top {
+			height: 70px;
+		}
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 			color: #f7df3a;
 			font-size: 1.3rem;
@@ -89,7 +92,7 @@
 		}
 		
 		.kt-quick-search .kt-quick-search__form {
-			background-color: #d8d8d8;
+			background-color: #f3f3f3;
 			border-radius: 5px;
 		}
 		.hasil_pencarian {
@@ -104,6 +107,24 @@
 		}
 		.modal-footer-edit {
 			border-top: transparent !important;
+		}
+		.btn_login {
+			color: white;
+			font-size: 1.3rem;
+			border: 2px solid #ebedf2;
+			padding: 10px 5rem  !important;
+		}
+		.btn_login:active {
+			color: white
+			font-size: 1.3rem;
+			border: 2px solid #ebedf2;
+			padding: 10px 5rem  !important;
+		}
+		.btn_login:focus {
+			color: white
+			font-size: 1.3rem;
+			border: 2px solid #ebedf2;
+			padding: 10px 5rem  !important;
 		}
 	</style>
 	<style type="text/css">
@@ -159,14 +180,14 @@
 							<!-- begin:: Brand -->
 							<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
 								<a class="kt-header__brand-logo" href="index.html">
-									<img style="height: auto;width: 22vw" alt="Logo" src="../assets/media/logos/logo_1.png" class="kt-header__brand-logo-default" />
+									<img style="height: auto;width: 16vw" alt="Logo" src="../assets/media/logos/logo_1.png" class="kt-header__brand-logo-default" />
 								</a>
 							</div>
 							<!-- end:: Brand -->
 							<!-- begin:: Header Topbar -->
 							<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
 								<!-- Header Sebelah Kanan -->
-								<div style="margin-bottom: 20px;margin-left: 56vw;" class="offset-md-10 col-md-2">
+								<div style="margin-bottom: 0.5vw;margin-left: 63vw;" class="offset-md-10 col-md-2">
 									<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 										<ul class="kt-menu__nav ">
 											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -188,48 +209,25 @@
 				</div>
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 					<!-- BAGIAN SEARCHING -->
-					<div style=";padding-bottom: 10px !important;" class="kt-content kt-grid__item ">
+					<div style="" class="kt-content kt-grid__item ">
 						<div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
 							<div class="kt-portlet__body">
-								<div class="row">
-									<div class="col-6">
-										<select class="form-control kt-input">
-											<option active value="0" >--PILIH JENIS--</option>
-											<option value="1">Pending</option>
-											<option value="2">Delivered</option>
-											<option value="3">Canceled</option>
-											<option value="5">Info</option><
-											option value="6">Danger</option>
+								<div class="col-xl-12 row">
+									<div class="col-3">
+										<select d class="form-control kt-input" data-col-index="2">
+											<option value="">--Pilih Jenis--</option>
+											<option value="1">Alat</option>
+											<option value="2">Kegiatan</option>
+											<option value="3">Paket Pengujian</option>
 										</select>
 									</div>
-									<div class="col-6">
-										<select class="form-control kt-input">
-											<option active value="0">--PILIH LOKASI--</option>
-											<option value="1">Pending</option>
-											<option value="2">Delivered</option>
-											<option value="3">Canceled</option>
-											<option value="5">Info</option>
-											<option value="6">Danger</option>
-										</select>
+									<div class="col-8">
+										<input id="searchbar" type="text" class="form-control kt-input" placeholder="cari disini">		
 									</div>
-									<div class="col-12">
-										<div class="kt-header-toolbar">
-											<div class="kt-quick-search" id="kt_quick_search_default">
-												<form method="get" class="kt-quick-search__form">
-													<div class="input-group">
-														<div class="input-group-prepend"><span class="input-group-text"><i class="flaticon2-search-1"></i></span></div>
-														<input type="text" class="form-control kt-quick-search__input" placeholder="Search...">
-														<div class="input-group-append"><span class="input-group-text"><i class="la la-close kt-quick-search__close"></i></span></div>
-													</div>
-												</form>
-												<div id="kt_quick_search_toggle" data-toggle="dropdown" data-offset="0px,10px">
-												</div>
-												<div style="display: none" class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
-													<div class="kt-quick-search__wrapper kt-scroll" data-scroll="true" data-height="300" data-mobile-height="200">
-													</div>
-												</div>
-											</div>
-										</div>
+									<div class="col-1">
+										<button style="width: 100%" class="btn btn-warning">
+											<span style="color: #424242" class="fa fa-search"></span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -320,7 +318,7 @@
 								</div>
 							</div>
 							<div style="display: block" align="center" class="modal-footer modal-footer-edit">
-								<button id="btn_simpan_modal_appointment" type="submit" class="btn btn-primary">LOGIN</button>
+								<button type="submit" class="btn btn-secondary btn-taller btn_login">Login</button>
 							</div>
 						</div>
 					</div>

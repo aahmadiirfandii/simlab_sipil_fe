@@ -1,0 +1,28 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_kegiatan": 1,
+                 "nama_kegiatan": "Analisis dan Desain Balok Kopel Hibrida",
+                 "jenis_kegiatan": "Penelitian",
+                 "waktu": "19 Maret 2019",
+                 "Aksi": null
+             },
+             {
+                 "id_kegiatan": 2,
+                 "nama_kegiatan": "Estimasi Gaya pada Harga Jembatan Gantung dengan Metode Vibrasi",
+                 "jenis_kegiatan": "Praktikum",
+                 "waktu": "10 Maret 2019",
+                 "Aksi": null
+             },
+             {
+                 "id_kegiatan": 3,
+                 "nama_kegiatan": "Evaluasi Kelayakan Struktur Gedung Taman Pintar",
+                 "jenis_kegiatan": "Pengabdian Masyarakat",
+                 "waktu": "1 Maret 2019",
+                 "Aksi": null
+             }
+]
+}
