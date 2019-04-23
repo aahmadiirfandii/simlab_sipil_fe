@@ -68,6 +68,9 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
 	<style>
+		.kt-container {
+			padding: 0 10px !important;
+		}
 		.kt-header .kt-header__top {
 			height: 70px;
 		}
@@ -116,19 +119,7 @@
 		.informasi {
 			margin-top: 25px;
 		}
-		@media (max-width: 768px) {
-			.kt-header .kt-header__top {
-				height: 0px;
-			}
-			.nav-item  a {
-				font-size: 1rem !important;
-				color: #1f1e2e !important;
-			}
-			.nav-tabs .nav-item .nav-link.active {
-				font-weight: 500 !important;
-				font-size: 1.1rem !important;
-			}
-		}
+		
 		</style>
 		<style type="text/css">
 			.tg  {border-collapse:collapse;border-spacing:0;}
@@ -149,6 +140,37 @@
 			.ts th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 			.ts .ts-xldj{border-color:inherit;text-align:left;font-weight: 600}
 			.ts .ts-0pky{border-color:inherit;text-align:left;vertical-align:top}
+		</style>
+		<style>
+			@media (max-width: 768px) {
+			.kt-header .kt-header__top {
+				height: 0px;
+			}
+			.nav-item  a {
+				font-size: 1rem !important;
+				color: #1f1e2e !important;
+			}
+			.nav-tabs .nav-item .nav-link.active {
+				font-weight: 500 !important;
+				font-size: 1.1rem !important;
+			}
+			.nav-tabs .nav-item .nav-link {
+				padding : 0.75rem 0.25rem !important;
+			}
+		}
+
+			@media (max-width: 768px) {
+			.head-table{
+				font-size: 1.1rem !important;
+			}
+			.tg .tg-0lax { 
+					font-size: 1.1rem !important;
+				}
+			.deskripsi p {
+				font-size: 1.1rem;
+			}
+		}
+		}
 		</style>
 	</head>
 	<!-- end::Head -->
@@ -208,8 +230,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="row">
+					<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+						<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
 							<div class="kt-portlet">
 								<div class="kt-portlet__head">
 									<div class="kt-portlet__head-label">
@@ -267,7 +289,7 @@
 												<div class="kt-portlet__body">
 													<!--begin: Search Form -->
 													<form class="kt-form kt-form--fit ">
-														<div class="row ">
+														<div class="row">
 															<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
 																<label>Bulan:</label>
 																<select class="form-control kt-input" data-col-index="2">
