@@ -1,0 +1,28 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_paket": "paket Pengujian 1",
+                 "jumlah": "2",
+                 "waktu": "26 Maret 2012, 09.00-10.00",
+                 "harga_paket": "Rp250.000"
+             },
+             {
+                 "no": 2,
+                 "nama_paket": "paket Pengujian 2",
+                 "jumlah": "2",
+                 "waktu": "26 Maret 2012, 09.00-10.00",
+                 "harga_paket": "Rp250.000"
+             },
+             {
+                 "no": 3,
+                 "nama_paket": "paket Pengujian 3",
+                 "jumlah": "2",
+                 "waktu": "26 Maret 2012, 09.00-10.00",
+                 "harga_paket": "Rp250.000"
+             }
+]
+}

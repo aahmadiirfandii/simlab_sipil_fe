@@ -1,0 +1,31 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_riwayat": 1,
+                 "tgl_permohonan": "21 April 2019",
+                 "no_invoice": "A0011903017",
+                 "total": "Rp230.000",
+                 "status": "Konfirmasi",
+                 "aksi": null
+             },
+             {
+                 "id_riwayat": 2,
+                "tgl_permohonan": "22 Maret 2019",
+                 "no_invoice": "A0011903008",
+                 "total": "Rp200.000",
+                 "status": "Berhasil",
+                 "aksi": null
+             },
+             {
+                 "id_riwayat": 3,
+                 "tgl_permohonan": "19 Maret 2019",
+                 "no_invoice": "A0011904300",
+                 "total": "Rp150.000",
+                 "status": "Dibatalkan",
+                 "aksi": null
+             }
+]
+}

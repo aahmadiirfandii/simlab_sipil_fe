@@ -1,0 +1,31 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_paket": null,
+                 "nama_paket": "Paket Pengujian 1",
+                 "jumlah": "Penelitian",
+                 "waktu": "19 Maret 2019",
+                 "harga": "19 Maret 2019",
+                 "aksi" :null
+             },
+             {
+                 "id_paket": null,
+                "nama_paket": "po",
+                 "jumlah": "Penelitian",
+                 "waktu": "19 Maret 2019",
+                 "harga": "19 Maret 2019",
+                 "aksi" :null
+             },
+             {
+                 "id_paket": null,
+                  "nama_paket": "po",
+                 "jumlah": "Penelitian",
+                 "waktu": "19 Maret 2019",
+                 "harga": "19 Maret 2019",
+                 "aksi" :null
+             }
+]
+}

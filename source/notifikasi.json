@@ -1,0 +1,67 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_notifikasi": 1,
+                 "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 1"
+             },
+             {
+                 "id_notifikasi": 2,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+             {
+                 "id_notifikasi": 3,
+                   "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 4,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 5,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 6,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 7,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 8,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 9,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             },
+              {
+                 "id_notifikasi": 10,
+                  "tanggal": "20 november 2019",
+                 "waktu": "10.00 AM",
+                 "keterangan": "Keterangan 2"
+             }
+]
+}
