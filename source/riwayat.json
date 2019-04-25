@@ -1,6 +1,6 @@
 {
-    "iTotalRecords": 3,
-    "iTotalDisplayRecords": 3,
+    "iTotalRecords": 6,
+    "iTotalDisplayRecords": 6,
     "sEcho": 0,
     "sColumns": "",
     "aaData": [{
@@ -8,7 +8,7 @@
                  "tgl_permohonan": "21 April 2019",
                  "no_invoice": "A0011903017",
                  "total": "Rp230.000",
-                 "status": "Konfirmasi",
+                 "status": "pembayaran",
                  "aksi": null
              },
              {
@@ -16,7 +16,7 @@
                 "tgl_permohonan": "22 Maret 2019",
                  "no_invoice": "A0011903008",
                  "total": "Rp200.000",
-                 "status": "Berhasil",
+                 "status": "diterima",
                  "aksi": null
              },
              {
@@ -24,7 +24,31 @@
                  "tgl_permohonan": "19 Maret 2019",
                  "no_invoice": "A0011904300",
                  "total": "Rp150.000",
-                 "status": "Dibatalkan",
+                 "status": "ditolak",
+                 "aksi": null
+             },
+             {
+                 "id_riwayat": 4,
+                 "tgl_permohonan": "19 Maret 2019",
+                 "no_invoice": "A0011904300",
+                 "total": "Rp150.000",
+                 "status": "konfirmasi",
+                 "aksi": null
+             },
+             {
+                 "id_riwayat": 5,
+                 "tgl_permohonan": "19 Maret 2019",
+                 "no_invoice": "A0011904300",
+                 "total": "Rp150.000",
+                 "status": "expired",
+                 "aksi": null
+             },
+             {
+                 "id_riwayat": 6,
+                 "tgl_permohonan": "19 Maret 2019",
+                 "no_invoice": "A0011904300",
+                 "total": "Rp150.000",
+                 "status": "persetujuan",
                  "aksi": null
              }
 ]

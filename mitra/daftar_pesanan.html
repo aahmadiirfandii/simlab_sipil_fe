@@ -125,479 +125,486 @@
 		.dataTables_wrapper .dataTables_info {
 			display: none;
 		}
-		</style>
-		<style>
-			@media (max-width: 1024px) {
-				.kt-header .kt-header__top {
-					height: 0px;
-				}
-				.nav-item  a {
-					font-size: 1rem !important;
-					color: #1f1e2e !important;
-				}
-				.nav-tabs .nav-item .nav-link.active {
-					font-weight: 500 !important;
-					font-size: 1.1rem !important;
-				}
-				.header-mobile {
-					display: block;
-				}
-				/*MENU kecil*/
-				.kt-header-menu-wrapper {
-					background: white;
-					-webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-					box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-				}
-				.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
-					background-color: #f4f4f7 !important;
-				}
-				.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
-					color: #282829;
-				}
-				.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-					color: #444441;
-					font-size: 1.3rem;
-				}
-				.btn_print {
-					width: 25%;
+		.modal-lg {
+			max-width: 860px;
+		}
+		.btn_aksi_header {
+			width: 20%;
+		}
+		.kt-portlet--sticky .kt-portlet__head {
+			width: 100vw;
+			z-index: 90;
+			top: 0px !important;
+		}
+		.kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+			font-size: 1.8rem;
+		}
+		.dataTables_wrapper .dataTable th {
+			font-size: 1.2rem;
+		}
+		.dataTables_wrapper .dataTable td {
+			font-size: 1.1rem;
+		}
+	</style>
+	<style>
+		@media (max-width: 1024px) {
+			.kt-header .kt-header__top {
+				height: 0px;
+			}
+			.nav-item  a {
+				font-size: 1rem !important;
+				color: #1f1e2e !important;
+			}
+			.nav-tabs .nav-item .nav-link.active {
+				font-weight: 500 !important;
+				font-size: 1.1rem !important;
+			}
+			.header-mobile {
+				display: block;
+			}
+			/*MENU kecil*/
+			.kt-header-menu-wrapper {
+				background: white;
+				-webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+				box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+			}
+			.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
+				background-color: #f4f4f7 !important;
+			}
+			.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
+				color: #282829;
+			}
+			.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+				color: #444441;
+				font-size: 1.3rem;
+			}
+			.btn_print {
+				width: 25%;
+			}
+			.kt-portlet--sticky .kt-portlet__head {
+			width: 100vw;
+			z-index: 90;
+			top: 55px !important;
+		}
+		}
+		@media (max-width: 720px) {
+			.btn_aksi_header {
+				width: 45%;
+			}
+		}
+	</style>
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+<body class="kt-page--loading-enabled kt-page--loading kt-page--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+	<!-- begin::Page loader -->
+	<!-- end::Page Loader -->
+	<!-- begin:: Page -->
+	<!-- begin:: Header Mobile -->
+	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+		<div class="kt-header-mobile__logo">
+			<a href="index.html">
+				<img style="height: 45px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
+			</a>
+		</div>
+		<div class="kt-header-mobile__toolbar">
+			<div class="dropdown dropdown-inline">
+				<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="kt-menu__link-text registration flaticon2-user">
+					</span> 
+					<span style="margin-left: 5px" class="kt-menu__link-text registration">
+						Mitra
+					</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a href="akun.html" style="width: 100%;margin-bottom: 5px" class="btn btn-primary">
+						Akun
+					</a>
+					<a style="width: 100%;color: white" class="btn btn-danger">
+						Keluar
+					</a>
+				</div>
+			</div>
+			<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+		</div>
+	</div>
+
+	<!-- end:: Header Mobile -->
+	<div class="kt-grid kt-grid--hor kt-grid--root">
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper " id="kt_wrapper">
+				<!-- begin:: Header -->
+				<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on">
+					<div class="kt-header__top">
+						<div class="kt-container">
+							<!-- begin:: Brand -->
+							<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
+								<a class="kt-header__brand-logo" href="index.html">
+									<img style="height: auto;width: 16vw" alt="Logo" src="../assets/media/logos/logo_1.png" class="kt-header__brand-logo-default" />
+								</a>
+							</div>
+							<!-- end:: Brand -->
+							<!-- begin:: Header Topbar -->
+							<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
+								<!-- Header Sebelah Kanan -->
+								<div align="right" style="margin-bottom: 0.5vw;margin-left: 80%;" class="offset-md-10 col-md-2">
+
+									<div class="dropdown dropdown-inline">
+										<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<span class="kt-menu__link-text registration flaticon2-user">
+											</span> 
+											<span style="margin-left: 5px" class="kt-menu__link-text registration">
+												Mitra
+											</span>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a href="akun.html" style="width: 100%;margin-bottom: 5px" class="btn btn-primary">
+												Akun
+											</a>
+											<a style="width: 100%;color: white" class="btn btn-danger">
+												Keluar
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="kt-header__bottom">
+						<div class="kt-container">
+							<!-- begin: Header Menu -->
+							<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+							<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+								<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
+									<ul class="kt-menu__nav ">
+										<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="index.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Beranda</span>
+											</a>
+										</li>
+										<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
+											<a href="list_laboratorium.html" class="kt-menu__link">
+												<span class="kt-menu__link-text">Laboratorium</span>
+											</a>
+										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here"  aria-haspopup="true"><a href="daftar_pesanan.html" class="kt-menu__link "><span class="kt-menu__link-text">Daftar Pesanan</span></a>
+										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="true"><a href="invoice.html" class="kt-menu__link "><span class="kt-menu__link-text">Invoice</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- end: Header Menu -->
+						</div>
+					</div>
+				</div>
+				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+					<!-- <div class="kt-portlet">
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<div style="margin-top:20px; color: #1f1e2e;" class="kt-portlet__head-label">
+									<div  class="row">
+										<div class="col-6">
+											<h4 class="kt-subheader__title">Daftar Pesanan</h4>
+										</div>
+										<div align="right" style="margin-bottom: 10px;width: 95vw" class="col-6">
+											<button style="font-size: 1.1rem;" class="btn btn-danger btn_print btn_aksi_header">
+												Hapus
+											</button>
+											<button style="font-size: 1.1rem;" class="btn btn-success btn_print btn_aksi_header">
+												Proses
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div class="kt-portlet__body kt-portlet__body--fit">
+								<table class="table table-striped- table-bordered table-hover " id="tbl_list_daftar_pesanan">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nama</th>
+											<th>Jumlah</th>
+											<th>Waktu</th>
+											<th>Harga</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div> -->
+					<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="kt_page_portlet">
+						<div class="kt-portlet__head kt-portlet__head--lg" style="">
+							<div class="kt-portlet__head-label">
+								<div  class="row">
+										<div class="col-6">
+											<h3 style="margin-top: 5px" class="kt-portlet__head-title">Daftar Pesanan</h3>
+										</div>
+										<div align="right" style="margin-bottom: 10px;width: 95vw" class="col-6">
+											<button style="font-size: 1.1rem;" class="btn btn-danger btn_print btn_aksi_header">
+												Hapus
+											</button>
+											<button style="font-size: 1.1rem;" class="btn btn-success btn_print btn_aksi_header">
+												Proses
+											</button>
+										</div>
+									</div>
+							</div>
+
+						</div>
+						<div class="kt-portlet__body">
+							<div class="kt-portlet__body kt-portlet__body--fit">
+								<table class="table table-striped- table-bordered table-hover " id="tbl_list_daftar_pesanan">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nama</th>
+											<th>Jumlah</th>
+											<th>Waktu</th>
+											<th>Harga</th>
+											<th>Aksi</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Pesanan -->
+				<div class="modal fade" id="ubah_pesanan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Formulir Permohonan Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Penanggung Jawab</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="penanggung_jawab">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Paket Pengujian</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Paket Pengujian 1" id="jenis_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jumlah</label>
+											<div class="col-8">
+												<input  class="form-control" type="number" value="2" id="jumlah_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Nama Kegiatan</label>
+											<div class="col-8">
+												<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
+											<div class="col-8">
+												<select class="form-control" id="exampleSelectd">
+													<option value="">--Pilih Jenis Kegiatan--</option>
+													<option value="1">Pengabdian Masyarakat</option>
+													<option value="2">Penelitan</option>
+													<option value="3">Umum</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">	
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+											<div class="col-8">
+												<input class="form-control" type="date" value="2011-08-19" id="tanggal_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Waktu Mulai</label>
+											<div class="col-8">
+												<input class="form-control" type="time" value="13:45:00" id="waktu_mulai_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Waktu Selesai</label>
+											<div class="col-8">
+												<input class="form-control" type="time" value="15:45:00" id="waktu_selesai_kegiatan">
+											</div>
+										</div>		
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Kontak(Hp)</label>
+											<div class="col-8">
+												<input class="form-control" type="tel" placeholder="input no. telpon" id="kontak_pemesan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Surat Kegiatan Penelitan</label>
+											<div class="col-8">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input choose_file" id="customFile">
+													<label class="custom-file-label" for="customFile">Choose file</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-primary">Proses</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer -->
+				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
+					<div class="kt-footer__bottom">
+						<div class="kt-container">
+							<div class="kt-footer__wrapper">
+								<div class="kt-footer__logo">
+									<a href="index.html">
+										<img style="height: auto;width: 15vw" alt="Logo" src="../assets/media/logos/logo_1.png">
+									</a>
+									<div class="kt-footer__copyright">
+										2019&nbsp;&copy;&nbsp;
+										Teknik Sipil Universitas Hasanuddin - Makassar, Indonesia
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var KTAppOptions = {
+			"colors": {
+				"state": {
+					"brand": "#374afb",
+					"light": "#ffffff",
+					"dark": "#282a3c",
+					"primary": "#5867dd",
+					"success": "#34bfa3",
+					"info": "#36a3f7",
+					"warning": "#ffb822",
+					"danger": "#fd3995"
+				},
+				"base": {
+					"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+					"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
 				}
 			}
-		</style>
-	</head>
-	<!-- end::Head -->
-	<!-- begin::Body -->
-	<body class="kt-page--loading-enabled kt-page--loading kt-page--fixed kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
-		<!-- begin::Page loader -->
-		<!-- end::Page Loader -->
-		<!-- begin:: Page -->
-		<!-- begin:: Header Mobile -->
-		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
-			<div class="kt-header-mobile__logo">
-				<a href="index.html">
-					<img style="height: 45px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
-				</a>
-			</div>
-			<div class="kt-header-mobile__toolbar">
-				<div class="dropdown dropdown-inline">
-					<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="kt-menu__link-text registration flaticon2-user">
-						</span> 
-						<span style="margin-left: 5px" class="kt-menu__link-text registration">
-							Mitra
-						</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a href="akun.html" style="width: 100%;margin-bottom: 5px" class="btn btn-primary">
-							Akun
-						</a>
-						<a style="width: 100%;color: white" class="btn btn-danger">
-							Keluar
-						</a>
-					</div>
-				</div>
-				<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-			</div>
-		</div>
+		};
+	</script>
 
-		<!-- end:: Header Mobile -->
-		<div class="kt-grid kt-grid--hor kt-grid--root">
-			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper " id="kt_wrapper">
-					<!-- begin:: Header -->
-					<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on">
-						<div class="kt-header__top">
-							<div class="kt-container">
-								<!-- begin:: Brand -->
-								<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
-									<a class="kt-header__brand-logo" href="index.html">
-										<img style="height: auto;width: 16vw" alt="Logo" src="../assets/media/logos/logo_1.png" class="kt-header__brand-logo-default" />
-									</a>
-								</div>
-								<!-- end:: Brand -->
-								<!-- begin:: Header Topbar -->
-								<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
-									<!-- Header Sebelah Kanan -->
-									<div style="margin-bottom: 0.5vw;margin-left: 72vw;" class="offset-md-10 col-md-2">
+	<!-- end::Global Config -->
 
-										<div class="dropdown dropdown-inline">
-											<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span class="kt-menu__link-text registration flaticon2-user">
-												</span> 
-												<span style="margin-left: 5px" class="kt-menu__link-text registration">
-													Mitra
-												</span>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right">
-												<a href="akun.html" style="width: 100%;margin-bottom: 5px" class="btn btn-primary">
-													Akun
-												</a>
-												<a style="width: 100%;color: white" class="btn btn-danger">
-													Keluar
-												</a>
-											</div>
-										</div>
+	<!--begin:: Global Mandatory Vendors -->
+	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="kt-header__bottom">
-							<div class="kt-container">
-								<!-- begin: Header Menu -->
-								<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
-								<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
-									<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
-										<ul class="kt-menu__nav ">
-											<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-												<a href="index.html" class="kt-menu__link">
-													<span class="kt-menu__link-text">Beranda</span>
-												</a>
-											</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Laboratorium</span></a>
-											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Mekanika Tanah
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Struktur dan Bahan
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Ukur Tanah
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Jalan dan Aspal
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Riset Pantai
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Riset Sungai dan Sumber Daya Air
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Riset Eco Material
-															</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="laboratorium.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">
-																Lab Riset Gempa
-															</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here"  aria-haspopup="true"><a href="daftar_pesanan.html" class="kt-menu__link "><span class="kt-menu__link-text">Daftar Pesanan</span></a>
-											</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel "  aria-haspopup="true"><a href="riwayat.html" class="kt-menu__link "><span class="kt-menu__link-text">Riwayat</span></a>
-											</li>
-										</ul>
-									</div>
-								</div>
+	<!--end:: Global Mandatory Vendors -->
 
-								<!-- end: Header Menu -->
-							</div>
-						</div>
-					</div>
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="kt-portlet">
-							<div class="kt-portlet__body">
-								<h3 class="header-mobile">Daftar Pesanan</h3>
-								<div class="kt-portlet__body kt-portlet__body--fit">
-									<table class="table table-striped- table-bordered table-hover " id="tbl_list_daftar_pesanan">
-										<thead>
-											<tr>
-												<th>#</th>
-												<th>Nama</th>
-												<th>Jumlah</th>
-												<th>Waktu</th>
-												<th>Harga</th>
-												<th>Aksi</th>
-											</tr>
-										</thead>
-									</table>
-									<div align="right">
-										<button style="font-size: 1.1rem" class="btn btn-danger btn_print">
-											Hapus
-										</button>
-										<button style="font-size: 1.1rem" class="btn btn-success btn_print">
-											Proses
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Pesanan -->
-					<div class="modal fade" id="ubah_pesanan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Formulir Permohonan Pengujian</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									</button>
-								</div>
-								<div class="modal-body">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Penanggung Jawab</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="penanggung_jawab">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Paket Pengujian</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Paket Pengujian 1" id="jenis_paket_pengujian">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Jumlah</label>
-										<div class="col-8">
-											<input  class="form-control" type="number" value="2" id="jumlah_paket_pengujian">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Nama Kegiatan</label>
-										<div class="col-8">
-											<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
-										<div class="col-8">
-											<select class="form-control" id="exampleSelectd">
-												<option value="">--Pilih Jenis Kegiatan--</option>
-												<option value="1">Pengabdian Masyarakat</option>
-												<option value="2">Penelitan</option>
-												<option value="3">Umum</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
-										<div class="col-8">
-											<input class="form-control" type="date" value="2011-08-19" id="tanggal_kegiatan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Waktu</label>
-										<div class="col-8">
-											<input class="form-control" type="time" value="13:45:00" id="waktu_kegiatan">
-										</div>
-									</div>	
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Kontak(Hp)</label>
-										<div class="col-8">
-											<input class="form-control" type="tel" placeholder="input no. telpon" id="kontak_pemesan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Surat Kegiatan Penelitan</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input choose_file" id="customFile">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-									<button type="button" class="btn btn-primary">Proses</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Footer -->
-					<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
-						<div class="kt-footer__bottom">
-							<div class="kt-container">
-								<div class="kt-footer__wrapper">
-									<div class="kt-footer__logo">
-										<a href="index.html">
-											<img style="height: auto;width: 15vw" alt="Logo" src="../assets/media/logos/logo_1.png">
-										</a>
-										<div class="kt-footer__copyright">
-											2019&nbsp;&copy;&nbsp;
-											Teknik Sipil Universitas Hasanuddin - Makassar, Indonesia
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script>
-			var KTAppOptions = {
-				"colors": {
-					"state": {
-						"brand": "#374afb",
-						"light": "#ffffff",
-						"dark": "#282a3c",
-						"primary": "#5867dd",
-						"success": "#34bfa3",
-						"info": "#36a3f7",
-						"warning": "#ffb822",
-						"danger": "#fd3995"
-					},
-					"base": {
-						"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
-						"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
-					}
-				}
-			};
-		</script>
+	<!--begin:: Global Optional Vendors -->
+	<script src="../assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-timepicker/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-switch/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/autosize/dist/autosize.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/summernote/dist/summernote.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/markdown/lib/markdown.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-markdown/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-notify/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/toastr/build/toastr.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/raphael/raphael.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/morris.js/morris.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/vendors/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/counterup/jquery.counterup.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
 
-		<!-- end::Global Config -->
+	<!--end:: Global Optional Vendors -->
 
-		<!--begin:: Global Mandatory Vendors -->
-		<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+	<!--begin::Global Theme Bundle(used by all pages) -->
+	<script src="../assets/demo/demo2/base/scripts.bundle.js" type="text/javascript"></script>
 
-		<!--end:: Global Mandatory Vendors -->
+	<!--end::Global Theme Bundle -->
 
-		<!--begin:: Global Optional Vendors -->
-		<script src="../assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-timepicker/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-switch/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/autosize/dist/autosize.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/summernote/dist/summernote.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/markdown/lib/markdown.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-markdown/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-notify/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/toastr/build/toastr.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/raphael/raphael.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/morris.js/morris.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/counterup/jquery.counterup.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 
-		<!--end:: Global Optional Vendors -->
+	<!--end::Page Vendors -->
 
-		<!--begin::Global Theme Bundle(used by all pages) -->
-		<script src="../assets/demo/demo2/base/scripts.bundle.js" type="text/javascript"></script>
+	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
+	<script src="../assets/app/custom/general/crud/metronic-datatable/base/data-local.js" type="text/javascript">
+	</script>
+	<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 
-		<!--end::Global Theme Bundle -->
+	<!--end::Page Scripts -->
+	<!-- AJAX -->
+	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script> 
+	<script src="../assets/app/script/js_ajax_mitra.js" type="text/javascript"></script> 
 
-		<!--begin::Page Vendors(used by this page) -->
-		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
+	<!--begin::Global App Bundle(used by all pages) -->
+	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+	<!--end::Global App Bundle -->
+</body>
 
-		<!--end::Page Vendors -->
-
-		<!--begin::Page Scripts(used by this page) -->
-		<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-		<script src="../assets/app/custom/general/crud/metronic-datatable/base/data-local.js" type="text/javascript">
-		</script>
-		<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
-
-		<!--end::Page Scripts -->
-		<!-- AJAX -->
-		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script> 
-		<script src="../assets/app/script/js_ajax_mitra.js" type="text/javascript"></script> 
-
-		<!--begin::Global App Bundle(used by all pages) -->
-		<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
-		<!--end::Global App Bundle -->
-	</body>
-
-	<!-- end::Body -->
-	</html>
+<!-- end::Body -->
+</html>

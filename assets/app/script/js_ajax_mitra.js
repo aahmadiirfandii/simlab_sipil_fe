@@ -534,7 +534,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable6 = function() {
 		// begin first table
-		var table = $('#tbl_list_riwayat').DataTable({
+		var table = $('#tbl_list_invoice').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -581,11 +581,29 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="invoice.html" class="btn btn-sm btn-warning" style="color:white;">Rincian</a>`;
+                        <a class="btn btn-sm btn-success" style="color:white;">Upload </a>`+' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Cetak</a>';
+					},  
+				},
+				{
+					targets: 4,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
+							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 					},
 				},
 				{
-					targets: [0, -1],
+					targets: [0,4,-1],
 					className: 'text-center'
 				},
 				
