@@ -122,6 +122,10 @@
 		.informasi {
 			margin-top: 25px;
 		}
+		.form-group label,.form-control {
+			font-size: 1.24rem;
+		}
+
 		
 	</style>
 	<style type="text/css">
@@ -238,161 +242,64 @@
 						<div class="kt-portlet__head">
 							<div class="kt-portlet__head-label">
 								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Lab Hidrolika</h3>
+									<h3 style="margin-top: 5px" class="kt-portlet__head-title">
+										Buat Janji
+									</h3>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-12 row">
-							<div class="kt-portlet__body col-sm-8">
-								<ul class="nav nav-tabs nav-fill" role="tablist" style="">
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#kt_tabs_informasi_umum">Informasi Umum</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#kt_tabs_kegiatan">Kegiatan</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#kt_tabs_alat">Alat</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#kt_tabs_paket_pengujian">Paket Pengujian</a>
-									</li>
-								</ul>
-								<div class="tab-content">
-									<div class="tab-pane active" id="kt_tabs_informasi_umum" role="tabpanel">
-										<div class=" informasi">
-											<div class="row">
-												<div  class="col-4">
-													<img style="height: auto;width: inherit;" src="http://tsipil.ugm.ac.id/wp-content/uploads/2016/02/kunj_lab_hidro_3.jpg">
-												</div>
-												<div class="col-8 deskripsi">
-													<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-												</div>
-												<div style="margin-top: 30px " class="col-12" >
-													<table style="width: 100%;height: 170px" class="tg">
-														<tr>
-															<th class="tg-s268 head-table">Penanggung Jawab</th>
-															<th class="tg-0lax">Ahmad Rifaldi</th>
-														</tr>
-														<tr>
-															<td class="tg-s268 head-table">Telepon</td>
-															<td class="tg-0lax">+6285145322137</td>
-														</tr>
-														<tr>
-															<td class="tg-s268 head-table">Lokasi</td>
-															<td class="tg-0lax">Civil Engineering Building, Lt. Dasar, Fakultas Teknik, Kampus Gowa</td>
-														</tr>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="tab-pane" id="kt_tabs_kegiatan" role="tabpanel">
-										<div class="kt-portlet__body">
-											<form class="kt-form kt-form--fit ">
-												<div class="row">
-													<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-														<label>Bulan:</label>
-														<select class="form-control kt-input" data-col-index="2">
-															<option active value="">--Pilih Bulan--</option>
-															<option value="1">Januari</option>
-															<option value="2">Februari</option>
-															<option value="3">Maret</option>
-															<option value="4">April</option>
-															<option value="5">Mei</option>
-															<option value="6">Juni</option>
-															<option value="7">Juli</option>
-															<option value="8">Agustus</option>
-															<option value="9">September</option>
-															<option value="10">Oktober</option>
-															<option value="11">November</option>
-															<option value="12">Desember</option>
-														</select>
-													</div>
-													<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-														<label>Search:</label>
-														<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
-													</div>
-												</div>
-											</form>
-											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kegiatan">
-												<thead>
-													<tr>
-														<th>No.</th>
-														<th>Nama Kegiatan</th>
-														<th>Jenis Kegiatan</th>
-														<th>Waktu</th>
-														<th>Aksi</th>
-													</tr>
-												</thead>
-											</table>
-										</div>
-									</div>
-									<div class="tab-pane" id="kt_tabs_alat" role="tabpanel">
-										<div class="kt-portlet__body">
-											<form class="kt-form kt-form--fit ">
-												<div class="row ">
-													<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-														<label>Search:</label>
-														<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
-													</div>
-												</div>
-											</form>
-											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_peralatan">
-												<thead>
-													<tr>
-														<th>No.</th>
-														<th>Gambar	</th>
-														<th>Nama Alat</th>
-														<th>Fungsi Utama</th>
-														<th>Jumlah Alat</th>
-													</tr>
-												</thead>
-											</table>
-										</div>
-									</div>
-									<div class="tab-pane" id="kt_tabs_paket_pengujian" role="tabpanel">
-										<div class="kt-portlet__body">	
-											<form class="kt-form kt-form--fit ">
-												<div class="row ">	
-													<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-														<label>Search:</label>
-														<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
-													</div>
-												</div>
-											</form>
-											<div class="kt-portlet__body kt-portlet__body--fit">
-												<table class="table" id="tbl_list_pengujian">
-													<thead>
-														<tr>
-															<th>No</th>
-															<th>Nama Paket Pengujian</th>
-														</tr>
-													</thead>
-												</table>
-											</div>
-										</div>
-									</div>
+						<div class="kt-portlet__body">
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">ID :</label>
+								<div class="col-9">
+									<input disabled="" class="form-control" type="text" value="ABCD12345" id="id_appointment">
 								</div>
 							</div>
-							<div class="kt-portlet__body col-sm-4" style="padding-top: 11px!important">
-								<div class="kt-portlet__head">
-									<div class="kt-portlet__head-label">
-										<h3 class="kt-portlet__head-title">
-											<span class="fa fa-map-marked-alt"></span> Alamat
-										</h3>
-									</div>
-								</div>
-								<div class="kt-portlet__body alamat_sipil">
-									<p>Civil Engineering Building</p>
-									<p>Fakultas Teknik, Kampus Gowa</p>
-									<p>Jalan Poros Malino, KM 6, Bontomarannu, Gowa</p>
-									<p type="email">civil@eng.unhas.ac.id</p>
-									<div >
-										<div id="kt_gmap_1" style="height:300px;"></div>
-									</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Nama</label>
+								<div class="col-9">
+									<input class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pembuat_appointment">
 								</div>
 							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">E-Mail</label>
+								<div class="col-9">
+									<input class="form-control" type="email" value="yahoo@gmail.com" id="email_pembuat_appointment">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Pilihan Lab</label>
+								<div class="col-9">
+									<select class="form-control" id="pilihan_lab">
+										<option active value="0">--Pilih Lab--</option>
+										<option value="1">LAB 1</option>
+										<option value="2">LAB 2</option>
+										<option value="3">LAB 3</option>
+										<option value="4">LAB 4</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Tgl Janjian</label>
+								<div class="col-9">
+									<input class="form-control" type="date" value="2011-08-19" id="tanggal_janjian_appointment">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Waktu</label>
+								<div class="col-9">
+									<input class="form-control" type="time" value="10:10:00" id="waktu_janjian">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Keperluan</label>
+								<div class="col-9">
+									<textarea style="resize: none" class="form-control" id="keperluan_appointment" rows="3"></textarea>
+								</div>
+							</div>
+						</div>
+						<div align="right" class="kt-portlet__foot">
+							<button onclick="window.open('print_perjanjian.html')" id="btn_simpan_modal_appointment" type="submit" class="btn btn-primary">Simpan dan Cetak</button>
 						</div>
 					</div>
 				</div>
