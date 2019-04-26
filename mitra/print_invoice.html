@@ -97,6 +97,30 @@ License: You must have a valid license purchased only from themeforest(the above
 			color: #44b4bf !important;
 			font-weight: 700 !important;
 		}
+		.kt-content {
+			padding: 20px !important;
+			margin: 0px !important;
+		}
+		.kt-invoice-1 .kt-invoice__wrapper .kt-invoice__head .kt-invoice__container .kt-invoice__items .kt-invoice__item .kt-invoice__text {
+			color: #ffffff;
+			font-weight: 500;
+		}
+		body {
+			background: white;
+		}
+		
+	</style>
+	<style>
+		@media print {
+			.btn_cetak {
+				display: none;
+			}
+			.kt-invoice-1 .kt-invoice__wrapper .kt-invoice__body.kt-invoice__body--centered {
+				width: 85%;
+				min-height: 530px;
+			}
+			
+		}
 	</style>
 </head>
 
@@ -113,9 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- end:: Header Mobile -->
 	<div class="kt-grid kt-grid--hor kt-grid--root">
 		<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-			<button class="btn btn-warning" style="font-size: 1.4rem; width: 20%;margin-bottom: 10px">Cetak</button>
 			<div class="kt-portlet">
-				
 				<div class="kt-portlet__body kt-portlet__body--fit">
 					<div class="kt-invoice-1">
 						<div class="kt-invoice__wrapper">
@@ -130,8 +152,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										</a>
 									</div>
 									<span class="kt-invoice__desc">
-										<span>Civil Engineering Building</span>
-										<span>Lt. Dasar, Fakultas Teknik, Kampus Gowa</span>
+										<span style="color: white;font-size: 500">Civil Engineering Building</span>
+										<span style="color: white;font-size: 500">Lt. Dasar, Fakultas Teknik, Kampus Gowa</span>
 									</span>
 									<div class="kt-invoice__items">
 										<div align="center" style="font-size: 1.4rem" class="kt-invoice__item">
@@ -193,13 +215,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="kt-invoice__footer">
 								<div class="kt-invoice__container kt-invoice__container--centered">
-									<div class="kt-invoice__content">
+									<div style="width: 40%;font-size: 1.5rem" class="kt-invoice__content bank-transfer">
 										<span>BANK TRANSFER</span>
 										<span><span>Account Name:</span><span>Laboratorium Sipil UNHAS</span></span>
 										<span><span>No. Rekening :</span><span>731002699</span></span>
 										<span><span>Bank:</span><span>Bank Mandiri</span></span>
 									</div>
-									<div class="kt-invoice__content">
+									<div style="font-size: 1.5rem" class="kt-invoice__content">
 										<span>TOTAL HARGA</span>
 										<span class="kt-invoice__price">Rp450.000</span>
 										<span><span>Batas Pembayaran:</span><span>Jumat, 22 Maret 2019, 15.45</span></span>
@@ -209,6 +231,11 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 					</div>
 				</div>
+			</div>
+			<div align="right">
+				<button onclick="print_halaman()" class="btn btn-warning btn_cetak" style="font-size: 1.4rem; width: 20%;margin-bottom: 10px">
+					Cetak
+				</button>
 			</div>
 		</div>
 	</div>
@@ -222,9 +249,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- end::Quick Panel -->
 
 	<!-- begin::Scrolltop -->
-	<div id="kt_scrolltop" class="kt-scrolltop">
-		<i class="fa fa-arrow-up"></i>
-	</div>
+	
 
 	<!-- end::Scrolltop -->
 
@@ -338,6 +363,11 @@ License: You must have a valid license purchased only from themeforest(the above
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 
 	<!--end::Global App Bundle -->
+	<script>
+		function print_halaman() {
+			window.print();
+		}
+	</script>
 </body>
 
 <!-- end::Body -->

@@ -140,6 +140,12 @@
 		.kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username {
 			font-size: 1.2rem;
 		}
+		.kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username {
+			color: #2c2d3a;
+		}
+		.kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username:hover {
+			color: #2c2d3a;
+		}
 	</style>
 	<style>
 		@media (max-width: 1024px) {
@@ -173,6 +179,14 @@
 				color: #444441;
 				font-size: 1.3rem;
 			}	
+		}
+		@media (max-width: 767px) {
+			.kolom-menu-1 {
+				border-bottom: 1px dashed #ebedf2;padding-bottom: 1rem;
+			}
+			.kolom-menu-2 {
+				margin-top: 15px
+			}
 		}
 	</style>
 
@@ -297,12 +311,12 @@
 								<div class="tab-pane active" id="kt_widget4_tab1_content">
 									<div class="kt-widget4">
 										<div class="row">
-											<div class="col-sm">
+											<div style="" class="col-md-6 kolom-menu-1">
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p  class="kt-widget4__username">
 															Lab Mekanika Tanah
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -311,9 +325,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Struktur dan Bahan
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -322,9 +336,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Ukur Tanah
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -333,9 +347,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Jalan dan Aspal
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -344,9 +358,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Riset Pantai
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -354,12 +368,12 @@
 													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
 												</div>
 											</div>
-											<div class="col-sm">
+											<div style="" class="col-md-6 kolom-menu-2">
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Riset Sungai dan Sumberdaya Air
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -368,9 +382,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Riset Eco Material
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -379,9 +393,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Lab Riset Gempa
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -390,9 +404,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Anna Strong
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -401,9 +415,9 @@
 												</div>
 												<div class="kt-widget4__item">
 													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
+														<p href="#" class="kt-widget4__username">
 															Anna Strong
-														</a>
+														</p>
 														<p class="kt-widget4__text">
 															penjelasan singkat tentang lab
 														</p>
@@ -411,63 +425,6 @@
 													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
 												</div>
 											</div>
-											<!-- <div class="col-sm">
-												<div class="kt-widget4__item">
-													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
-															Anna Strong
-														</a>
-														<p class="kt-widget4__text">
-															penjelasan singkat tentang lab
-														</p>
-													</div>
-													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
-												</div>
-												<div class="kt-widget4__item">
-													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
-															Anna Strong
-														</a>
-														<p class="kt-widget4__text">
-															penjelasan singkat tentang lab
-														</p>
-													</div>
-													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
-												</div>
-												<div class="kt-widget4__item">
-													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
-															Anna Strong
-														</a>
-														<p class="kt-widget4__text">
-															penjelasan singkat tentang lab
-														</p>
-													</div>
-													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
-												</div>
-												<div class="kt-widget4__item">
-													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
-															Anna Strong
-														</a>
-														<p class="kt-widget4__text">
-															penjelasan singkat tentang lab
-														</p>
-													</div>
-													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
-												</div>
-												<div class="kt-widget4__item">
-													<div class="kt-widget4__info">
-														<a href="#" class="kt-widget4__username">
-															Anna Strong
-														</a>
-														<p class="kt-widget4__text">
-															penjelasan singkat tentang lab
-														</p>
-													</div>
-													<a href="laboratorium.html" class="btn btn-sm btn-label-warning btn-bold">Rincian</a>
-												</div>
-											</div> -->
 										</div>
 									</div>
 								</div>
