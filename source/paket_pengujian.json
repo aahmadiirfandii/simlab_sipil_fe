@@ -6,26 +6,31 @@
     "aaData": [{
                  "id_pengujian": 1,
                  "nama_paket_pengujian": "Paket Pengujian 1",
+                 "jenis_paket_pengujian": "Pekerjaan Lab",
                  "action" : null
              },
              {
                  "id_pengujian": 2,
                  "nama_paket_pengujian": "Paket Pengujian 2",
+                 "jenis_paket_pengujian": "Pekerjaan Lab",
                  "action" : null
              },
              {
                  "id_pengujian": 3,
                  "nama_paket_pengujian": "Paket Pengujian 3",
+                 "jenis_paket_pengujian": "Pekerjaan Lab",
                  "action" : null
              },
               {
                  "id_pengujian": 4,
                  "nama_paket_pengujian": "Paket Pengujian 4",
+                 "jenis_paket_pengujian": "Pekerjaan Lapangan",
                  "action" : null
              },
               {
                  "id_pengujian": 5,
                  "nama_paket_pengujian": "Paket Pengujian 5",
+                 "jenis_paket_pengujian": "Pekerjaan Lapangan",
                  "action" : null
              }
 ]

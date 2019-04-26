@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Invoice</title>
+	<title>Print Perjanjian</title>
 	<meta name="description" content="Invoice example">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -115,18 +115,44 @@ License: You must have a valid license purchased only from themeforest(the above
 		.judul_surat {
 				margin-top: 40px;
 		}
+		img {
+				width: 100%;
+				height: auto;
+			}
+		.isi-perjanjian {
+			margin-top: 20px;
+			padding: 0px 50px;
+		}
 		
+	</style>
+	<style>
+		@media(max-width: 768px) {
+			.isi-perjanjian {
+				margin-top: 20px;
+				padding: 0px 20px;
+			}
+		}
 	</style>
 	<style>
 		@media print {
 			.btn_cetak {
 				display: none;
 			}
-			.kt-invoice-1 .kt-invoice__wrapper .kt-invoice__body.kt-invoice__body--centered {
-				width: 85%;
-				min-height: 530px;
+			img {
+				width: 100vw;
+				height: auto;
 			}
-			
+			.form-group label {
+				font-size: 1.3rem;
+			}
+			.form-control:disabled {
+				/*background-color: transparent;
+				border-color: transparent;*/
+			}
+			.form-control {
+				font-size: 1.3rem;
+			}
+
 		}
 	</style>
 </head>
@@ -146,82 +172,52 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 			<div class="kt-portlet">
 				<div class="kt-portlet__body kt-portlet__body--fit">
-					<div class="kt-invoice-1">
-						<div class="kt-invoice__wrapper">
-							<div class="kt-invoice__head" style="background-color: #FFAB00;height: 200px">
-								<div class="kt-invoice__container kt-invoice__container--centered">
-									<div class="kt-invoice__logo">
-										<a href="#">
-											<h1 class="judul_surat">BUAT JANJI</h1>
-										</a>
-										<a href="#">
-											<img style="height: auto;width: 300px" alt="Logo" src="../assets/media/logos/logo_1.png" />
-											<span class="kt-invoice__desc">
-												<span style="color: white;font-size: 500">Civil Engineering Building</span>
-												<span style="color: white;font-size: 500">Lt. Dasar, Fakultas Teknik, Kampus Gowa</span>
-											</span>
-										</a>
-									</div>
-									
+					<img alt="Logo" src="../assets/media/logos/header_janji_pertemuan_2.png"/>
+					<div style="" class="row isi-perjanjian">
+						<div class="col-sm">
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">No. Kartu :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="ABCD12345" id="no_kartu">
 								</div>
 							</div>
-							<div class="kt-invoice__body kt-invoice__body--centered">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pembuat_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">E-Mail</label>
-									<div class="col-9">
-										<input class="form-control" type="email" value="yahoo@gmail.com" id="email_pembuat_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Pilihan Lab</label>
-									<div class="col-9">
-										<select class="form-control" id="pilihan_lab">
-											<option active value="0">--Pilih Lab--</option>
-											<option value="1">LAB 1</option>
-											<option value="2">LAB 2</option>
-											<option value="3">LAB 3</option>
-											<option value="4">LAB 4</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tgl Janjian</label>
-									<div class="col-9">
-										<input class="form-control" type="date" value="2011-08-19" id="tanggal_janjian_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Waktu</label>
-									<div class="col-9">
-										<input class="form-control" type="time" value="10:10:00" id="waktu_janjian">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Keperluan</label>
-									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="keperluan_appointment" rows="3"></textarea>
-									</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">Nama :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="Darnilia" id="nama">
 								</div>
 							</div>
-							<div class="kt-invoice__footer">
-								<div class="kt-invoice__container kt-invoice__container--centered">
-									<div style="width: 40%;font-size: 1.5rem" class="kt-invoice__content bank-transfer">
-										<span>BANK TRANSFER</span>
-										<span><span>Account Name:</span><span>Laboratorium Sipil UNHAS</span></span>
-										<span><span>No. Rekening :</span><span>731002699</span></span>
-										<span><span>Bank:</span><span>Bank Mandiri</span></span>
-									</div>
-									<div style="font-size: 1.5rem" class="kt-invoice__content">
-										<span>TOTAL HARGA</span>
-										<span class="kt-invoice__price">Rp450.000</span>
-										<span><span>Batas Pembayaran:</span><span>Jumat, 22 Maret 2019, 15.45</span></span>
-									</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">E-Mail :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="darnilia@gmail.com" id="email">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">Laboratorium :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="Lab. Mekanika Tanah" id="laboratorium">
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-sm">
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">Tanggal :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="Selasa, 25 April 2019" id="tanggal_janjian">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">Waktu :</label>
+								<div class="col-8">
+									<input disabled="" class="form-control" type="text" value="12.00" id="waktu_janjian">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-4 col-form-label">Keperluan</label>
+								<div class="col-8">
+									<textarea disabled="" style="resize: none" class="form-control" id="keperluan_appointment" rows="5"></textarea>
 								</div>
 							</div>
 						</div>

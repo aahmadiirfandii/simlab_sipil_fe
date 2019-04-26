@@ -235,15 +235,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			ajax: {
 				url: '../source/paket_pengujian.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_pengujian', 'nama_paket_pengujian',  'action'],
-				},
 			},
 			columns: [
 				{data: 'id_pengujian'},
 				{data: 'nama_paket_pengujian'},
+				{data: 'jenis_paket_pengujian'},
 				{data: 'action'},
 			],
 
@@ -257,7 +253,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1],
+					targets: [0, 1,2,3],
 					className: 'text-center'
 				},
 				{
@@ -581,7 +577,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a class="btn btn-sm btn-success" style="color:white;">Upload </a>`+' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Cetak</a>';
+                        <a data-toggle="modal" data-target="#upload_bukti_pembayaran" class="btn btn-sm btn-success" style="color:white;">Upload</a>`+' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Cetak</a>';
 					},  
 				},
 				{

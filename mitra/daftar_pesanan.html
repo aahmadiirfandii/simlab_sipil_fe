@@ -182,10 +182,10 @@
 				width: 25%;
 			}
 			.kt-portlet--sticky .kt-portlet__head {
-			width: 100vw;
-			z-index: 90;
-			top: 55px !important;
-		}
+				width: 100vw;
+				z-index: 90;
+				top: 55px !important;
+			}
 		}
 		@media (max-width: 720px) {
 			.btn_aksi_header {
@@ -299,61 +299,23 @@
 					</div>
 				</div>
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<!-- <div class="kt-portlet">
-						<div class="kt-portlet__head">
-							<div class="kt-portlet__head-label">
-								<div style="margin-top:20px; color: #1f1e2e;" class="kt-portlet__head-label">
-									<div  class="row">
-										<div class="col-6">
-											<h4 class="kt-subheader__title">Daftar Pesanan</h4>
-										</div>
-										<div align="right" style="margin-bottom: 10px;width: 95vw" class="col-6">
-											<button style="font-size: 1.1rem;" class="btn btn-danger btn_print btn_aksi_header">
-												Hapus
-											</button>
-											<button style="font-size: 1.1rem;" class="btn btn-success btn_print btn_aksi_header">
-												Proses
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="kt-portlet__body">
-							<div class="kt-portlet__body kt-portlet__body--fit">
-								<table class="table table-striped- table-bordered table-hover " id="tbl_list_daftar_pesanan">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Nama</th>
-											<th>Jumlah</th>
-											<th>Waktu</th>
-											<th>Harga</th>
-											<th>Aksi</th>
-										</tr>
-									</thead>
-								</table>
-							</div>
-						</div>
-					</div> -->
 					<div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="kt_page_portlet">
 						<div class="kt-portlet__head kt-portlet__head--lg" style="">
 							<div class="kt-portlet__head-label">
 								<div  class="row">
-										<div class="col-6">
-											<h3 style="margin-top: 5px" class="kt-portlet__head-title">Daftar Pesanan</h3>
-										</div>
-										<div align="right" style="margin-bottom: 10px;width: 95vw" class="col-6">
-											<button style="font-size: 1.1rem;" class="btn btn-danger btn_print btn_aksi_header">
-												Hapus
-											</button>
-											<button style="font-size: 1.1rem;" class="btn btn-success btn_print btn_aksi_header">
-												Proses
-											</button>
-										</div>
+									<div class="col-6">
+										<h3 style="margin-top: 5px" class="kt-portlet__head-title">Daftar Pesanan</h3>
 									</div>
+									<div align="right" style="margin-bottom: 10px;width: 95vw" class="col-6">
+										<button style="font-size: 1.1rem;" class="btn btn-danger btn_print btn_aksi_header">
+											Hapus
+										</button>
+										<button style="font-size: 1.1rem;" class="btn btn-success btn_print btn_aksi_header">
+											Proses
+										</button>
+									</div>
+								</div>
 							</div>
-
 						</div>
 						<div class="kt-portlet__body">
 							<div class="kt-portlet__body kt-portlet__body--fit">
@@ -429,6 +391,15 @@
 											</div>
 										</div>
 										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Durasi</label>
+											<div class="col-8">
+												<div class="input-group">
+													<input type="text" disabled="" class="form-control" value="2" id="durasi_kegiatan" aria-describedby="basic-addon2">
+													<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="form-group row">
 											<label for="example-text-input" class="col-4 col-form-label">Waktu Mulai</label>
 											<div class="col-8">
 												<input class="form-control" type="time" value="13:45:00" id="waktu_mulai_kegiatan">
@@ -438,6 +409,12 @@
 											<label for="example-text-input" class="col-4 col-form-label">Waktu Selesai</label>
 											<div class="col-8">
 												<input class="form-control" type="time" value="15:45:00" id="waktu_selesai_kegiatan">
+											</div>
+										</div> -->
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Sampel</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="80gr" id="sampel_kegiatan">
 											</div>
 										</div>		
 										<div class="form-group row">
@@ -457,8 +434,6 @@
 										</div>
 									</div>
 								</div>
-								
-								
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

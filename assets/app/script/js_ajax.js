@@ -28,24 +28,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			ajax: {
 				url: '../source/kegiatan.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_kegiatan', 'nama_kegiatan', 'jenis_kegiatan', 'waktu', 'Aksi',],
-				},
 			},
 			columns: [
 				{data: 'id_kegiatan'},
 				{data: 'nama_kegiatan'},
 				{data: 'jenis_kegiatan'},
 				{data: 'waktu'},
-				{data: 'Aksi', responsivePriority: -1},
+				{data: 'Aksi'},
 			],
 
 			initComplete: function() {
 				this.api().columns().every(function() {
 					var column = this;
-
 				
 				});
 			},
@@ -57,9 +51,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#rincian_kegiatan" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+						<a data-toggle="modal" data-target="#rincian_kegiatan" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
 					},
 				},
+				{ responsivePriority: 1, targets: -1 },
 				
 				
 			],
@@ -235,15 +230,12 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			ajax: {
 				url: '../source/paket_pengujian.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_pengujian', 'nama_paket_pengujian',],
-				},
 			},
 			columns: [
 				{data: 'id_pengujian'},
 				{data: 'nama_paket_pengujian'},
+				{data: 'jenis_paket_pengujian'},
+
 			],
 
 			initComplete: function() {
@@ -256,7 +248,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1],
+					targets: [0, 1,2],
 					className: 'text-center'
 				}
 			],
