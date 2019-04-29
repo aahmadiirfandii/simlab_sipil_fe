@@ -7,7 +7,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 	var initTable1 = function() {
 		// begin first table
-		var table = $('#tbl_list_kegiatan').DataTable({
+		var table = $('#tbl_list_verifikasi_praktikum').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -22,24 +22,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				'lengthMenu': 'Display _MENU_',
 			},
 
-			searchDelay: 100,
+			searchDelay: 500,
 			processing: true,
 			serverSide: true,
 			ajax: {
-				url: '../source/kegiatan.json',
+				url: '../source/verifikasi_praktikum.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_kegiatan', 'nama_kegiatan', 'jenis_kegiatan', 'waktu', 'Aksi',],
-				},
+				
 			},
 			columns: [
-				{data: 'id_kegiatan'},
-				{data: 'nama_kegiatan'},
-				{data: 'jenis_kegiatan'},
-				{data: 'waktu'},
-				{data: 'Aksi', responsivePriority: -1},
+				{data: 'no'},
+				{data: 'nim'},
+				{data: 'nama'},
+				{data: 'nama_praktikum'},
+				{data: 'semester'},
+				{data: 'tahun_ajaran'},
+				{data: 'status',responsivePriority: -1},
+				{data: 'aksi'},
 			],
 
 			initComplete: function() {
@@ -54,14 +53,31 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{
 					targets: -1,
 					title: 'Aksi',
+					className: 'text-center',
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#rincian_kegiatan" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+                        <a href="rincian_verifikasi_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;">Rincian</a>`;
 					},
 				},
-				
-				
+				{
+					targets: [0, 1, 2, 3, 4,5,6],
+					className: 'text-center'
+				},
+				{
+					targets: 6,
+					width: 220,
+					render: function(data, type, full, meta) {
+						var status = {
+							terverifikasi: {'title': 'Terverifikasi', 'class': ' btn-label-success'},
+							belum: {'title': 'Belum Terverifikasi', 'class': 'btn-label-danger'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
 			],
 		});
 
@@ -114,7 +130,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable2 = function() {
 		// begin first table
-		var table = $('#tbl_list_peralatan').DataTable({
+		var table = $('#tbl_jadwal_praktikum').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -133,20 +149,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: true,
 			ajax: {
-				url: '../source/alat.json',
+				url: '../source/jadwal_praktikum.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_alat', 'gambar_alat', 'nama_alat', 'fungsi_utama', 'jumlah_alat',],
-				},
+				
 			},
 			columns: [
-				{data: 'id_alat'},
-				{data: 'gambar_alat'},
-				{data: 'nama_alat'},
-				{data: 'fungsi_utama'},
-				{data: 'jumlah_alat'},
+				{data: 'id_praktikum'},
+				{data: 'nama_praktikum'},
+				{data: 'tempat_praktikum'},
+				{data: 'semester'},
+				{data: 'tahun_ajaran'},
+				{data: 'download'},
+				{data: 'aksi'},
 			],
 
 			initComplete: function() {
@@ -159,9 +173,30 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1, 2, 3, 4],
-					className: 'text-center'
-				}
+					targets: -1,
+					title: 'Aksi',
+					width: 120,
+					className: 'text-center',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;">Rincian</a>`;
+					},
+				},
+				{
+					targets: [0, 1, 2, 3, 4,6],
+					className: 'text-center',
+				},
+				{
+					targets: 5,
+					className: 'text-center',
+					width: 140,
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a href="#" class="btn btn-sm btn-success download-modul" style="color:white;" target="_blank">Modul</a>`+' <a href="#" class="btn btn-sm btn-primary" style="color:white;" target="_blank">Format Laporan</a>';
+					},
+				},
 			],
 		});
 
@@ -214,8 +249,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable3 = function() {
 		// begin first table
-		var table = $('#tbl_list_pengujian').DataTable({
-			responsive: true,
+		var table = $('#tbl_rincian_praktikum').DataTable({
+			responsive: false,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
@@ -230,17 +265,25 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 
 			searchDelay: 500,
+			scrollX: true,
 			processing: true,
 			serverSide: true,
 			ajax: {
-				url: '../source/paket_pengujian.json',
+				url: '../source/rincian_praktikum.json',
 				type: 'POST',
+				
 			},
 			columns: [
-				{data: 'id_pengujian'},
-				{data: 'nama_paket_pengujian'},
-				{data: 'jenis_paket_pengujian'},
-				{data: 'action'},
+				{data: 'no_praktikum'},
+				{data: 'nim_praktikan'},
+				{data: 'nama_praktikan'},
+				{data: 'pertemuan_1',},
+				{data: 'pertemuan_2'},
+				{data: 'pertemuan_3'},
+				{data: 'pertemuan_4'},
+				{data: 'pertemuan_5'},
+				{data: 'pertemuan_6'},
+				{data: 'pertemuan_7'},
 			],
 
 			initComplete: function() {
@@ -253,17 +296,20 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1,2,3],
+					targets: [0, 1, 2, 3, 4,5,6,7,8,9],
 					className: 'text-center'
 				},
 				{
-					targets: -1,
-					title: 'Aksi',
-					className: 'text-center',
-					orderable: false,
+					targets: [3,,4,5,6,7,8,9],
 					render: function(data, type, full, meta) {
-						return `
-                        <a data-toggle="modal" data-target="#pesan_paket_pengujian" class="btn btn-sm btn-success" style="color:white; width:80px;">Pesan</a>`;
+						var status = {
+							1: {'title': '', 'class': ' fa fa-check'},
+							0: {'title': '', 'class': 'fa fa-times'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 					},
 				},
 			],
@@ -318,7 +364,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable4 = function() {
 		// begin first table
-		var table = $('#tbl_list_notifikasi').DataTable({
+		var table = $('#tbl_list_appointment').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -337,19 +383,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: true,
 			ajax: {
-				url: '../source/notifikasi.json',
+				url: '../source/list_appointment.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_notifikasi','tanggal', 'waktu',  'keterangan'],
-				},
+				
 			},
 			columns: [
-				{data: 'id_notifikasi'},
-				{data: 'tanggal'},
+				{data: 'no_appointment'},
+				{data: 'id_appointment'},
+				{data: 'nama'},
+				{data: 'e-mail',},
+				{data: 'pilihan_lab'},
+				{data: 'tanggal_janjian'},
 				{data: 'waktu'},
-				{data: 'keterangan'},
+				{data: 'keperluan'}
 			],
 
 			initComplete: function() {
@@ -361,10 +407,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 
 			columnDefs: [
-				{
-					targets: [0,1,2,3],
-					className: 'text-center'
-				},
+	
 			],
 		});
 
@@ -417,7 +460,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable5 = function() {
 		// begin first table
-		var table = $('#tbl_list_daftar_pesanan').DataTable({
+		var table = $('#tbl_daftar_permohonan').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -436,16 +479,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: true,
 			ajax: {
-				url: '../source/pesanan.json',
+				url: '../source/daftar_permohonan.json',
 				type: 'POST',
 				
 			},
 			columns: [
-				{data: 'id_paket'},
-				{data: 'nama_paket'},
+				{data: 'no'},
+				{data: 'nama_lab'},
+				{data: 'paket_pengujian'},
+				{data: 'jenis'},
+				{data: 'nama_kegiatan'},
 				{data: 'jumlah'},
-				{data: 'waktu'},
-				{data: 'harga'},
+				{data: 'tanggal'},
+				{data: 'durasi'},
 				{data: 'aksi'},
 			],
 
@@ -465,19 +511,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#ubah_pesanan" class="btn btn-sm btn-success" style="color:white;">Ubah</a>`;
+                        <a href="rincian_daftar_permohonan.html" class="btn btn-sm btn-warning" style="color:#212121;">Rincian</a>`;
 					},
 				},
 				{
-					targets: 0,
-					title: '#',
-					className: 'text-center',
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-                        <input type="checkbox"></input`;
-					},
+					targets: [0, 1, 2, 3, 4,5,6,7],
+					className: 'text-center'
 				},
+				
 			],
 		});
 
@@ -577,7 +618,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#upload_bukti_pembayaran" class="btn btn-sm btn-success" style="color:white;">Upload</a>`+' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Cetak</a>';
+                        <a class="btn btn-sm btn-success" style="color:white;">Terima</a>`+' <a class="btn btn-sm btn-danger" style="color:white;">Tolak</a>';
 					},  
 				},
 				{
@@ -654,229 +695,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
-	var initTable7 = function() {
-		// begin first table
-		var table = $('#tbl_invoice').DataTable({
-			responsive: true,
-			// Pagination settings
-			dom: `<'row'<'col-sm-12'tr>>
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-			// read more: https://datatables.net/examples/basic_init/dom.html
-
-			lengthMenu: [5, 10, 25, 50],
-
-			pageLength: 10,
-
-			language: {
-				'lengthMenu': 'Display _MENU_',
-			},
-
-			searchDelay: 500,
-			processing: true,
-			serverSide: true,
-			paging: false,
-			ajax: {
-				url: '../source/invoice.json',
-				type: 'POST',
-				
-			},
-			columns: [
-				{data: 'no'},
-				{data: 'nama_paket'},
-				{data: 'jumlah'},
-				{data: 'waktu'},
-				{data: 'harga_paket'},
-			],
-
-			initComplete: function() {
-				this.api().columns().every(function() {
-					var column = this;
-
-				
-				});
-			},
-
-			columnDefs: [
-				
-				{
-					targets: [0,2,-1],
-					className: 'text-center'
-				},
-				
-				
-			],
-		});
-
-		var filter = function() {
-			var val = $.fn.dataTable.util.escapeRegex($(this).val());
-			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
-		};
-
-		var asdasd = function(value, index) {
-			var val = $.fn.dataTable.util.escapeRegex(value);
-			table.column(index).search(val ? val : '', false, true);
-		};
-
-		$('#kt_search').on('click', function(e) {
-			e.preventDefault();
-			var params = {};
-			$('.kt-input').each(function() {
-				var i = $(this).data('col-index');
-				if (params[i]) {
-					params[i] += '|' + $(this).val();
-				}
-				else {
-					params[i] = $(this).val();
-				}
-			});
-			$.each(params, function(i, val) {
-				// apply search params to datatable
-				table.column(i).search(val ? val : '', false, false);
-			});
-			table.table().draw();
-		});
-
-		$('#kt_reset').on('click', function(e) {
-			e.preventDefault();
-			$('.kt-input').each(function() {
-				$(this).val('');
-				table.column($(this).data('col-index')).search('', false, false);
-			});
-			table.table().draw();
-		});
-
-		$('#kt_datepicker').datepicker({
-			todayHighlight: true,
-			templates: {
-				leftArrow: '<i class="la la-angle-left"></i>',
-				rightArrow: '<i class="la la-angle-right"></i>',
-			},
-		});
-
-	};
-	var initTable8 = function() {
-		// begin first table
-		var table = $('#tbl_jadwal_praktikum').DataTable({
-			responsive: true,
-			// Pagination settings
-			dom: `<'row'<'col-sm-12'tr>>
-			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-			// read more: https://datatables.net/examples/basic_init/dom.html
-
-			lengthMenu: [5, 10, 25, 50],
-
-			pageLength: 10,
-
-			language: {
-				'lengthMenu': 'Display _MENU_',
-			},
-
-			searchDelay: 100,
-			processing: true,
-			serverSide: true,
-			ajax: {
-				url: '../source/jadwal_praktikum.json',
-				type: 'POST',
-			},
-			columns: [
-				{data: 'id_praktikum'},
-				{data: 'nama_praktikum'},
-				{data: 'tempat_praktikum'},
-				{data: 'semester'},
-				{data: 'tahun_ajaran'},
-				{data: 'status_praktikum', responsivePriority: -1},
-				{data: 'download'},
-			],
-
-			initComplete: function() {
-				this.api().columns().every(function() {
-					var column = this;
-
-				
-				});
-			},
-
-			columnDefs: [
-				{
-					targets: -1,
-					title: 'Aksi',
-					width: 150,
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-                        <a href="#" class="btn btn-sm btn-success" style="color:white;margin-bottom:5px" target="_blank">Modul</a>`+' <a href="#" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Format Laporan</a>';
-					},
-				},
-				{
-					targets: [0,1,2,3,4,5,6],
-					className: 'text-center'
-				},
-				{
-					targets: 5,
-					width: 220,
-					render: function(data, type, full, meta) {
-						var status = {
-							terverifikasi: {'title': 'Terverifikasi', 'class': ' btn-label-success'},
-							belum: {'title': 'Belum Terverifikasi', 'class': ' btn-label-warning'},
-						};
-						if (typeof status[data] === 'undefined') {
-							return data;
-						}
-						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
-					},
-				},
-				
-				
-			],
-		});
-
-		var filter = function() {
-			var val = $.fn.dataTable.util.escapeRegex($(this).val());
-			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
-		};
-
-		var asdasd = function(value, index) {
-			var val = $.fn.dataTable.util.escapeRegex(value);
-			table.column(index).search(val ? val : '', false, true);
-		};
-
-		$('#kt_search').on('click', function(e) {
-			e.preventDefault();
-			var params = {};
-			$('.kt-input').each(function() {
-				var i = $(this).data('col-index');
-				if (params[i]) {
-					params[i] += '|' + $(this).val();
-				}
-				else {
-					params[i] = $(this).val();
-				}
-			});
-			$.each(params, function(i, val) {
-				// apply search params to datatable
-				table.column(i).search(val ? val : '', false, false);
-			});
-			table.table().draw();
-		});
-
-		$('#kt_reset').on('click', function(e) {
-			e.preventDefault();
-			$('.kt-input').each(function() {
-				$(this).val('');
-				table.column($(this).data('col-index')).search('', false, false);
-			});
-			table.table().draw();
-		});
-
-		$('#kt_datepicker').datepicker({
-			todayHighlight: true,
-			templates: {
-				leftArrow: '<i class="la la-angle-left"></i>',
-				rightArrow: '<i class="la la-angle-right"></i>',
-			},
-		});
-
-	};
+	
+	
 
 	return {
 
@@ -888,8 +708,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable4();
 			initTable5();
 			initTable6();
-			initTable7();
-			initTable8();
 		},
 
 	};

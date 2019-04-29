@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nim": "D42113016",
+                 "nama_praktikan": "Ahmad Rifaldi",
+                 "nama_praktikum": "Mekanika Tanah 1",
+                 "semester": "4",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "terverifikasi",
+                 "aksi": null
+             },
+             {
+                 "no": 2,
+                 "nim": "D42113016",
+                 "nama_praktikan": "Ahmad Rifaldi",
+                 "nama_praktikum": "Mekanika Tanah 1",
+                 "semester": "4",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "terverifikasi",
+                 "aksi": null
+             },
+             {
+                 "no": 3,
+                 "nim": "D42113016",
+                 "nama_praktikan": "Ahmad Rifaldi",
+                 "nama_praktikum": "Mekanika Tanah 1",
+                 "semester": "4",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "terverifikasi",
+                 "aksi": null
+             }
+]
+}

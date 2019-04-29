@@ -10,7 +10,8 @@
                  "semester": "2",
                  "tahun_ajaran": "2018/2019",
                  "status_praktikum": "terverifikasi",
-                 "download": null
+                 "download": null,
+                 "aksi": null
              },
              {
                  "id_praktikum": 2,
@@ -19,7 +20,8 @@
                  "semester": "2",
                  "tahun_ajaran": "2018/2019",
                  "status_praktikum": "belum",
-                 "download": null
+                 "download": null,
+                 "aksi" : null
              }
 ]
 }

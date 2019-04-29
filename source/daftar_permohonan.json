@@ -1,0 +1,40 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_lab": "Laboratorium A",
+                 "paket_pengujian": "Paket 1",
+                 "jenis": "jenis 1",
+                 "nama_kegiatan" :"Kegiatan A",
+                 "jumlah":"2",
+                 "tanggal": "19 Maret 2019",
+                 "durasi": "2 hari",
+                 "aksi": null
+             },
+             {
+                "no": 2,
+                 "nama_lab": "Laboratorium B",
+                 "paket_pengujian": "Paket 2",
+                 "jenis": "jenis 2",
+                 "nama_kegiatan" :"Kegiatan A",
+                 "jumlah":"2",
+                 "tanggal": "19 Maret 2019",
+                 "durasi": "2 hari",
+                 "aksi": null
+             },
+             {
+                 "no": 3,
+                 "nama_lab": "Laboratorium C",
+                 "paket_pengujian": "Paket 2",
+                 "jenis": "jenis 3",
+                 "nama_kegiatan" :"Kegiatan A",
+                 "jumlah":"2",
+                 "tanggal": "19 Maret 2019",
+                 "durasi": "2 hari",
+                 "aksi": null
+             }
+]
+}

@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nim": "D42113015",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_praktikum": "Praktikum A",
+                 "semester": "2",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "terverifikasi",
+                 "aksi" :null
+             },
+             {
+                 "no": 2,
+                 "nim": "D42113016",
+                 "nama": "Fascal Ivandry",
+                 "nama_praktikum": "Praktikum B",
+                 "semester": "4",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "terverifikasi",
+                 "aksi" :null
+             },
+             {
+                 "no": 3,
+                  "nim": "D42113017",
+                 "nama": "Aigi Walie",
+                 "nama_praktikum": "Praktikum A",
+                 "semester": "2",
+                 "tahun_ajaran": "2018/2019",
+                 "status": "belum",
+                 "aksi" :null
+             }
+]
+}

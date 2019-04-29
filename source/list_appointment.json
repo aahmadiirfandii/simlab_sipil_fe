@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 2,
+    "iTotalDisplayRecords": 2,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no_appointment": 1,
+                 "id_appointment": "12334",
+                 "nama": "Ahmad Rifaldi",
+                 "e-mail": "aldi4rifaldi@gmail.com",
+                 "pilihan_lab": "Lab Hidrolika",
+                 "tanggal_janjian": "20/11/2019",
+                 "waktu": "10.10",
+                 "keperluan": "Janjian dengan asisten laboratorium"
+             },
+             {
+                  "no_appointment": 2,
+                 "id_appointment": "12334",
+                 "nama": "Ahmad Rifaldi",
+                 "e-mail": "aldi4rifaldi@gmail.com",
+                 "pilihan_lab": "Lab Tanah",
+                 "tanggal_janjian": "20/11/2019",
+                 "waktu": "10.10",
+                 "keperluan": "Janjian dengan asisten laboratorium"
+             },
+             {
+                  "no_appointment": 3,
+                 "id_appointment": "12334",
+                 "nama": "Ahmad Rifaldi",
+                 "e-mail": "aldi4rifaldi@gmail.com",
+                 "pilihan_lab": "Lab Eco",
+                 "tanggal_janjian": "20/11/2019",
+                 "waktu": "10.10",
+                 "keperluan": "Janjian dengan asisten laboratorium"
+             }
+]
+}
