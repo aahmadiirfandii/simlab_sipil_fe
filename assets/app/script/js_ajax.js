@@ -133,7 +133,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: {
 					// parameters for custom backend script demo
 					columnsDef: [
-						'id_alat', 'gambar_alat', 'nama_alat', 'fungsi_utama', 'jumlah_alat',],
+						'id_alat', 'gambar_alat', 'nama_alat', 'fungsi_utama', 'jumlah_alat','aksi'],
 				},
 			},
 			columns: [
@@ -142,6 +142,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'nama_alat'},
 				{data: 'fungsi_utama'},
 				{data: 'jumlah_alat'},
+				{data: 'aksi'},
 			],
 
 			initComplete: function() {
@@ -154,9 +155,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1, 2, 3, 4],
+					targets: [0, 1, 2, 3, 4,5],
 					className: 'text-center'
-				}
+				},
+				{
+					targets: -1,
+					title: 'Aksi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+						<a data-toggle="modal" data-target="#rincian_alat" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+					},
+				},
 			],
 		});
 
@@ -235,6 +245,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'id_pengujian'},
 				{data: 'nama_paket_pengujian'},
 				{data: 'jenis_paket_pengujian'},
+				{data: 'durasi_paket_pengujian'},
+				{data: 'harga_paket_pengujian'},
+				
 
 			],
 
@@ -248,7 +261,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1,2],
+					targets: [0, 1,2,3,4],
 					className: 'text-center'
 				}
 			],

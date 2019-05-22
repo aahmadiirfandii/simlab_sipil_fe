@@ -1,0 +1,69 @@
+.kt-header .kt-header__top {
+height: 70px;
+}
+.kt-header {
+background: #eb2629;
+}
+.kt-header-mobile {
+background: #eb2629;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active) > .kt-menu__link {
+background-color: #0e3e871f;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+color: white;
+font-size: 1.3rem;
+}
+.kt-footer .kt-footer__bottom {
+background-color: #0e3e87;
+}
+.kt-footer .kt-footer__bottom .kt-footer__logo .kt-footer__copyright {
+color: white;
+}
+.login-mobile {
+	font-size: 1.2rem;
+	color: white;
+	font-weight: 500;
+}
+.flaticon2-user,.registration {
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 600;
+
+}
+.kt-header .kt-header__bottom {
+	background-color: #c52426;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
+	background-color:#a22324 !important;
+}
+.dropdown-inline:hover {
+	background-color: #c82426;
+}
+.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item .kt-menu__submenu .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+    color: #ffffff;
+}
+i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
+	color: white;
+}
+
+@media (max-width: 1024px) {
+	.kt-header .kt-header__top {
+		height: 0px;
+	}
+	.kt-header-menu-mobile {
+		background-color: #eb2629;
+	}
+	.kt-header-menu-wrapper {
+		background: #eb2629;
+	}
+	.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__link {
+		background-color: #0d3879;
+	}
+	.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__heading .kt-menu__link-text, .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__link .kt-menu__link-text {
+		color: #ffffff;
+	}
+	.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
+		color: #ffffff;
+	}
+}

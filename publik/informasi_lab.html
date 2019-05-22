@@ -66,17 +66,10 @@
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
-	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<style>
 		.kt-container {
 			padding: 0 10px !important;
-		}
-		.kt-header .kt-header__top {
-			height: 70px;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-			color: #f7df3a;
-			font-size: 1.3rem;
 		}
 		.kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
 			font-size: 1.8rem;
@@ -175,6 +168,28 @@
 		}
 	}
 </style>
+<style type="text/css">
+		.badge-color-red {
+			background-color: #F50057 !important;
+			color: white !important;
+			font-size: 1rem;
+		}
+		.badge-color-blue {
+			background-color: #1565C0 !important;
+			color: white !important;
+			font-size: 1rem;
+		}
+		.badge-color-yellow {
+			background-color: #FFA000 !important;
+			color: white !important;
+			font-size: 1rem;
+		}
+		.badge-color-green {
+			background-color: #558B2F !important;
+			color: white !important;
+			font-size: 1rem;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -190,8 +205,7 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button data-toggle="modal" data-target="#kt_modal_masuk" class="btn btn-dark">Masuk</button>
-			<button data-toggle="modal" data-target="#kt_modal_daftar" class="btn btn-dark">Daftar</button>
+			<a href="login.html" class="btn login-mobile">Login</a>
 		</div>
 	</div>
 
@@ -213,17 +227,12 @@
 							<!-- begin:: Header Topbar -->
 							<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
 								<!-- Header Sebelah Kanan -->
-								<div style="margin-bottom: 0.5vw;margin-left: 63vw;" class="offset-md-10 col-md-2">
+								<div style="margin-bottom: 0.5vw;" class="offset-md-10 col-md-2">
 									<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 										<ul class="kt-menu__nav ">
 											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-												<a id="login" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_masuk">
-													<span class="kt-menu__link-text registration">Masuk</span>
-												</a>
-											</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-												<a id="daftar" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_daftar">
-													<span class="kt-menu__link-text registration">Daftar</span>
+												<a id="daftar" class="kt-menu__link" href="login.html">
+													<span class="kt-menu__link-text registration">Login</span>
 												</a>
 											</li>
 										</ul>
@@ -255,7 +264,10 @@
 										<a class="nav-link" data-toggle="tab" href="#kt_tabs_alat">Alat</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#kt_tabs_paket_pengujian">Paket Pengujian</a>
+										<a class="nav-link" data-toggle="tab" href="#kt_tabs_layanan_lab">Layanan Lab</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#kt_tabs_appointment">Appointment</a>
 									</li>
 								</ul>
 								<div class="tab-content">
@@ -346,12 +358,13 @@
 														<th>Nama Alat</th>
 														<th>Fungsi Utama</th>
 														<th>Jumlah Alat</th>
+														<th>Aksi</th>
 													</tr>
 												</thead>
 											</table>
 										</div>
 									</div>
-									<div class="tab-pane" id="kt_tabs_paket_pengujian" role="tabpanel">
+									<div class="tab-pane" id="kt_tabs_layanan_lab" role="tabpanel">
 										<div class="kt-portlet__body">	
 											<form class="kt-form kt-form--fit ">
 												<div class="row ">	
@@ -368,10 +381,72 @@
 															<th>No</th>
 															<th>Nama Paket Pengujian</th>
 															<th>Jenis</th>
+															<th>Durasi(hari)</th>
+															<th>Harga</th>
 														</tr>
 													</thead>
 												</table>
 											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="kt_tabs_appointment" role="tabpanel">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Buat Appointment</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											</button>
+										</div>
+										<div class="modal-body">
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">ID :</label>
+												<div class="col-9">
+													<input disabled="" class="form-control" type="text" value="ABCD12345" id="id_appointment">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">Nama</label>
+												<div class="col-9">
+													<input class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pembuat_appointment">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">E-Mail</label>
+												<div class="col-9">
+													<input class="form-control" type="email" value="yahoo@gmail.com" id="email_pembuat_appointment">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">Pilihan Lab</label>
+												<div class="col-9">
+													<select class="form-control" id="pilihan_lab">
+														<option active value="0">--Pilih Lab--</option>
+														<option value="1">LAB 1</option>
+														<option value="2">LAB 2</option>
+														<option value="3">LAB 3</option>
+														<option value="4">LAB 4</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">Tgl Janjian</label>
+												<div class="col-9">
+													<input class="form-control" type="date" value="2011-08-19" id="tanggal_janjian_appointment">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">Waktu</label>
+												<div class="col-9">
+													<input class="form-control" type="time" value="10:10:00" id="waktu_janjian">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-3 col-form-label">Keperluan</label>
+												<div class="col-9">
+													<textarea style="resize: none" class="form-control" id="keperluan_appointment" rows="3"></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">	
+											<button onclick="window.open('print_perjanjian.html')" id="btn_proses_appointment" type="submit" class="btn btn-primary">Proses</button>
 										</div>
 									</div>
 								</div>
@@ -505,6 +580,49 @@
 										<td class="ts-0pky">Dalam rangka penyusunan disertasi</td>
 									</tr>
 								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Rincian Alat -->
+				<div class="modal fade" id="rincian_alat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Rincian Alat</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="container">
+									<div class="row">
+										<div class="col-4">
+											<img style="height: auto;width: inherit" src="https://image.indonetwork.co.id/products/thumbs/600x600/2016/03/12/0cb1a43fff6fe1df9c7e722035a8cf9e.jpg">
+										</div>
+										<div class="col-8">
+											<h5>Nama Alat :</h5>
+											<p id="nama_alat">Alat A</p>
+											<h5>Fungsi Utama :</h5>
+											<p id="fungsi_utama_alat">Membaca Beban</p>
+											<h5>Tersedia :</h5>
+											<p id="jumlah_alat">3 Unit</p>
+											<h5>Deskripsi :</h5>
+											<textarea style="resize: none" class="form-control" readonly="" rows="6">Eum ei stet menandri, ad eros dicam democritum sit. Ad probo malorum denique mel, minimum indoctum vix no. Sed ei legere facilisis qualisque, eam tation soleat eu. Cum ut mucius everti periculis, per esse labore pericula at. In euismod assentior nec, eam possim diceret ut. Ut facer soluta efficiendi eos, et ridens graecis eum.</textarea>
+											<h5 style="margin-top: 13px" >Lokasi :</h5>
+											<div>
+												<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-blue">
+													LAB Hidrolika
+												</span>
+												<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded badge-color-yellow">
+													LAB Struktur dan Bahan
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>

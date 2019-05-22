@@ -132,13 +132,21 @@
 		.col-sm-12 {
 			align-items: center;
 		}
+		.btn-search {
+			background-color:#0e3e87 ;
+			border-color:#0e3e87 ;
+		}
+		.btn-search:hover {
+			background-color:#0b2e63 ;
+			border-color:#0b2e63 ;
+		}
 	</style>
 </head>
 
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body style="background-image: url(../assets/demo/demo4/media/bg/header_3.jpg); background-position: center top; background-size: 100% 350px;" class="kt-page--loading-enabled kt-page--loading kt-header--minimize-menu kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+<body style="background-image: url(../assets/demo/demo4/media/bg/header_4.jpg); background-position: center top; background-size: 100% 350px;" class="kt-page--loading-enabled kt-page--loading kt-header--minimize-menu kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
 	<!-- begin::Page loader -->
 
@@ -154,8 +162,11 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button data-toggle="modal" data-target="#kt_modal_masuk" class="btn btn-light">Masuk</button>
-			<button data-toggle="modal" data-target="#kt_modal_daftar" class="btn btn-light">Daftar</button>
+			<div style="font-weight: 600;color: #212121">
+				<a name="login" class="kt-menu__link" href="login.html">
+					<span class="kt-menu__link-text registration">Login</span>
+				</a>
+			</div>
 		</div>
 	</div>
 
@@ -181,17 +192,12 @@
 						<!-- begin:: Header Topbar -->
 						<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
 							<!-- Header Sebelah Kanan -->
-							<div style="margin-bottom: 20px;margin-left: 56vw;" class="offset-md-10 col-md-2">
+							<div style="margin-bottom: 20px;" class="offset-md-11 col-md-1">
 								<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 									<ul class="kt-menu__nav ">
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-											<a id="login" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_masuk">
-												<span class="kt-menu__link-text registration">Masuk</span>
-											</a>
-										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-											<a id="daftar" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_daftar">
-												<span class="kt-menu__link-text registration">Daftar</span>
+											<a name="login" class="kt-menu__link" href="login.html">
+												<span class="kt-menu__link-text registration">Login</span>
 											</a>
 										</li>
 									</ul>
@@ -210,10 +216,6 @@
 							<div align="center" class="kt-subheader kt-grid__item" id="kt_subheader">
 								<div  class="kt-subheader__main">
 									<h2 class="kt-subheader__title">SIMLAB SIPIL UNHAS</h2>
-									<!-- <button class="btn btn-secondary btn_appointment" style="color: white" data-toggle="modal" data-target="#kt_modal_appointment" >
-										BUAT JANJI
-									</button> -->
-									<button onclick="location.href = 'appointment.html';" type="button" class="btn btn-secondary btn-wide btn_buat_janji">Buat Janji</button>
 								</div>
 							</div>
 							<!-- BAGIAN SEARCHING -->
@@ -224,7 +226,7 @@
 												<div class="row">
 													<div class="col-sm-3">
 														<select class="form-control kt-input" data-col-index="2">
-															<option value="">--Pilij Jenis--</option>
+															<option value="">--Pilih Jenis--</option>
 															<option value="1">Alat</option>
 															<option value="2">Kegiatan</option>
 															<option value="3">Paket Pengujian</option>
@@ -234,8 +236,8 @@
 														<input id="searchbar" type="text" class="form-control kt-input" placeholder="cari disini">		
 													</div>
 													<div class="col-sm-1">
-														<button style="width: 100%" class="btn btn-warning">
-															<span style="color: #424242" class="fa fa-search"></span>
+														<button style="width: 100%" class="btn btn-warning btn-search">
+															<span style="color: #ffffff" class="fa fa-search"></span>
 														</button>
 													</div>
 												</div>
@@ -322,141 +324,10 @@
 				</div>
 
 				<!--begin::Modal-->
-				<!-- Buat Janji -->
-				<div class="modal fade" id="kt_modal_appointment" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Buat Janji</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pembuat_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">E-Mail</label>
-									<div class="col-9">
-										<input class="form-control" type="email" value="yahoo@gmail.com" id="email_pembuat_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Pilihan Lab</label>
-									<div class="col-9">
-										<select class="form-control" id="pilihan_lab">
-											<option active value="0">--Pilih Lab--</option>
-											<option value="1">LAB 1</option>
-											<option value="2">LAB 2</option>
-											<option value="3">LAB 3</option>
-											<option value="4">LAB 4</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tgl Janjian</label>
-									<div class="col-9">
-										<input class="form-control" type="date" value="2011-08-19" id="tanggal_janjian_appointment">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Waktu</label>
-									<div class="col-9">
-										<input class="form-control" type="time" value="10:10:00" id="waktu_janjian">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Keperluan</label>
-									<div class="col-9">
-										<textarea style="resize: none" class="form-control" id="keperluan_appointment" rows="3"></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button id="btn_tutup_modal_appointment" type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button id="btn_simpan_modal_appointment" type="submit" class="btn btn-primary">Simpan</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Login -->
-				<div class="modal fade" id="kt_modal_masuk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content modal-content-edit">
-							<div class="modal-body">
-								<div class="form-group row">
-									<img style="width: auto;height: 70px;margin-left: 75px;margin-bottom: 25px" src="../assets/media/logos/logo_1.png">
-									<div align="center" class="col-xl-12"> 
-										<h3 style="color: white">LOGIN</h3>
-									</div>
-									<div class="col-12 login">
-										<input class="form-control" type="email" value="" id="email_login" placeholder="masukkan email">
-									</div>
-									<div class="col-12 login">
-										<input class="form-control" type="password" value="" id="password_login" placeholder="masukkan password">
-									</div>
-								</div>
-							</div>
-							<div style="display: block" align="center" class="modal-footer modal-footer-edit">
-								<button type="submit" class="btn btn-secondary btn-taller btn_login">Login</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Daftar -->
-				<div class="modal fade" id="kt_modal_daftar" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Daftar</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Nama</label>
-									<div class="col-9">
-										<input class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pendaftar">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Pekerjaan</label>
-									<div class="col-9">
-										<select class="form-control" id="tipe_akun">
-											<option active value="0">--Pilih pekerjaan--</option>
-											<option value="1">Umum</option>
-											<option value="2">Dosen</option>
-											<option value="3">Mahasiswa</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Password</label>
-									<div class="col-9">
-										<input class="form-control" type="password" value="" id="password_pendaftar">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Konfirmasi Password</label>
-									<div class="col-9">
-										<input class="form-control" type="password" value="" id="konfirmasi_password">
-									</div>
-									<label style="display: block; color: red" class="offset-3 col-9" >Password tidak cocok</label>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button id="btn_tutup_modal_daftar" type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button id="btn_buat_akun" type="submit" class="btn btn-primary">Buat Akun</button>
-							</div>
-						</div>
-					</div>
-				</div>
+		
 				<!--end::Modal-->
 				<!-- begin:: Footer -->
-				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer" style="background-image: url('../assets/media/bg/demo4-bg-footer.jpg');">
+				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer" style="background-color: #0e3e87">
 					<div class="kt-footer__bottom">
 						<div class="kt-container">
 							<div class="kt-footer__wrapper">

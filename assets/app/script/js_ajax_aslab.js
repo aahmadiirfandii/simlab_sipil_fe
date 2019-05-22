@@ -194,7 +194,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="#" class="btn btn-sm btn-success download-modul" style="color:white;" target="_blank">Modul</a>`+' <a href="#" class="btn btn-sm btn-primary" style="color:white;" target="_blank">Format Laporan</a>';
+                        <a data-toggle="modal" data-target="#upload_modul" class="btn btn-sm btn-success download-modul" style="color:white;">Modul</a>`+' <a data-toggle="modal" data-target="#upload_format_laporan" class="btn btn-sm btn-primary" style="color:white;">Format Laporan</a>';
 					},
 				},
 			],

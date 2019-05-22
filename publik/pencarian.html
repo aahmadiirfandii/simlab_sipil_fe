@@ -67,14 +67,8 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<style>
-		.kt-header .kt-header__top {
-			height: 70px;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-			color: #f7df3a;
-			font-size: 1.3rem;
-		}
 		.kt-subheader__title {
 			font-size: 3rem !important;
 		}
@@ -128,6 +122,14 @@
 		}
 		.informasi_pencarian p {
 			font-size: 1.2rem;
+		}
+		.btn-warning{
+			background-color:  #0e3e87;
+			border-color:  #0e3e87;
+		}
+		.btn-warning:hover{
+			background-color: #0e3e87cf;
+			border-color: #0e3e87cf;
 		}
 		@media (max-width: 768px) {
 			.kt-header .kt-header__top {
@@ -183,8 +185,7 @@
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
-			<button data-toggle="modal" data-target="#kt_modal_masuk" class="btn btn-dark">Masuk</button>
-			<button data-toggle="modal" data-target="#kt_modal_daftar" class="btn btn-dark">Daftar</button>
+			<a href="login.html" class="btn login-mobile">Login</a>
 		</div>
 	</div>
 
@@ -206,17 +207,12 @@
 							<!-- begin:: Header Topbar -->
 							<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
 								<!-- Header Sebelah Kanan -->
-								<div style="margin-bottom: 0.5vw;margin-left: 63vw;" class="offset-md-10 col-md-2">
+								<div style="margin-bottom: 0.5vw;" class="offset-md-10 col-md-2">
 									<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 										<ul class="kt-menu__nav ">
 											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-												<a id="login" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_masuk">
-													<span class="kt-menu__link-text registration">Masuk</span>
-												</a>
-											</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-												<a id="daftar" class="kt-menu__link kt-menu__toggle" data-toggle="modal" data-target="#kt_modal_daftar">
-													<span class="kt-menu__link-text registration">Daftar</span>
+												<a id="daftar" class="kt-menu__link" href="login.html">
+													<span class="kt-menu__link-text registration">Login</span>
 												</a>
 											</li>
 										</ul>
@@ -246,7 +242,7 @@
 										</div>
 										<div class="col-sm-1">
 											<button style="width: 100%" class="btn btn-warning">
-												<span style="color: #424242" class="fa fa-search"></span>
+												<span style="color: white" class="fa fa-search"></span>
 											</button>
 										</div>
 									</div>

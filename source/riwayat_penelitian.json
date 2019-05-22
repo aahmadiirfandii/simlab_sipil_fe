@@ -1,0 +1,19 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "tanggal_permohonan": "20 november 2019",
+                 "judul_penelitian": "Nama Penelitian",
+                 "jenis_penelitian": "Tugas Akhir",
+                 "laboratorium": "Laboratorium A",
+                 "nama_pengujian" : "Pengujian A",
+                 "tanggal_mulai": "10 November 2019",
+                 "tanggal_selesai": "10 November 2019",
+                 "status" : "konfirmasi",
+                 "aksi" : "rincian"
+             }
+]
+}
