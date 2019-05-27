@@ -1557,7 +1557,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable15 = function() {
 		// begin first table
-		var table = $('#tbl_list_riwayat_dosen').DataTable({
+		var table = $('#tbl_list_riwayat_layanan_dosen').DataTable({
 			responsive: true,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
@@ -1619,7 +1619,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						var status = {
 							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
 							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
-							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							batal: {'title': 'Dibatalkan', 'class': ' btn-label-danger'},
 							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
 							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
 							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
