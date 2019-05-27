@@ -7,12 +7,28 @@
                  "no": 1,
                  "tanggal_permohonan": "20 november 2019",
                  "judul_penelitian": "Nama Penelitian",
+                 "judul_kegiatan": "Nama Kegiatan Lab",
                  "jenis_penelitian": "Tugas Akhir",
+                 "nama_pemohon" : "Fascal Ivandry",
                  "laboratorium": "Laboratorium A",
                  "nama_pengujian" : "Pengujian A",
                  "tanggal_mulai": "10 November 2019",
                  "tanggal_selesai": "10 November 2019",
                  "status" : "konfirmasi",
+                 "aksi" : "rincian"
+             },
+             {
+                 "no": 2,
+                 "tanggal_permohonan": "22 november 2019",
+                 "judul_penelitian": "Nama Penelitian",
+                 "judul_kegiatan": "Nama Kegiatan Lab",
+                 "jenis_penelitian": "Tugas Akhir",
+                 "nama_pemohon" : "Asep Surasep",
+                 "laboratorium": "Laboratorium A",
+                 "nama_pengujian" : "Pengujian A",
+                 "tanggal_mulai": "25 November 2019",
+                 "tanggal_selesai": "25 November 2019",
+                 "status" : "ditolak",
                  "aksi" : "rincian"
              }
 ]
