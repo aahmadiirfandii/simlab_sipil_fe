@@ -28,17 +28,16 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			ajax: {
 				url: '../source/kegiatan.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'id_kegiatan', 'nama_kegiatan', 'jenis_kegiatan', 'waktu', 'Aksi',],
-				},
 			},
 			columns: [
 				{data: 'id_kegiatan'},
+				{data: 'nama'},
 				{data: 'nama_kegiatan'},
 				{data: 'jenis_kegiatan'},
-				{data: 'waktu'},
+				{data: 'instansi'},
+				{data: 'tanggal_mulai'},
+				{data: 'tanggal_selesai'},
+				{data: 'status'},
 				{data: 'Aksi', responsivePriority: -1},
 			],
 
@@ -52,12 +51,35 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
+					targets: [0, 1, 2, 3, 4,5,6,7,8],
+					className: 'text-center'
+				},
+				{
 					targets: -1,
 					title: 'Aksi',
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#rincian_kegiatan" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+                        <a class="btn btn-sm btn-warning btn_rincian" style="color:white;">Published</a>` 
+                        	+ '<a href="rincian_kegiatan.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>';
+					},
+				},
+				{
+					targets: 7,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
+							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 					},
 				},
 				
@@ -896,12 +918,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			columns: [
 				{data: 'no'},
 				{data: 'tanggal_permohonan'},
+				{data: 'nama_pemohon'},
+				{data: 'instansi'},
 				{data: 'judul_kegiatan'},
-				{data: 'no_invoice'},
-				{data: 'laboratorium'},
-				{data: 'nama_pengujian'},
-				{data: 'tanggal_mulai'},
-				{data: 'tanggal_selesai'},
+				{data: 'jenis_kegiatan'},
 				{data: 'status'},
 				{data: 'aksi'},
 				],
@@ -916,7 +936,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5,6,7,8,9],
+					targets: [0,1,2,3,4,5,6,7],
 					className: 'text-center'
 				},
 				{
@@ -929,13 +949,13 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					},
 				},
 				{
-					targets: 8,
+					targets: 6,
 					width: 200,
 					render: function(data, type, full, meta) {
 						var status = {
 							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
 							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
-							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							batal: {'title': 'Dibatalkan', 'class': ' btn-label-danger'},
 							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
 							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
 							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
@@ -1231,12 +1251,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			columns: [
 				{data: 'no'},
 				{data: 'tanggal_permohonan'},
-				{data: 'judul_penelitian'},
-				{data: 'jenis_penelitian'},
-				{data: 'laboratorium'},
-				{data: 'nama_pengujian'},
-				{data: 'tanggal_mulai'},
-				{data: 'tanggal_selesai'},
+				{data: 'nama_pemohon'},
+				{data: 'judul_kegiatan'},
 				{data: 'status'},
 				{data: 'aksi'},
 				],
@@ -1251,7 +1267,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5,6,7,8,9],
+					targets: [0,1,2,3,4,5],
 					className: 'text-center'
 				},
 				{
@@ -1264,7 +1280,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					},
 				},
 				{
-					targets: 8,
+					targets: 4,
 					width: 200,
 					render: function(data, type, full, meta) {
 						var status = {
@@ -1361,6 +1377,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'tanggal_mulai'},
 				{data: 'jam_mulai'},
 				{data: 'jam_selesai'},
+				{data: 'aksi'},
 				],
 
 			initComplete: function() {
@@ -1373,10 +1390,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4],
+					targets: [0,1,2,3,4,5],
 					className: 'text-center'
 				},
-				
+				{
+					targets: -1,
+					title: 'Aksi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a class="btn btn-sm btn-warning" style="color:white;">Pengujian Selesai</a>`;
+					},
+				},
 				
 				
 			],
@@ -1530,6 +1555,131 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable15 = function() {
+		// begin first table
+		var table = $('#tbl_list_riwayat_dosen').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/riwayat_layanan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'no'},
+				{data: 'tanggal_permohonan'},
+				{data: 'nama_pemohon'},
+				{data: 'judul_kegiatan'},
+				{data: 'jenis_kegiatan'},
+				{data: 'sumber_dana'},
+				{data: 'status'},
+				{data: 'aksi'},
+				],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6,7],
+					className: 'text-center'
+				},
+				{
+					targets: -1,
+					title: 'Aksi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a href="rincian_riwayat.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+					},
+				},
+				{
+					targets: 6,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
+							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 
 	return {
 
@@ -1549,6 +1699,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable12();
 			initTable13();
 			initTable14();
+			initTable15();
 		},
 
 	};
