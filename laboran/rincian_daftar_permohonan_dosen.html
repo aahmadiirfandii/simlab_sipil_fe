@@ -4,7 +4,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Rincian Praktikum | Laboran</title>
+	<title>Rincian Permohonan Dosen | Laboran</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -65,11 +65,8 @@
 	<!--end::Global Theme Styles -->
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
-	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
-	<!-- X-Editable -->
-	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css" rel="stylesheet"/>
-	<!-- End: X-Editable -->
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<style>
 		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
@@ -78,16 +75,6 @@
 		}
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 			font-size: 1rem;
-		}
-		.dataTables_wrapper .dataTable th, .dataTables_wrapper .dataTable td {
-			font-size: 1.2rem;
-		}
-		a {
-			color: #212121;
-		}
-		.editable-click, a.editable-click, a.editable-click:hover {
-			color: #657be6;
-			border-bottom: transparent;
 		}
 	</style>
 </head>
@@ -195,7 +182,7 @@
 												<span class="kt-menu__link-text ">Permohonan Layanan</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Praktikum</span>
 											</a>
@@ -225,7 +212,7 @@
 												<span class="kt-menu__link-text ">Appointment</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Permohonan Pengujian</span>
 											</a>
@@ -269,66 +256,207 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 					<div class="col-sm-12">
 						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 							<div class="kt-subheader__main">
-								<a href="verifikasi.html"><h3 class="kt-subheader__title">Praktikum</h3></a>
+								<a href="verifikasi.html"><h3 class="kt-subheader__title">Permohonan Pengujian</h3></a>
 								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="jadwal_praktikum.html"><span class="kt-subheader__desc">Jadwal Praktikum</span></a>
+								<a href="daftar_permohonan.html"><span class="kt-subheader__desc">Daftar Permohonan</span></a>
 								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="rincian_praktikum.html"><span class="kt-subheader__desc">Rincian praktikum</span></a>
+								<a href="#"><span class="kt-subheader__desc">Rincian Permohonan Dosen</span></a>
 							</div>
 						</div>
 					</div>
 					<div class="kt-portlet">
-						<div style="width: 100%" class="kt-portlet__head">
-							<div style="width: 100%" class="kt-portlet__head-label">
-								<div style="width: 100%" class="kt-portlet__head-label">
-									<div style="width: 100%" class="row">
-										<div class="col-sm">
-											<h3 style="margin-top: 5px" class="kt-portlet__head-title">Mekanika Tanah I</h3>
-										</div>
-										<div class="col-sm">
-											<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
-										</div>
-									</div>
+						<div class="kt-portlet__head">
+							<div class="kt-portlet__head-label">
+								<div class="kt-portlet__head-label">
+									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Rincian Permohonan Dosen </h3>
 								</div>
 							</div>
 						</div>
 						<div class="kt-portlet__body">
-							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_rincian_praktikum">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											No Registrasi
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="A0011111" id="no_registrasi">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Tanggal Permohonan
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_permohonan">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Nama Pemohon
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pemohon">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Judul Penelitian
+										</label>
+										<div class="col-8">
+											<textarea disabled="" style="resize: none" class="form-control" id="judul_penelitian" rows="3">Analisis Power Level Kebisingan Kendaraan Sepeda Motor di Kota Makassar</textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Jenis Kegiatan
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="Penelitian Tugas Akhir (S1)" id="jenis_kegiatan">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Sumber Pendanaan
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="Dana Pribadi" id="sumber_pendanaan">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Kontak
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="085145322xxx" id="kontak_dosen">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Tanggal Mulai
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="-" id="tanggal_mulai">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">
+											Tanggal Selesai
+										</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="-" id="tanggal_selesai">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="kt-portlet__head-label">
+								<h3 style="margin-top: 5px" class="kt-portlet__head-title">Layanan Laboratorium </h3>
+							</div>
+							<table class="table table-striped- table-bordered table-hover " id="tbl_layanan_lab_dosen">
 								<thead>
 									<tr>
-										<th  rowspan="3">No</th>
-										<th  rowspan="3">NIM</th>
-										<th  rowspan="3">Nama</th>
-										<th style="text-align: center;" colspan="7">Pertemuan</th>
-									</tr>
-									<tr>
-										<td style="text-align: center;" >1</td>
-										<td style="text-align: center;" >2</td>
-										<td style="text-align: center;">3</td>
-										<td style="text-align: center;">4</td>
-										<td style="text-align: center;">5</td>
-										<td style="text-align: center;">6</td>
-										<td style="text-align: center;">7</td>
-									</tr>
-									<tr>
-										<td ><a href="#" id="username">tanggal</a></td>
-										<td >06/05/19</td>
-										<td >07/05/19</td>
-										<td >08/05/19</td>
-										<td >09/05/19</td>
-										<td >010/05/19</td>
-										<td >011/05/19</td>
+										<th>No</th>
+										<th>Laboratorium</th>
+										<th>Layanan Lab</th>
+										<th>Tanggal</th>
+										<th>Jam Mulai</th>
+										<th>Jam Selesai</th>
+										<th>Aksi</th>
 									</tr>
 								</thead>
 							</table>
-							
+							<div class="row">
+								<div class="col-sm-6">
+									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">SK Penelitian</button>
+									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">Proposal Penelitian</button>
+								</div>
+								<div align="right" class="col-sm-6">
+									<button class="btn btn-danger">Tolak</button>
+									<button class="btn btn-info">Konfirmasi</button>
+									<a href="daftar_permohonan.html" class="btn btn-warning">Kembali</a>
+								</div>
+							</div>	
 						</div>
 					</div>
 				</div>
+				<!--begin::Modal-->
+				<div class="modal fade" id="kt_modal_rincian_kegiatan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Pemakaian Alat</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Laboratorium</label>
+									<div class="col-8">
+										<input disabled="" class="form-control" type="text" value="Laboratorium A" id="laboratorium">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Layanan Laboratorium</label>
+									<div class="col-8">
+										<input disabled="" class="form-control" type="text" value="Pengujian 1" id="laboratorium">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+									<div class="col-8">
+										<input class="form-control" type="date" value="2011-08-19" id="tanggal">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Jam Mulai</label>
+									<div class="col-8">
+										<input class="form-control" type="time" value="13:45:00" id="jam_mulai">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Jam Selesai</label>
+									<div class="col-8">
+										<input class="form-control" type="time" value="14:45:00" id="jam_selesai">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Status</label>
+									<div class="col-8">
+										<span style="font-size: 1rem;padding: 15px" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Terkonfirmasi</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Petugas</label>
+									<div class="col-8">
+										<input disabled="" class="form-control" type="text" value="Ai (Laboran)" id="petugas_lab">
+									</div>
+								</div>
+								<table class="table table-striped- table-bordered table-hover table-checkable" id="pemakaian_alat">
+									<thead>
+										<tr>
+											<th>No.</th>
+											<th>Alat</th>
+											<th>Kondisi</th>
+											<th>Catatan</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary"  data-dismiss="modal">Simpan</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end::Modal-->
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 					<div class="kt-footer__bottom">
@@ -463,23 +591,39 @@
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_aslab.js" type="text/javascript"></script>
 
-	<!-- X-Editable -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
-	<script>
-		//turn to inline mode
-		$.fn.editable.defaults.mode = 'inline';
-		$('#username').editable({
-			type: 'text',
-			pk: 1,
-			url: '../assets/script/data-xtable.js',
-			title: 'Enter username'
-		});
-	</script>
-
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
-
+	<script>
+		var Select2 = function() {
+			var demos = function(){
+				$('.dropdown_search, .dropdown_search_validate').select2({
+					placeholder: "Select a state"
+				});
+			}
+			var modalDemos = function(){
+				$('#m_select2_modal').on('shown.bs.modal', function () {
+					$('.dropdown_search_modal').select2({
+						placeholder: "Select a state"
+					});
+				});
+			}
+			return {
+				init: function() {
+					demos();
+					modalDemos();
+				}
+			};
+		}();
+		jQuery(document).ready(function() {
+			Select2.init();
+		});
+	</script>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
 </body>
 
 <!-- end::Body -->

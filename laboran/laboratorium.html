@@ -67,25 +67,17 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<style>
-		.kt-header .kt-header__top {
-			height: 70px;
+		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
+			border-radius: 4px;
+			padding: 0.75rem 0.75rem;
+		}
+		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+			font-size: 1rem;
 		}
 		.kt-container {
 			padding: 0 10px !important;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-			color: #f7df3a;
-			font-size: 1.3rem;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
-			background-color: #252338 !important;
-		}
-		.flaticon2-user,.registration {
-			color: #f7df3a;
-			font-size: 1.3rem;
-			font-weight: 600;
-
 		}
 		.dropdown-inline {
 			padding: 10px;
@@ -179,7 +171,7 @@
 		.tg .tg-s268{text-align:left}
 		.tg .tg-0lax{text-align:left;vertical-align:top;font-size: 1.3rem;padding-left: 20px}
 		.head-table {
-			background-color: #1f1e2e;
+			background-color: #0e3e87;
 			font-size: 1.2rem !important;
 			color: white;
 			text-align: center !important;
@@ -318,7 +310,6 @@
 											</a>
 										</div>
 									</div>
-									
 								</div>
 							</div>
 						</div>
@@ -336,8 +327,18 @@
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
-											<a href="list_laboratorium.html" class="kt-menu__link">
+											<a href="laboratorium.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Laboratorium</span>
+											</a>
+										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="jadwal_layanan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Jadwal Layanan</span>
+											</a>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="permohonan_layanan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Permohonan Layanan</span>
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -394,6 +395,18 @@
 													</li>
 												</ul>
 											</div>
+										</li>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="kerjasama.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Kerjasama</span>
+											</a>
+										</li>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="Pelatihan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Pelatihan</span>
+											</a>
 										</li>	
 									</ul>
 								</div>
@@ -413,7 +426,7 @@
 							</div>
 						</div>
 						<div class="col-sm-12 row">
-							<div class="kt-portlet__body col-sm-8">
+							<div class="kt-portlet__body col-sm-12">
 								<ul class="nav nav-tabs nav-fill" role="tablist" style="">
 									<li class="nav-item">
 										<a class="nav-link active" data-toggle="tab" href="#kt_tabs_informasi_umum">Informasi Umum</a>
@@ -425,7 +438,7 @@
 										<a class="nav-link" data-toggle="tab" href="#kt_tabs_alat">Alat</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#kt_tabs_paket_pengujian">Paket Pengujian</a>
+										<a class="nav-link" data-toggle="tab" href="#kt_tabs_layanan_lab">Layanan Lab</a>
 									</li>
 								</ul>
 								<div class="tab-content">
@@ -489,9 +502,13 @@
 												<thead>
 													<tr>
 														<th>No.</th>
+														<th>Nama</th>
 														<th>Nama Kegiatan</th>
 														<th>Jenis Kegiatan</th>
-														<th>Waktu</th>
+														<th>Instansi</th>
+														<th>Tangal Mulai</th>
+														<th>Tanggal Selesai</th>
+														<th>Status</th>
 														<th>Aksi</th>
 													</tr>
 												</thead>
@@ -501,10 +518,15 @@
 									<div class="tab-pane" id="kt_tabs_alat" role="tabpanel">
 										<div class="kt-portlet__body">
 											<form class="kt-form kt-form--fit ">
-												<div class="row ">
-													<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+												<div class="row ">	
+													<div class="col-sm-12 kt-margin-b-10-tablet-and-mobile">
 														<label>Search:</label>
+													</div>
+													<div class="col-sm-9">
 														<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
+													</div>
+													<div align="right" class="col-sm-3">
+														<a href="tambah_alat.html" style="color: white;width: 100%" class="btn btn-primary">Tambah Alat</a>
 													</div>
 												</div>
 											</form>
@@ -512,16 +534,23 @@
 												<thead>
 													<tr>
 														<th>No.</th>
-														<th>Gambar	</th>
+														<th>No. Inventaris</th>
+														<th>Tahun Pengadaan</th>
+														<th>Gambar</th>
 														<th>Nama Alat</th>
+														<th>Spesifikasi/Merk/Tipe</th>
+														<th>Sumber Biaya</th>
 														<th>Fungsi Utama</th>
-														<th>Jumlah Alat</th>
+														<th>Jumlah</th>
+														<th>Kondisi</th>
+														<th>Harga Sewa</th>
+														<th>Aksi</th>
 													</tr>
 												</thead>
 											</table>
 										</div>
 									</div>
-									<div class="tab-pane" id="kt_tabs_paket_pengujian" role="tabpanel">
+									<div class="tab-pane" id="kt_tabs_layanan_lab" role="tabpanel">
 										<div class="kt-portlet__body">	
 											<form class="kt-form kt-form--fit ">
 												<div class="row ">	
@@ -529,15 +558,21 @@
 														<label>Search:</label>
 														<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#">
 													</div>
+													<div align="right" class="col-lg-9">
+														<a data-toggle="modal" data-target="#tambah_paket_pengujian" class="btn btn-success" style="color: white">Tambah Paket Pengujian</a>
+													</div>
 												</div>
 											</form>
 											<div class="kt-portlet__body kt-portlet__body--fit">
-												<table class="table" id="tbl_list_pengujian">
+												<table class="table" id="tbl_layanan_lab">
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Nama Paket Pengujian</th>
-															<th>Jenis</th>
+															<th>Paket Pengujian</th>
+															<th>Durasi (hari)</th>
+															<th>Deskripsi Singkat</th>
+															<th>Harga</th>
+															<th>Status</th>
 															<th>Aksi</th>
 														</tr>
 													</thead>
@@ -547,7 +582,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="kt-portlet__body col-sm-4" style="padding-top: 11px!important">
+							<div class="kt-portlet__body col-sm-12" style="padding-top: 11px!important">
 								<div class="kt-portlet__head">
 									<div class="kt-portlet__head-label">
 										<h3 class="kt-portlet__head-title">
@@ -675,18 +710,6 @@
 												</div>
 											</div>
 										</div>
-										<!-- <div class="form-group row">
-											<label for="example-text-input" class="col-4 col-form-label">Waktu Mulai</label>
-											<div class="col-8">
-												<input class="form-control" type="time" value="13:45:00" id="waktu_mulai_kegiatan">
-											</div>
-										</div>
-										<div class="form-group row">
-											<label for="example-text-input" class="col-4 col-form-label">Waktu Selesai</label>
-											<div class="col-8">
-												<input class="form-control" type="time" value="15:45:00" id="waktu_selesai_kegiatan">
-											</div>
-										</div> -->
 										<div class="form-group row">
 											<label for="example-text-input" class="col-4 col-form-label">Sampel</label>
 											<div class="col-8">
@@ -710,12 +733,110 @@
 										</div>
 									</div>
 								</div>
-								
-								
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
 								<button type="button" class="btn btn-primary">Proses</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Tambah Paket Pengujian -->
+				<div class="modal fade" id="tambah_paket_pengujian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tambah Paket Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Paket Pengujian</label>
+										<div class="col-9">
+											<input class="form-control" type="text" id="nama_paket_pengujian">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Durasi (hari)</label>	
+										<div class="col-9">
+											<div class="input-group">
+												<input id="durasi_pengujian" type="text" class="form-control" aria-describedby="basic-addon2">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Deskripsi Singkat</label>
+										<div class="col-9">
+											<textarea style="resize: none" class="form-control" id="deskripsi_pengujian" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Harga</label>
+										<div class="col-9">
+											<div class="input-group">
+												<div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+												<input id="harga_paket_pengujian" type="text" class="form-control" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Tambah Paket</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Edit Paket Pengujian -->
+				<div class="modal fade" id="edit_paket_pengujian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Paket Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Paket Pengujian</label>
+										<div class="col-9">
+											<input value="Paket A" class="form-control" type="text" id="nama_paket_pengujian">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Durasi (hari)</label>	
+										<div class="col-9">
+											<div class="input-group">
+												<input value="2" id="durasi_pengujian" type="text" class="form-control" aria-describedby="basic-addon2">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Deskripsi Singkat</label>
+										<div class="col-9">
+											<textarea style="resize: none" class="form-control" id="deskripsi_pengujian" rows="3">Lorem ipsum dolor sit amet</textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Harga</label>
+										<div class="col-9">
+											<div class="input-group">
+												<div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+												<input value="250000" id="harga_paket_pengujian" type="text" class="form-control" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Simpan</button>
 							</div>
 						</div>
 					</div>
@@ -851,7 +972,8 @@
 
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_mitra.js" type="text/javascript"></script>
+	<script src="../assets/app/script/js_ajax_aslab.js" type="text/javascript"></script>
+
 
 	<!--end::Page Scripts -->
 

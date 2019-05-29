@@ -67,6 +67,16 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
+	<style>
+		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
+			border-radius: 4px;
+			padding: 0.75rem 0.75rem;
+		}
+		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+			font-size: 1rem;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -158,11 +168,21 @@
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="list_laboratorium.html" class="kt-menu__link">
+											<a href="laboratorium.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="jadwal_layanan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Jadwal Layanan</span>
+											</a>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="permohonan_layanan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Permohonan Layanan</span>
+											</a>
+										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Praktikum</span>
 											</a>
@@ -216,6 +236,18 @@
 													</li>
 												</ul>
 											</div>
+										</li>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="kerjasama.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Kerjasama</span>
+											</a>
+										</li>
+										</li>
+											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="Pelatihan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Pelatihan</span>
+											</a>
 										</li>	
 									</ul>
 								</div>
@@ -246,6 +278,7 @@
 											<th>Tanggal Janjian</th>
 											<th>Waktu</th>
 											<th>Keperluan</th>
+											<th>Aksi</th>
 										</tr>
 									</thead>
 								</table>
@@ -253,7 +286,31 @@
 						</div>
 					</div>
 				</div>
-				
+				<!--begin::Modal-->
+				<div class="modal fade" id="kt_modal_alasan_penolakan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Alasan Penolakan</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+										<textarea class="form-control" id="message-text"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Simpan</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end::Modal-->
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 					<div class="kt-footer__bottom">
