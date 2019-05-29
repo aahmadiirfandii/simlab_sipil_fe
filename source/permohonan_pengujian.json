@@ -1,0 +1,40 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "tanggal_permohonan": "20 November 2019",
+                 "nama_pemohon": "Ahmad Rifaldi",
+                 "judul_kegiatan": "Judul A",
+                 "jenis_kegiatan": "Penelitian Tugas Akhir",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "sumber_dana":"LBE Fakultas Teknik",
+                 "status": "m_konfirmasi",
+                 "Aksi": null
+             },
+             {
+                 "no": 2,
+                 "tanggal_permohonan": "20 November 2019",
+                 "nama_pemohon": "Ahmad Rifaldi",
+                 "judul_kegiatan": "Judul A",
+                 "jenis_kegiatan": "Penelitian Tugas Akhir",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "sumber_dana":"LBE Fakultas Teknik",
+                 "status": "ditolak",
+                 "Aksi": null
+             },
+             {
+                 "no": 3,
+                 "tanggal_permohonan": "20 November 2019",
+                 "nama_pemohon": "Ahmad Rifaldi",
+                 "judul_kegiatan": "Judul A",
+                 "jenis_kegiatan": "Penelitian Tugas Akhir",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "sumber_dana":"LBE Fakultas Teknik",
+                 "status": "m_konfirmasi",
+                 "Aksi": null
+             }
+]
+}

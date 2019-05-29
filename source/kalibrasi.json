@@ -1,0 +1,31 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_kalibrasi":"-",
+                 "tanggal": "1 Mei 2019",
+                 "instansi": "Fakultas Teknik UNHAS",
+                 "hasil_kalibrasi": "-",
+                 "aksi":null
+             },
+             {
+                 "no": 2,
+                 "nama_kalibrasi":"-",
+                 "tanggal": "2 Mei 2019",
+                 "instansi": "Fakultas Teknik UNHAS",
+                 "hasil_kalibrasi": "-",
+                 "aksi":null
+             },
+             {
+                 "no": 3,
+                "nama_kalibrasi":"-",
+                 "tanggal": "3 Mei 2019",
+                 "instansi": "Fakultas Teknik UNHAS",
+                 "hasil_kalibrasi": "-",
+                 "aksi":null
+             }
+]
+}

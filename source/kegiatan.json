@@ -5,23 +5,38 @@
     "sColumns": "",
     "aaData": [{
                  "id_kegiatan": 1,
+                 "nama": "Ahmad Rifaldi",
                  "nama_kegiatan": "Analisis dan Desain Balok Kopel Hibrida",
                  "jenis_kegiatan": "Penelitian",
+                 "instansi": "Teknik Sipil Unhas",
                  "waktu": "19 Maret 2019",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "tanggal_selesai":"06 Mei 2019",
+                 "status": "m_verifikasi",
                  "Aksi": null
              },
              {
                  "id_kegiatan": 2,
+                 "nama": "Fascal Ivandry",
                  "nama_kegiatan": "Estimasi Gaya pada Harga Jembatan Gantung dengan Metode Vibrasi",
                  "jenis_kegiatan": "Praktikum",
+                 "instansi": "Teknik Sipil Unhas",
                  "waktu": "10 Maret 2019",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "tanggal_selesai":"06 Mei 2019",
+                 "status": "selesai",
                  "Aksi": null
              },
              {
                  "id_kegiatan": 3,
+                 "nama": "Surya Aditama",
                  "nama_kegiatan": "Evaluasi Kelayakan Struktur Gedung Taman Pintar",
                  "jenis_kegiatan": "Pengabdian Masyarakat",
+                 "instansi": "PT Adhi Karya",
                  "waktu": "1 Maret 2019",
+                 "tanggal_mulai":"06 Mei 2019",
+                 "tanggal_selesai":"06 Mei 2019",
+                 "status": "terkonfirmasi",
                  "Aksi": null
              }
 ]

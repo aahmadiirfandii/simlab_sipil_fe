@@ -1,0 +1,34 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "paket_pengujian":"Paket A",
+                 "durasi":"2",
+                 "deskripsi": "Lorem ipsum dolor sit amet",
+                 "harga": "Rp250.000",
+                 "status": "published",
+                 "aksi":null
+             },
+             {
+                 "no": 2,
+                 "paket_pengujian":"Paket A",
+                 "durasi":"2",
+                 "deskripsi": "Lorem ipsum dolor sit amet",
+                 "harga": "Rp250.000",
+                 "status": "unpublished",
+                 "aksi":null
+             },
+             {
+                 "no": 3,
+                 "paket_pengujian":"Paket A",
+                 "durasi":"2",
+                 "deskripsi": "Lorem ipsum dolor sit amet",
+                 "harga": "Rp250.000",
+                 "status": "published",
+                 "aksi":null
+             }
+]
+}

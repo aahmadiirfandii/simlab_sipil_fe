@@ -5,26 +5,44 @@
     "sColumns": "",
     "aaData": [{
                  "id_alat": 1,
-                 "gambar_alat": "gambar disini",
+                 "no_inventaris":"001/inv-hid/2018",
+                 "tahun_pengadaan":"2017",
+                 "gambar_alat": null,
                  "nama_alat": "Load Cell",
+                 "tipe": "Control",
+                 "sumber_biaya":"Departemen Teknik Sipil",
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
+                 "kondisi_alat": "Baik",
+                 "harga_sewa":"Rp800.000",
                  "aksi":null
              },
              {
                  "id_alat": 2,
-                 "gambar_alat": "gambar disini",
+                  "no_inventaris":"001/inv-hid/2018",
+                 "tahun_pengadaan":"2017",
+                 "gambar_alat": null,
                  "nama_alat": "Load Cell",
+                 "tipe": "Control",
+                 "sumber_biaya":"Departemen Teknik Sipil",
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
+                 "kondisi_alat": "Baik",
+                 "harga_sewa":"Tidak Disewakan",
                  "aksi":null
              },
              {
                  "id_alat": 3,
-                 "gambar_alat": "gambar disini",
+                  "no_inventaris":"001/inv-hid/2018",
+                 "tahun_pengadaan":"2017",
+                 "gambar_alat": null,
                  "nama_alat": "Load Cell",
+                 "tipe": "Control",
+                 "sumber_biaya":"Departemen Teknik Sipil",
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
+                 "kondisi_alat": "Baik",
+                 "harga_sewa":"Rp800.000",
                  "aksi":null
              }
 ]

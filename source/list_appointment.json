@@ -11,7 +11,8 @@
                  "pilihan_lab": "Lab Hidrolika",
                  "tanggal_janjian": "20/11/2019",
                  "waktu": "10.10",
-                 "keperluan": "Janjian dengan asisten laboratorium"
+                 "keperluan": "Janjian dengan asisten laboratorium",
+                 "aksi":null
              },
              {
                   "no_appointment": 2,
@@ -21,7 +22,8 @@
                  "pilihan_lab": "Lab Tanah",
                  "tanggal_janjian": "20/11/2019",
                  "waktu": "10.10",
-                 "keperluan": "Janjian dengan asisten laboratorium"
+                 "keperluan": "Janjian dengan asisten laboratorium",
+                 "aksi":null
              },
              {
                   "no_appointment": 3,
@@ -31,7 +33,8 @@
                  "pilihan_lab": "Lab Eco",
                  "tanggal_janjian": "20/11/2019",
                  "waktu": "10.10",
-                 "keperluan": "Janjian dengan asisten laboratorium"
+                 "keperluan": "Janjian dengan asisten laboratorium",
+                 "aksi":null
              }
 ]
 }

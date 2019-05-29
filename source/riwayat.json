@@ -6,6 +6,7 @@
     "aaData": [{
                  "id_riwayat": 1,
                  "tgl_permohonan": "21 April 2019",
+                 "jenis_pembayaran":"Cash",
                  "no_invoice": "A0011903017",
                  "total": "Rp230.000",
                  "status": "pembayaran",
@@ -14,6 +15,7 @@
              {
                  "id_riwayat": 2,
                 "tgl_permohonan": "22 Maret 2019",
+                "jenis_pembayaran":"Transfer",
                  "no_invoice": "A0011903008",
                  "total": "Rp200.000",
                  "status": "diterima",
@@ -22,6 +24,7 @@
              {
                  "id_riwayat": 3,
                  "tgl_permohonan": "19 Maret 2019",
+                 "jenis_pembayaran":"Cash",
                  "no_invoice": "A0011904300",
                  "total": "Rp150.000",
                  "status": "ditolak",
@@ -30,6 +33,7 @@
              {
                  "id_riwayat": 4,
                  "tgl_permohonan": "19 Maret 2019",
+                 "jenis_pembayaran":"Transfer",
                  "no_invoice": "-",
                  "total": "Rp150.000",
                  "status": "konfirmasi",
@@ -38,6 +42,7 @@
              {
                  "id_riwayat": 5,
                  "tgl_permohonan": "19 Maret 2019",
+                 "jenis_pembayaran":"Cash",
                  "no_invoice": "A0011904300",
                  "total": "Rp150.000",
                  "status": "expired",
@@ -46,6 +51,7 @@
              {
                  "id_riwayat": 6,
                  "tgl_permohonan": "19 Maret 2019",
+                 "jenis_pembayaran":"Cash",
                  "no_invoice": "-",
                  "total": "Rp150.000",
                  "status": "konfirmasi",

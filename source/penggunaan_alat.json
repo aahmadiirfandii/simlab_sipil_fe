@@ -6,10 +6,30 @@
     "aaData": [{
                  "no": 1,
                  "nama_alat": "Alat A",
+                 "jumlah_alat": "2",
+                 "harga_sewa":"Rp250000",
+                 "tanggal":"20 April 2019",
                  "jam_mulai":"10.30",
                  "jam_selesai":"12.30",
+                 "status_pembayaran":"lunas",
                  "kondisi" : "Baik",
-                 "catatan" : " "
+                 "keterangan":"-",
+                 "catatan" : " ",
+                 "aksi": null
+             },
+             {
+                 "no": 2,
+                 "nama_alat": "Alat B",
+                 "jumlah_alat": "4",
+                 "harga_sewa":"Rp450000",
+                 "tanggal":"21 April 2019",
+                 "jam_mulai":"10.30",
+                 "jam_selesai":"12.30",
+                 "status_pembayaran":"b_lunas",
+                 "kondisi" : "Baik",
+                 "keterangan":"-",
+                 "catatan" : " ",
+                 "aksi": null
              }
 ]
 }

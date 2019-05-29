@@ -69,10 +69,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					width: 200,
 					render: function(data, type, full, meta) {
 						var status = {
-							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
-							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
+							m_verifikasi: {'title': 'Menunggu verifikasi', 'class': 'btn-label-warning'},
+							selesai: {'title': 'Selesai', 'class': ' btn-label-success'},
 							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
-							konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
+							terkonfirmasi: {'title': 'Terkonfirmasi', 'class': ' btn-label-info'},
 							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
 							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
 						};

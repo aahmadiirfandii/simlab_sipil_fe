@@ -1,0 +1,35 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_kegiatan": "Pengukuran emisi kendaraan bermotor di kota Makassar",
+                 "instansi": "Badan Lingkungan Hidup Daerah Makassar",
+                 "region": "Alat 1",
+                 "waktu":"2013-2016",
+                 "status":"selesai",
+                 "aksi":null
+
+             },
+             {
+                 "no": 2,
+                 "jenis_kegiatan": "Pengukuran emisi kendaraan bermotor di kota Makassar",
+                 "instansi": "Badan Lingkungan Hidup Daerah Makassar",
+                 "region": "Alat 1",
+                 "waktu":"2013-2016",
+                 "status":"selesai",
+                 "aksi":null
+             },
+             {
+                 "no": 3,
+                 "jenis_kegiatan": "Pengukuran emisi kendaraan bermotor di kota Makassar",
+                 "instansi": "Badan Lingkungan Hidup Daerah Makassar",
+                 "region": "Alat 1",
+                 "waktu":"2013-2016",
+                 "status":"selesai",
+                 "aksi":null
+             }
+]
+}

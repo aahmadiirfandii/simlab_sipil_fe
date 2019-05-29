@@ -1,0 +1,37 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "laboratorium": "Laboratorium A",
+                 "layanan_laboratorium": "Pengujian 1",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai": "09.00",
+                 "status": "m_verifikasi",
+                 "aksi" :null
+             },
+             {
+                 "no": 2,
+                 "laboratorium": "Laboratorium B",
+                 "layanan_laboratorium": "Pengujian 1",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai": "09.00",
+                 "status": "terkonfirmasi",
+                 "aksi" :null
+             },
+             {
+                 "no": 3,
+                  "laboratorium": "Laboratorium C",
+                 "layanan_laboratorium": "Pengujian 1",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai": "09.00",
+                 "status": "terkonfirmasi",
+                 "aksi" :null
+             }
+]
+}

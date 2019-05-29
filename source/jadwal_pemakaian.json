@@ -1,0 +1,34 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "penanggung_jawab":"Ahmad Rifaldi",
+                 "jenis_kegiatan":"Tugas Akhir",
+                 "tanggal": "1 Mei 2019",
+                 "waktu_mulai": "08.00",
+                 "waktu_selesai": "11.00",
+                 "aksi":null
+             },
+             {
+                 "no": 2,
+                 "penanggung_jawab":"Ahmad Rifaldi",
+                 "jenis_kegiatan":"Pengabdian Masyarakat",
+                 "tanggal": "1 Mei 2019",
+                 "waktu_mulai": "08.00",
+                 "waktu_selesai": "11.00",
+                 "aksi":null
+             },
+             {
+                 "no": 3,
+                "penanggung_jawab":"Ahmad Rifaldi",
+                 "jenis_kegiatan":"Penelitian Dosen",
+                 "tanggal": "1 Mei 2019",
+                 "waktu_mulai": "08.00",
+                 "waktu_selesai": "11.00",
+                 "aksi":null
+             }
+]
+}

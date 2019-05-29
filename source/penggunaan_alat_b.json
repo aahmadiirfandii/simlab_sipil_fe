@@ -1,0 +1,27 @@
+{
+    "iTotalRecords": 2,
+    "iTotalDisplayRecords": 2,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "id_praktikum": 1,
+                 "nama_praktikum": "Mekanika Tanah 1",
+                 "tempat_praktikum": "Lab A",
+                 "semester": "2",
+                 "tahun_ajaran": "2018/2019",
+                 "status_praktikum": "terverifikasi",
+                 "download": null,
+                 "aksi": null
+             },
+             {
+                 "id_praktikum": 2,
+                 "nama_praktikum": "Mekanika Tanah 2",
+                 "tempat_praktikum": "Lab A",
+                 "semester": "2",
+                 "tahun_ajaran": "2018/2019",
+                 "status_praktikum": "belum",
+                 "download": null,
+                 "aksi" : null
+             }
+]
+}

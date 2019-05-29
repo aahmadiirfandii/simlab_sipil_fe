@@ -1,0 +1,52 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "laboratorium": "Laboratorium A",
+                 "tanggal_permohonan":"1 Mei 2019",
+                 "nama_pemohon":"Ahmad Rifaldi",
+                 "layanan_lab": "Paket 1",
+                 "instansi":"PT Adhi Karya",
+                 "judul_kegiatan":"Pemeriksaan Jalan dan Aspal",
+                 "jenis_kegiatan":"Layanan Mitra",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai":"09.00",
+                 "status": "ditolak",
+                 "aksi": null
+             },
+             {
+                 "no": 2,
+                 "laboratorium": "Laboratorium B",
+                 "tanggal_permohonan":"1 Mei 2019",
+                 "nama_pemohon":"Ahmad Rifaldi",
+                 "layanan_lab": "Paket 2",
+                 "instansi":"PT Adhi Karya",
+                 "judul_kegiatan":"Pemeriksaan Jalan dan Aspal",
+                 "jenis_kegiatan":"Layanan Mitra",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai":"09.00",
+                 "status": "m_konfirmasi",
+                 "aksi": null
+             },
+             {
+                "no": 3,
+                 "laboratorium": "Laboratorium C",
+                 "tanggal_permohonan":"1 Mei 2019",
+                 "nama_pemohon":"Ahmad Rifaldi",
+                 "layanan_lab": "Paket 3",
+                 "instansi":"Teknik Lingkungan UMI",
+                 "judul_kegiatan":"Pemeriksaan Jalan dan Aspal",
+                 "jenis_kegiatan":"Layanan Mitra",
+                 "tanggal": "13 Maret 2019",
+                 "jam_mulai": "08.00",
+                 "jam_selesai":"09.00",
+                 "status": "terkonfirmasi",
+                 "aksi": null
+             }
+]
+}
