@@ -4,7 +4,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Daftar Permohonan | Kepala Lab</title>
+	<title>Kerjasama | Kepala Lab</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -77,15 +77,12 @@
 			font-size: 1rem;
 		}
 		.nav-item  a {
-			font-size: 1rem !important;
+			font-size: 1.2rem !important;
 			color: #1f1e2e !important;
 		}
 		.nav-tabs .nav-item .nav-link.active {
 			font-weight: 500 !important;
-			font-size: 1.1rem !important;
-		}
-		.nav-tabs .nav-item .nav-link {
-			padding : 0.75rem 0.25rem !important;
+			font-size: 1.3rem !important;
 		}
 	</style>
 </head>
@@ -161,6 +158,7 @@
 											</a>
 										</div>
 									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -222,7 +220,7 @@
 												<span class="kt-menu__link-text ">Appointment</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Permohonan Pengujian</span>
 											</a>
@@ -248,7 +246,7 @@
 											</div>
 										</li>
 									</li>
-									<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+									<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
 										<a href="kerjasama.html" class="kt-menu__link">
 											<span class="kt-menu__link-text ">Kerjasama</span>
 										</a>
@@ -267,20 +265,12 @@
 			</div>
 		</div>
 		<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-			<div class="col-sm-12">
-				<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-					<div class="kt-subheader__main">
-						<h3 class="kt-subheader__title">Permohonan Pengujian</h3>
-						<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-						<a href="#"><span class="kt-subheader__desc">Daftar Permohonan</span></a>
-					</div>
-				</div>
-			</div>
+
 			<div class="kt-portlet">
 				<div class="kt-portlet__head">
 					<div class="kt-portlet__head-label">
 						<div class="kt-portlet__head-label">
-							<h3 style="margin-top: 5px" class="kt-portlet__head-title">Daftar Permohonan</h3>
+							<h3 style="margin-top: 5px" class="kt-portlet__head-title">Daftar Kerjasama</h3>
 						</div>
 					</div>
 				</div>
@@ -288,68 +278,31 @@
 					<div class="kt-portlet__body col-sm-12">
 						<ul class="nav nav-tabs nav-fill" role="tablist" style="">
 							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#kt_tabs_mahasiswa">Mahasiswa</a>
+								<a class="nav-link active" data-toggle="tab" href="#kt_tabs_daftar_kerjasama">Daftar Kerjasama</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#kt_tabs_dosen">Dosen</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#kt_tabs_mitra">Mitra</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" data-toggle="tab" href="#kt_tabs_lainnya">Lainnya</a>
+								<a class="nav-link" data-toggle="tab" href="#kt_tabs_daftar_harga_sewa">Daftar Harga Sewa Alat</a>
 							</li>
 						</ul>
 						<div class="tab-content">
-							<div class="tab-pane active" id="kt_tabs_mahasiswa" role="tabpanel">
-								<div class="kt-portlet__body kt-portlet__body--fit">
-									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_permohonan_mahasiswa">
+							<div class="tab-pane active" id="kt_tabs_daftar_kerjasama" role="tabpanel">
+								<div class="row">
+									<div class="col-sm-6">
+										<h4>Daftar Kerjasama</h4>
+									</div>
+									<div align="right" class="col-sm-6">
+										<a href="tambah_kerjasama.html" class="btn btn-primary">Tambah Kerjasama</a>
+									</div>	
+								</div>
+								<div class="kt-portlet__body">
+									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_kerjasama">
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Tanggal Permohonan</th>
-												<th>Nama Pemohon</th>
-												<th>Judul Kegiatan</th>
 												<th>Jenis Kegiatan</th>
-												<th>Status</th>
-												<th>Aksi</th>
-											</tr>
-										</thead>
-									</table>
-								</div>
-							</div>
-							<div class="tab-pane" id="kt_tabs_dosen" role="tabpanel">
-								<div class="kt-portlet__body kt-portlet__body--fit">
-									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_permohonan_dosen">
-										<thead>
-											<tr>
-												<th>No</th>
-												<th>Tanggal Permohonan</th>
-												<th>Nama Pemohon</th>
-												<th>Judul Kegiatan</th>
-												<th>Jenis Kegiatan</th>
-												<th>Sumber Dana</th>
-												<th>Status</th>
-												<th>Aksi</th>
-											</tr>
-										</thead>
-									</table>
-								</div>
-							</div>
-							<div class="tab-pane" id="kt_tabs_mitra" role="tabpanel">
-								<div align="right">
-									<a href="tambah_pengujian_mitra.html" class="btn btn-primary">Tambah Pengujian Mitra</a>
-								</div>
-								<div class="kt-portlet__body kt-portlet__body--fit">
-									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_permohonan_mitra">
-										<thead>
-											<tr>
-												<th>No</th>
-												<th>Tanggal Permohonan</th>
-												<th>Nama Pemohon</th>
 												<th>Instansi</th>
-												<th>Judul Kegiatan</th>
-												<th>Jenis Kegiatan</th>
+												<th>Dalam/Luar Negeri</th>
+												<th>Waktu</th>
 												<th>Status</th>
 												<th>Aksi</th>
 											</tr>
@@ -357,17 +310,16 @@
 									</table>
 								</div>
 							</div>
-							<div class="tab-pane" id="kt_tabs_lainnya" role="tabpanel">
-								<div class="kt-portlet__body kt-portlet__body--fit">
-									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_permohonan_lainnya">
+							<div class="tab-pane" id="kt_tabs_daftar_harga_sewa" role="tabpanel">
+								<h4>Daftar Harga Sewa Alat</h4>
+								<div class="kt-portlet__body">
+									<table class="table table-striped- table-bordered table-hover " id="tbl_daftar_harga_sewa_alat">
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Tanggal Permohonan</th>
-												<th>Nama Pemohon</th>
-												<th>Judul Kegiatan</th>
-												<th>Jenis Kegiatan</th>
-												<th>Status</th>
+												<th>Nama Alat</th>
+												<th>Jumlah Alat</th>
+												<th>Harga Sewa Per Hari (Out-in)</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
@@ -376,9 +328,10 @@
 							</div>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
+
 		<!-- Footer -->
 		<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 			<div class="kt-footer__bottom">
