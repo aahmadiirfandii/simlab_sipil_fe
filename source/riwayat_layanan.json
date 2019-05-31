@@ -19,6 +19,7 @@
        "jam_mulai":"10.30",
        "jam_selesai":"12.30",
        "status" : "konfirmasi",
+       "total":"Rp-",
        "aksi" : "rincian"
    },
    {
@@ -37,6 +38,7 @@
        "jam_mulai":"10.30",
        "jam_selesai":"12.30",
        "status" : "batal",
+       "total":"Rp-",
        "aksi" : "rincian"
    }
 ]

@@ -162,6 +162,15 @@
 		.dataTables_wrapper .dataTable td {
 			font-size: 1.1rem;
 		}
+		.badge {
+			position: absolute;
+			top: 0px;
+			right: -5px;
+			padding: 5px 7px;
+			border-radius: 50%;
+			background: white;
+			color: #212121;
+		}
 	</style>
 	<style type="text/css">
 		.tg  {border-collapse:collapse;border-spacing:0;}
@@ -189,6 +198,10 @@
 	</style>
 	<style>
 		@media (max-width: 1024px) {
+			.badge{
+					top: 0px;
+					right: 10px;
+				}
 			.kt-header .kt-header__top {
 				height: 0px;
 			}
@@ -337,12 +350,12 @@
 										</li>
 										<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
 											<a href="penelitian.html" class="kt-menu__link">
-												<span class="kt-menu__link-text">Penelitian</span>
+												<span class="kt-menu__link-text">Penelitian</span><span class="badge">5</span>
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text">Praktikum</span>
+												<span class="kt-menu__link-text">Praktikum</span><span class="badge">5</span>
 											</a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">

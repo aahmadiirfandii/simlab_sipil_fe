@@ -5,8 +5,10 @@
     "sColumns": "",
     "aaData": [{
                  "id_alat": 1,
+                 "no":1,
                  "no_inventaris":"001/inv-hid/2018",
                  "tahun_pengadaan":"2017",
+                 "laboratorium":"Lab A",
                  "gambar_alat": null,
                  "nama_alat": "Load Cell",
                  "tipe": "Control",
@@ -14,13 +16,19 @@
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
                  "kondisi_alat": "Baik",
+                 "kondisi_baik":"2",
+                 "kondisi_rusak":"6",
                  "harga_sewa":"Rp800.000",
+                 "kalibrasi_terakhir":"12 April 2019",
+                 "jumlah_pemakaian":"20",
                  "aksi":null
              },
              {
                  "id_alat": 2,
+                 "no":2,
                   "no_inventaris":"001/inv-hid/2018",
                  "tahun_pengadaan":"2017",
+                 "laboratorium":"Lab B",
                  "gambar_alat": null,
                  "nama_alat": "Load Cell",
                  "tipe": "Control",
@@ -28,13 +36,19 @@
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
                  "kondisi_alat": "Baik",
+                 "kondisi_baik":"2",
+                 "kondisi_rusak":"6",
                  "harga_sewa":"Tidak Disewakan",
+                 "kalibrasi_terakhir":"12 April 2019",
+                 "jumlah_pemakaian":"15",
                  "aksi":null
              },
              {
                  "id_alat": 3,
+                 "no":3,
                   "no_inventaris":"001/inv-hid/2018",
                  "tahun_pengadaan":"2017",
+                 "laboratorium":"Lab C",
                  "gambar_alat": null,
                  "nama_alat": "Load Cell",
                  "tipe": "Control",
@@ -42,7 +56,11 @@
                  "fungsi_utama": "Membaca beban",
                  "jumlah_alat": "4",
                  "kondisi_alat": "Baik",
+                 "kondisi_baik":"2",
+                 "kondisi_rusak":"6",
                  "harga_sewa":"Rp800.000",
+                 "kalibrasi_terakhir":"12 April 2019",
+                 "jumlah_pemakaian":"12",
                  "aksi":null
              }
 ]

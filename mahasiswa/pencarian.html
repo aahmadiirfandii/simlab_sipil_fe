@@ -65,26 +65,11 @@
 	<!--end::Global Theme Styles -->
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
-	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<style>
-		.kt-header .kt-header__top {
-			height: 70px;
-		}
 		.kt-container {
 			padding: 0 10px !important;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-			color: #f7df3a;
-			font-size: 1.3rem;
-		}
-		.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
-			background-color: #252338 !important;
-		}
-		.flaticon2-user,.registration {
-			color: #f7df3a;
-			font-size: 1.3rem;
-			font-weight: 600;
-
 		}
 		.dropdown-inline {
 			padding: 10px;
@@ -133,9 +118,22 @@
 		.informasi_pencarian p {
 			font-size: 1.2rem;
 		}
+		.badge {
+			position: absolute;
+			top: 0px;
+			right: -5px;
+			padding: 5px 7px;
+			border-radius: 50%;
+			background: white;
+			color: #212121;
+		}
 	</style>
 	<style>
 		@media (max-width: 1024px) {
+			.badge{
+				top: 0px;
+				right: 10px;
+			}
 			.kt-header .kt-header__top {
 				height: 0px;
 			}
@@ -301,12 +299,12 @@
 										</li>
 										<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
 											<a href="penelitian.html" class="kt-menu__link">
-												<span class="kt-menu__link-text">Penelitian</span>
+												<span class="kt-menu__link-text">Penelitian</span><span class="badge">5</span>
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text">Praktikum</span>
+												<span class="kt-menu__link-text">Praktikum</span><span class="badge">5</span>
 											</a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">

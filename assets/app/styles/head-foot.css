@@ -47,7 +47,20 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	color: white;
 }
 
+.badge {
+	position: absolute;
+	top: 0px;
+	right: -5px;
+	padding: 5px 7px;
+	border-radius: 50%;
+	background: white;
+	color: #212121;
+}
 @media (max-width: 1024px) {
+	.badge{
+		top: 0px;
+		right: 10px;
+	}
 	.kt-header .kt-header__top {
 		height: 0px;
 	}
