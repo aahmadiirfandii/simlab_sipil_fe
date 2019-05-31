@@ -1946,7 +1946,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'harga_sewa'},
 				{data: 'kalibrasi_terakhir'},
 				{data: 'jumlah_pemakaian'},
-				{data: 'aksi'},
 			],
 
 			initComplete: function() {
@@ -1959,17 +1958,669 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1, 2, 3, 4,5,6,7,8,9,10,11],
+					targets: [0, 1, 2, 3, 4,5,6,7,8,9,10],
+					className: 'text-center'
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable17 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_kegiatan_mahasiswa').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'nama'},
+				{data: 'nama_kegiatan'},
+				{data: 'jenis_kegiatan'},
+				{data: 'laboratorium'},
+				{data: 'tanggal_mulai'},
+				{data: 'tanggal_selesai'},
+				{data: 'jumlah_layanan'},
+				{data: 'status'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6,7,8],
 					className: 'text-center'
 				},
 				{
 					targets: -1,
-					title: 'Aksi',
-					orderable: false,
+					width: 200,
 					render: function(data, type, full, meta) {
-						return `
-                        <a data-toggle="modal" data-target="#rincian_kegiatan" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+						var status = {
+							m_verifikasi: {'title': 'Menunggu verifikasi', 'class': 'btn-label-warning'},
+							selesai: {'title': 'Selesai', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							terkonfirmasi: {'title': 'Terkonfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 					},
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable18 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_kegiatan_dosen').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'nama'},
+				{data: 'nama_kegiatan'},
+				{data: 'jenis_kegiatan'},
+				{data: 'laboratorium'},
+				{data: 'sumber_dana'},
+				{data: 'tanggal_mulai'},
+				{data: 'tanggal_selesai'},
+				{data: 'jumlah_layanan'},
+				{data: 'status'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6,7,8,9],
+					className: 'text-center'
+				},
+				{
+					targets: -1,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							m_verifikasi: {'title': 'Menunggu verifikasi', 'class': 'btn-label-warning'},
+							selesai: {'title': 'Selesai', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							terkonfirmasi: {'title': 'Terkonfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable19 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_kegiatan_mitra').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'nama'},
+				{data: 'instansi'},
+				{data: 'nama_kegiatan'},
+				{data: 'laboratorium'},
+				{data: 'tanggal_mulai'},
+				{data: 'tanggal_selesai'},
+				{data: 'jumlah_layanan'},
+				{data: 'biaya'},
+				{data: 'status'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6,7,8,9],
+					className: 'text-center'
+				},
+				{
+					targets: -1,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							m_verifikasi: {'title': 'Menunggu verifikasi', 'class': 'btn-label-warning'},
+							selesai: {'title': 'Selesai', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							terkonfirmasi: {'title': 'Terkonfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable20 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_laporan_kerjasama').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'laboratorium'},
+				{data: 'jenis_kegiatan'},
+				{data: 'instansi'},
+				{data: 'region'},
+				{data: 'waktu'},
+				{data: 'status_kerjasama'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6],
+					className: 'text-center'
+				},
+				{
+					targets: -1,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							m_verifikasi: {'title': 'Menunggu verifikasi', 'class': 'btn-label-warning'},
+							selesai: {'title': 'Selesai', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							terkonfirmasi: {'title': 'Terkonfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable21 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_laporan_pelatihan').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'nama_kegiatan'},
+				{data: 'tanggal_mulai'},
+				{data: 'tanggal_selesai'},
+				{data: 'lokasi'},
+				{data: 'jumlah_peserta'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5],
+					className: 'text-center'
+				},
+				
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable22 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_laporan_praktikum').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/kegiatan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'id_kegiatan'},
+				{data: 'mata_kuliah'},
+				{data: 'semester'},
+				{data: 'tahun_ajaran'},
+				{data: 'laboratorium'},
+				{data: 'jumlah_peserta'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5],
+					className: 'text-center'
 				},
 				
 			],
@@ -2045,6 +2696,12 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable14();
 			initTable15();
 			initTable16();
+			initTable17();
+			initTable18();
+			initTable19();
+			initTable20();
+			initTable21();
+			initTable22();
 		},
 
 	};
