@@ -190,11 +190,6 @@
 												<span class="kt-menu__link-text ">Jadwal Layanan</span>
 											</a>
 										</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="permohonan_layanan.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Permohonan Layanan</span><span class="badge">5</span>
-											</a>
-										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Praktikum</span><span class="badge">5</span>
@@ -227,7 +222,7 @@
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text">Permohonan Pengujian</span>
+												<span class="kt-menu__link-text ">Permohonan Layanan</span><span class="badge">5</span>
 											</a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
@@ -306,8 +301,8 @@
 										<th style="text-align: center;" colspan="7">Pertemuan</th>
 									</tr>
 									<tr>
-										<td style="text-align: center;" >1</td>
-										<td style="text-align: center;" >2</td>
+										<td style="text-align: center;">1</td>
+										<td style="text-align: center;">2</td>
 										<td style="text-align: center;">3</td>
 										<td style="text-align: center;">4</td>
 										<td style="text-align: center;">5</td>
@@ -315,13 +310,13 @@
 										<td style="text-align: center;">7</td>
 									</tr>
 									<tr>
-										<td ><a href="#" id="username">tanggal</a></td>
-										<td >06/05/19</td>
-										<td >07/05/19</td>
-										<td >08/05/19</td>
-										<td >09/05/19</td>
-										<td >010/05/19</td>
-										<td >011/05/19</td>
+										<td ><a href="#" id="tanggal_0">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_1">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_2">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_3">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_4">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_5">Tanggal</a></td>
+										<td ><a href="#" id="tanggal_6">Tanggal</a></td>
 									</tr>
 								</thead>
 							</table>
@@ -468,11 +463,30 @@
 	<script>
 		//turn to inline mode
 		$.fn.editable.defaults.mode = 'inline';
-		$('#username').editable({
-			type: 'text',
-			pk: 1,
-			url: '../assets/script/data-xtable.js',
-			title: 'Enter username'
+		$('#tanggal_0').editable({
+		});
+		$('#tanggal_1').editable({
+		});
+		$('#tanggal_2').editable({
+		});
+		$('#tanggal_3').editable({
+		});
+		$('#tanggal_4').editable({
+		});
+		$('#tanggal_5').editable({
+		});
+		$('#tanggal_6').editable({
+		});
+		$('.kehadiran').editable({
+			type: 'select',
+			title: 'Select status',
+			placement: 'right',
+			value: 2,
+			source: [
+			{value: 1, text: 'status 1'},
+			{value: 2, text: 'status 2'},
+			{value: 3, text: 'status 3'}
+			]
 		});
 	</script>
 
