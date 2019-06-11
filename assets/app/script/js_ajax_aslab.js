@@ -159,7 +159,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'tempat_praktikum'},
 				{data: 'semester'},
 				{data: 'tahun_ajaran'},
-				{data: 'download'},
 				{data: 'aksi'},
 			],
 
@@ -180,22 +179,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;">Rincian</a>`;
+                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-bottom:5px">Rincian</a>` +
+                        '<button href="#" class="btn btn-sm btn-danger" style="margin-bottom:5px">Hapus</button>' +
+                        '<button data-toggle="modal" data-target="#edit_praktikum" class="btn btn-sm btn-primary">Edit</button>';
 					},
 				},
 				{
-					targets: [0, 1, 2, 3, 4,6],
+					targets: [0, 1, 2, 3, 4,5],
 					className: 'text-center',
-				},
-				{
-					targets: 5,
-					className: 'text-center',
-					width: 140,
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-                        <a data-toggle="modal" data-target="#upload_modul" class="btn btn-sm btn-success download-modul" style="color:white;">Modul</a>`+' <a data-toggle="modal" data-target="#upload_format_laporan" class="btn btn-sm btn-primary" style="color:white;">Format Laporan</a>';
-					},
 				},
 			],
 		});
@@ -298,6 +289,15 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{
 					targets: [0, 1, 2, 3, 4,5,6,7,8,9],
 					className: 'text-center'
+				},
+				{
+					targets: -1,
+					className: 'text-center',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a href="#" class="kehadiran ">?</a>`;
+					},
 				},
 				{
 					targets: [3,,4,5,6,7,8,9],

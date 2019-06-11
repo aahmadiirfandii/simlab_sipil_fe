@@ -339,6 +339,9 @@
 											<option value="2">2019/2020</option>
 										</select>
 									</div>
+									<div align="right" class="offset-3 col-lg-3">
+										<a data-toggle="modal" data-target="#tambah_praktikum" style="color: white" class="btn btn-primary">Tambah Praktikum</a>
+									</div>
 								</div>
 							</form>
 							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_jadwal_praktikum">
@@ -349,7 +352,6 @@
 										<th>Tempat</th>
 										<th>Semester</th>
 										<th>Tahun Ajaran</th>
-										<th>Upload</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -399,6 +401,152 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 								<button type="button" class="btn btn-primary">Upload</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Tambah Praktikum -->
+				<div class="modal fade" id="tambah_praktikum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tambah Praktikum</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Praktikum</label>
+									<div class="col-9">
+										<input class="form-control" type="text" placeholder="input nama praktikum" id="nama_praktikum">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
+									<div class="col-9">
+										<input class="form-control" type="text" placeholder="input tempat praktikum" id="tempat_praktikum">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Semester</label>
+									<div class="col-9">
+										<select class="form-control" id="semester">
+											<option value="0">1</option>
+											<option value="1">2</option>
+											<option value="2">3</option>
+											<option value="3">4</option>
+											<option value="4">6</option>
+											<option value="5">7</option>
+											<option value="6">8</option>
+											<option value="7">9</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
+									<div class="col-9">
+										<select class="form-control" id="semester">
+											<option value="0">2017/2018</option>
+											<option value="1">2018/2019</option>
+											<option value="2">2019/2020</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
+									<div class="col-9">
+										<div class=" custom-file">
+											<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
+									<div class="col-9">
+										<div class=" custom-file">
+											<input type="file" class="custom-file-input choose_file" id="upload_format_laporan">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-success">Tambahkan</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Edit Praktikum -->
+				<div class="modal fade" id="edit_praktikum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Edit Praktikum</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Praktikum</label>
+									<div class="col-9">
+										<input class="form-control" type="text"  value="Nama Praktikum 1" id="nama_praktikum">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
+									<div class="col-9">
+										<input class="form-control" type="text" value="Laboratorium A"  id="tempat_praktikum">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Semester</label>
+									<div class="col-9">
+										<select class="form-control" id="semester">
+											<option value="0">1</option>
+											<option active value="1">2</option>
+											<option value="2">3</option>
+											<option value="3">4</option>
+											<option value="4">6</option>
+											<option value="5">7</option>
+											<option value="6">8</option>
+											<option value="7">9</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
+									<div class="col-9">
+										<select class="form-control" id="semester">
+											<option value="0">2017/2018</option>
+											<option active value="1">2018/2019</option>
+											<option value="2">2019/2020</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
+									<div class="col-9">
+										<div class=" custom-file">
+											<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
+									<div class="col-9">
+										<div class=" custom-file">
+											<input type="file" class="custom-file-input choose_file" id="upload_format_laporan">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-success">Tambahkan</button>
 							</div>
 						</div>
 					</div>
