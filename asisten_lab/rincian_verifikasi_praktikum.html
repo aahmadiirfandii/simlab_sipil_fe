@@ -4,7 +4,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Rincian Verifikasi | Mahasiswa</title>
+	<title>Rincian Registrasi | Mahasiswa</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -67,6 +67,7 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -157,15 +158,31 @@
 												<span class="kt-menu__link-text ">Beranda</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
-											<a href="verifikasi.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Verifikasi</span>
-											</a>
-										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="praktikum.html" class="kt-menu__link">
+										
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text ">Praktikum</span>
 											</a>
+											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+												<ul class="kt-menu__subnav">
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="verifikasi.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Registrasi</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="praktikum.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Jadwal</span>
+														</a>
+													</li>
+												</ul>
+											</div>
 										</li>	
 									</ul>
 								</div>
@@ -179,7 +196,7 @@
 					<div class="col-sm-12">
 						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 							<div class="kt-subheader__main">
-								<a href="verifikasi.html"><h3 class="kt-subheader__title">Verifikasi</h3></a>
+								<a href="verifikasi.html"><h3 class="kt-subheader__title">Registrasi</h3></a>
 								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
 								<a href="ambil_praktikum.html"><span class="kt-subheader__desc">Rincian verifikasi praktikum</span></a>
 							</div>
