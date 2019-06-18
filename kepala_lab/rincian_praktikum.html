@@ -185,10 +185,38 @@
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="jadwal_layanan.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Jadwal Layanan</span>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-text ">Layanan Laboratorium</span><span class="badge">5</span>
 											</a>
+											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+												<ul class="kt-menu__subnav">
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="daftar_permohonan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Daftar Permohonan</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="verifikasi_invoice.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Verifikasi Invoice</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="jadwal_layanan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Jadwal Layanan</span>
+														</a>
+													</li>
+												</ul>
+											</div>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -196,8 +224,8 @@
 											</a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi.html" class="kt-menu__link ">
+													<li class="kt-menu__item kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
+														<a href="verifikasi.html" class="kt-menu__link kt-menu__item--open kt-menu__item--here">
 															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 																<span></span>
 															</i>
@@ -220,39 +248,11 @@
 												<span class="kt-menu__link-text ">Appointment</span><span class="badge">5</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text ">Permohonan Layanan</span><span class="badge">5</span>
-											</a>
-											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="daftar_permohonan.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Daftar Permohonan</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi_invoice.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Verifikasi Invoice</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
 											<a href="kerjasama.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Kerjasama</span>
 											</a>
-										</li>
-										</li>
-											<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										</li>								<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
 											<a href="Pelatihan.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Pelatihan</span>
 											</a>
@@ -295,14 +295,14 @@
 							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_rincian_praktikum">
 								<thead>
 									<tr>
-										<th  rowspan="3">No</th>
-										<th  rowspan="3">NIM</th>
-										<th  rowspan="3">Nama</th>
+										<th  rowspan="4">No</th>
+										<th  rowspan="4">NIM</th>
+										<th  rowspan="4">Nama</th>
 										<th style="text-align: center;" colspan="7">Pertemuan</th>
 									</tr>
 									<tr>
-										<td style="text-align: center;">1</td>
-										<td style="text-align: center;">2</td>
+										<td style="text-align: center;" >1</td>
+										<td style="text-align: center;" >2</td>
 										<td style="text-align: center;">3</td>
 										<td style="text-align: center;">4</td>
 										<td style="text-align: center;">5</td>
@@ -310,13 +310,22 @@
 										<td style="text-align: center;">7</td>
 									</tr>
 									<tr>
-										<td ><a href="#" id="tanggal_0">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_1">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_2">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_3">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_4">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_5">Tanggal</a></td>
-										<td ><a href="#" id="tanggal_6">Tanggal</a></td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+										<td data-toggle="modal" data-target="#kt_modal_rincian_pertemuan" style="text-align: center;"> <button class="btn btn-primary" >Rincian</button> </td>
+									</tr>
+									<tr>
+										<td ><a href="#" id="username">tanggal</a></td>
+										<td >06/05/19</td>
+										<td >07/05/19</td>
+										<td >08/05/19</td>
+										<td >09/05/19</td>
+										<td >010/05/19</td>
+										<td >011/05/19</td>
 									</tr>
 								</thead>
 							</table>
@@ -324,6 +333,81 @@
 						</div>
 					</div>
 				</div>
+				<!--begin::Modal-->
+				<div class="modal fade" id="kt_modal_rincian_pertemuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Rincian Praktikum</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Laboratorium</label>
+									<div class="col-8">
+										<input disabled="" class="form-control" type="text" value="Laboratorium A" id="laboratorium">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Layanan Laboratorium</label>
+									<div class="col-8">
+										<input disabled="" class="form-control" type="text" value="Pengujian 1" id="laboratorium">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+									<div class="col-8">
+										<input class="form-control" type="date" value="2011-08-19" id="tanggal">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Jam Mulai</label>
+									<div class="col-8">
+										<input class="form-control" type="time" value="13:45:00" id="jam_mulai">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Jam Selesai</label>
+									<div class="col-8">
+										<input class="form-control" type="time" value="14:45:00" id="jam_selesai">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Status</label>
+									<div class="col-8">
+										<span style="font-size: 1rem;padding: 15px" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Terkonfirmasi</span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="example-text-input" class="col-4 col-form-label">Upload Hasil</label>
+									<div class="col-8">
+										<div class="custom-file">
+											<input type="file" class="custom-file-input choose_file" id="upload_foto">
+											<label class="custom-file-label" for="customFile">Choose file</label>
+										</div>
+									</div>
+								</div>
+								<table class="table table-striped- table-bordered table-hover table-checkable" id="pemakaian_alat">
+									<thead>
+										<tr>
+											<th>No.</th>
+											<th>Alat</th>
+											<th>Kondisi</th>
+											<th>Catatan</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-warning"  data-dismiss="modal">Batalkan</button>
+								<button type="button" class="btn btn-primary"  data-dismiss="modal">Simpan</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end::Modal-->
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 					<div class="kt-footer__bottom">
@@ -463,30 +547,11 @@
 	<script>
 		//turn to inline mode
 		$.fn.editable.defaults.mode = 'inline';
-		$('#tanggal_0').editable({
-		});
-		$('#tanggal_1').editable({
-		});
-		$('#tanggal_2').editable({
-		});
-		$('#tanggal_3').editable({
-		});
-		$('#tanggal_4').editable({
-		});
-		$('#tanggal_5').editable({
-		});
-		$('#tanggal_6').editable({
-		});
-		$('.kehadiran').editable({
-			type: 'select',
-			title: 'Select status',
-			placement: 'right',
-			value: 2,
-			source: [
-			{value: 1, text: 'status 1'},
-			{value: 2, text: 'status 2'},
-			{value: 3, text: 'status 3'}
-			]
+		$('#username').editable({
+			type: 'text',
+			pk: 1,
+			url: '../assets/script/data-xtable.js',
+			title: 'Enter username'
 		});
 	</script>
 

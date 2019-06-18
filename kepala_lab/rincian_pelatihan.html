@@ -170,7 +170,7 @@
 							<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 								<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 									<ul class="kt-menu__nav ">
-										<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
 											<a href="index.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Beranda</span>
 											</a>
@@ -180,10 +180,38 @@
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="jadwal_layanan.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Jadwal Layanan</span>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-text ">Layanan Laboratorium</span><span class="badge">5</span>
 											</a>
+											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+												<ul class="kt-menu__subnav">
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="daftar_permohonan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Daftar Permohonan</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="verifikasi_invoice.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Verifikasi Invoice</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="jadwal_layanan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Jadwal Layanan</span>
+														</a>
+													</li>
+												</ul>
+											</div>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -215,33 +243,8 @@
 												<span class="kt-menu__link-text ">Appointment</span><span class="badge">5</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text ">Permohonan Layanan</span><span class="badge">5</span>
-											</a>
-											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="daftar_permohonan.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Daftar Permohonan</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi_invoice.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Verifikasi Invoice</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</li>
 									</li>
-									<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
+									<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
 										<a href="kerjasama.html" class="kt-menu__link">
 											<span class="kt-menu__link-text ">Kerjasama</span>
 										</a>
@@ -310,17 +313,32 @@
 									<input disabled="" class="form-control" type="text" value="50" id="jumlah_peserta">
 								</div>
 							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Instansi Terkait</label>
+								<div class="col-9">
+									<input disabled="" class="form-control" type="text" value="Instansi A" id="instansi">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="example-text-input" class="col-3 col-form-label">Total Biaya Kegiatan</label>
+								<div class="col-9">
+									<div class="input-group">
+										<div class="input-group-prepend"><span class="input-group-text" id="total_biaya_kegiatan">Rp</span></div>
+										<input disabled="" type="text" class="form-control" aria-describedby="basic-addon1" value="5650000">
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="row">
-								 <div align="center" class="col-sm-6">
-								 	<h5>Foto</h5>
-								 	<img style="width: 100%" src="http://bbpjn8.binamarga.pu.go.id/pengujian/wp-content/uploads/2017/10/Untitled-1-01.png">
-								 </div>
-								 <div align="center" class="col-sm-6">
-								 	<h5>PKS</h5>
-								 	<img style="width: 100%" src="http://bbpjn8.binamarga.pu.go.id/pengujian/wp-content/uploads/2017/10/Untitled-1-01.png">
-								 </div>
+								<div align="center" class="col-sm-6">
+									<h5>Foto</h5>
+									<img style="width: 100%" src="http://bbpjn8.binamarga.pu.go.id/pengujian/wp-content/uploads/2017/10/Untitled-1-01.png">
+								</div>
+								<div align="center" class="col-sm-6">
+									<h5>PKS</h5>
+									<img style="width: 100%" src="http://bbpjn8.binamarga.pu.go.id/pengujian/wp-content/uploads/2017/10/Untitled-1-01.png">
+								</div>
 							</div>
 							<div align="right">
 								<button class="btn btn-primary">Simpan</button>
@@ -328,7 +346,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
