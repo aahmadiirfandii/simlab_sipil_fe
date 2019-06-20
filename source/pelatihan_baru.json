@@ -6,28 +6,34 @@
     "aaData": [{
                  "no": 1,
                  "nama_kegiatan": "Pelatihan Kegiatan 1",
+                 "instansi": "Instansi A",
                  "tanggal_mulai": "1 Mei 2019",
                  "tanggal_selesai":"1 Mei 2019",
                  "lokasi":"Lab A",
                  "jumlah_peserta":"50",
+                  "biaya_kegiatan": "Rp150.000",
                  "aksi": null
              },
              {
                 "no": 2,
                  "nama_kegiatan": "Pelatihan Kegiatan 2",
+                  "instansi": "Instansi B",
                  "tanggal_mulai": "1 Mei 2019",
                  "tanggal_selesai":"2 Mei 2019",
                  "lokasi":"Lab B",
                  "jumlah_peserta":"25",
+                  "biaya_kegiatan": "Rp250.000",
                  "aksi": null
              },
              {
                 "no": 3,
                  "nama_kegiatan": "Pelatihan Kegiatan 3",
+                  "instansi": "Instansi C",
                  "tanggal_mulai": "1 Mei 2019",
                  "tanggal_selesai":"3 Mei 2019",
                  "lokasi":"Lab B",
                  "jumlah_peserta":"70",
+                  "biaya_kegiatan": "Rp300.000",
                  "aksi": null
              }
 ]

@@ -413,7 +413,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					className: 'text-center'
 				},
 				{
-					targets: -1,
+					targets: 8,
 					title: 'Aksi',
 					className: 'text-center',
 					orderable: false,
@@ -422,6 +422,106 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
                         <button data-toggle="modal" data-target="#kt_modal_alasan_penolakan" class="btn btn-sm btn-danger" style="margin-right:5px">Tolak</button>` +
                         '<button class="btn btn-sm btn-success" >Terima</button>';
 					},
+				},
+	
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable4_laboran = function() {
+		// begin first table
+		var table = $('#tbl_list_appointment_laboran').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/list_appointment.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'no_appointment'},
+				{data: 'id_appointment'},
+				{data: 'nama'},
+				{data: 'e-mail',},
+				{data: 'pilihan_lab'},
+				{data: 'tanggal_janjian'},
+				{data: 'waktu'},
+				{data: 'keperluan'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1, 2, 3, 4,5,6,7],
+					className: 'text-center'
 				},
 	
 			],
@@ -1018,7 +1118,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a class="btn btn-sm btn-warning btn_rincian" style="color:white;">Published</a>` 
+                        <button type="button" class="btn btn-warning btn-custom" id="kt_sweetalert_demo_4">published</button>` 
                         	+ '<a style="margin-top:5px" href="rincian_kegiatan.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>';
 					},
 				},
@@ -1347,6 +1447,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 			columns: [
 				{data: 'no'},
+				{data: 'no_kode_alat'},
 				{data: 'nama_kalibrasi'},
 				{data: 'tanggal'},
 				{data: 'instansi'},
@@ -1364,7 +1465,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5],
+					targets: [0,1,2,3,4,5,6],
 					className: 'text-center',
 				},
 				{
@@ -3051,10 +3152,12 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			columns: [
 				{data: 'no'},
 				{data: 'nama_kegiatan'},
+				{data: 'instansi'},
 				{data: 'tanggal_mulai'},
 				{data: 'tanggal_selesai'},
 				{data: 'lokasi'},
 				{data: 'jumlah_peserta'},
+				{data: 'biaya_kegiatan'},
 				{data: 'aksi'},
 
 			],
@@ -3080,7 +3183,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					},
 				},
 				{
-					targets: [0,1,2,3,4,5,6],
+					targets: [0,1,2,3,4,5,6,7,8],
 					className: 'text-center',
 				},
 				
@@ -3144,6 +3247,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable2();
 			initTable3();
 			initTable4();
+			initTable4_laboran();
 			initTable5();
 			initTable6();
 			initTable7();

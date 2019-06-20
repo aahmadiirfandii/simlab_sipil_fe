@@ -5,6 +5,7 @@
     "sColumns": "",
     "aaData": [{
                  "no": 1,
+                 "no_kode_alat": "123123123",
                  "nama_kalibrasi":"-",
                  "tanggal": "1 Mei 2019",
                  "instansi": "Fakultas Teknik UNHAS",
@@ -13,6 +14,7 @@
              },
              {
                  "no": 2,
+                 "no_kode_alat": "123123123",
                  "nama_kalibrasi":"-",
                  "tanggal": "2 Mei 2019",
                  "instansi": "Fakultas Teknik UNHAS",
@@ -21,6 +23,7 @@
              },
              {
                  "no": 3,
+                "no_kode_alat": "123123123",
                 "nama_kalibrasi":"-",
                  "tanggal": "3 Mei 2019",
                  "instansi": "Fakultas Teknik UNHAS",
