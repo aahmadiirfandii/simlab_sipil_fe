@@ -1,0 +1,28 @@
+{
+    "iTotalRecords": 3,
+    "iTotalDisplayRecords": 3,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "kelompok_1": "Ahmad Rifaldi",
+                 "kelompok_2": "Fascal Ivandry",
+                 "kelompok_3": "Ahwan Azhari",
+                 "kelompok_4": "Muh Fadly Bahrum",
+                "kelompok_5": "Darnilia"
+             },
+             {
+                 "kelompok_1": "Joshua Neonada",
+                 "kelompok_2": "Ewit Pratiwi",
+                 "kelompok_3": "Alif Indra Setiawan",
+                 "kelompok_4": "Muh. Fatur",
+                "kelompok_5": "Vega Vatima"
+             },
+             {
+                "kelompok_1": "Muh. ikhsan",
+                 "kelompok_2": "Riska Wulandari",
+                 "kelompok_3": "Muh. Farhan",
+                 "kelompok_4": "Siti Surya Rahmi",
+                "kelompok_5": "Muh. Fuad Hasbi"
+             }
+]
+}

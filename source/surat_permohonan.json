@@ -1,0 +1,38 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "no_surat": "A123321123",
+                 "tanggal_surat": "1 juni 2019",
+                 "tujuan": "Kepala Departemen Sipil UH",
+                 "perihal" : "Permohonan Layana LAB A",
+                 "instansi" : "Darnilia Nurul/Upana Studio",
+                 "scan_surat": null,
+                 "aksi" : null
+
+             },
+             {
+                 "no": 2,
+                 "no_surat": "A123321123",
+                 "tanggal_surat": "1 juni 2019",
+                 "tujuan": "Kepala Departemen Sipil UH",
+                 "perihal" : "Permohonan Layana LAB A",
+                 "instansi" : "Darnilia Nurul/Upana Studio",
+                 "scan_surat": null,
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                 "no_surat": "A123321123",
+                 "tanggal_surat": "1 juni 2019",
+                 "tujuan": "Kepala Departemen Sipil UH",
+                 "perihal" : "Permohonan Layana LAB A",
+                 "instansi" : "Darnilia Nurul/Upana Studio",
+                 "scan_surat": null,
+                 "aksi" : null
+             }
+]
+}

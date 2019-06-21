@@ -2673,6 +2673,126 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable23 = function() {
+		// begin first table
+		var table = $('#tbl_daftar_surat_permohonan').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 100,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/surat_permohonan.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'no'},
+				{data: 'no_surat'},
+				{data: 'tanggal_surat'},
+				{data: 'tujuan'},
+				{data: 'perihal'},
+				{data: 'instansi'},
+				{data: 'scan_surat'},
+				{data: 'aksi'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1, 2, 3, 4,5,6,7],
+					className: 'text-center'
+				},
+				{
+					targets: -1,
+					title: 'Aksi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a href="rincian_daftar_permohonan.html" class="btn btn-sm btn-warning btn_rincian" style="color:white;">Rincian</a>` 
+                        	+ '<a class="btn btn-sm btn-success btn_rincian" style="color:white;margin-left:5px">Disposisi</a>'
+                        	+ '<a class="btn btn-sm btn-danger btn_rincian" style="color:white;margin-left:5px">Tolak</a>';
+					},
+				},
+				{
+					targets: -2,
+					title: 'Scan Surat',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a class="btn btn-sm btn-primary btn_rincian" style="color:white;">Lihat</a>`;
+					},
+				},
+				
+				
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 
 	return {
 
@@ -2702,6 +2822,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable20();
 			initTable21();
 			initTable22();
+			initTable23();
 		},
 
 	};

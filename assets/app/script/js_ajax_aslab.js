@@ -2019,6 +2019,134 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable16_kepala_lab = function() {
+		// begin first table
+		var table = $('#tbl_layanan_lab_kepala_lab').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/layanan_lab_mahasiswa.json',
+				type: 'POST',
+			},
+			columns: [
+				{data: 'no'},
+				{data: 'laboratorium'},
+				{data: 'layanan_lab'},
+				{data: 'tanggal'},
+				{data: 'jam_mulai'},
+				{data: 'jam_selesai'},
+				{data: 'status'},
+				{data: 'aksi'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3,4,5,6],
+					className: 'text-center',
+				},
+				{
+					targets: -1,
+					title: 'Aksi',
+					className: 'text-center',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>`;
+					},
+				},
+				{
+					targets: -2,
+					width: 200,
+					render: function(data, type, full, meta) {
+						var status = {
+							pembayaran: {'title': 'Menunggu Pembayaran', 'class': 'btn-label-warning'},
+							diterima: {'title': 'Diterima', 'class': ' btn-label-success'},
+							ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
+							terkonfirmasi: {'title': 'terkonfirmasi', 'class': ' btn-label-info'},
+							expired: {'title': 'Expired', 'class': ' btn-label-dark'},
+							persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						};
+						if (typeof status[data] === 'undefined') {
+							return data;
+						}
+						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					},
+				},
+
+				
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 	var initTable17 = function() {
 		// begin first table
 		var table = $('#tbl_daftar_permohonan_dosen').DataTable({
@@ -3237,6 +3365,384 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable_2_kelompok = function() {
+		// begin first table
+		var table = $('#jumlah_kelompok_2').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/pembagian_kelompok.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'kelompok_1'},
+				{data: 'kelompok_2'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1],
+					className: 'text-center'
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable_3_kelompok = function() {
+		// begin first table
+		var table = $('#jumlah_kelompok_3').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/pembagian_kelompok.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'kelompok_1'},
+				{data: 'kelompok_2'},
+				{data: 'kelompok_3'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1,2],
+					className: 'text-center'
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable_4_kelompok = function() {
+		// begin first table
+		var table = $('#jumlah_kelompok_4').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/pembagian_kelompok.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'kelompok_1'},
+				{data: 'kelompok_2'},
+				{data: 'kelompok_3'},
+				{data: 'kelompok_4'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1,2,3],
+					className: 'text-center'
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
+	var initTable_5_kelompok = function() {
+		// begin first table
+		var table = $('#jumlah_kelompok_5').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/pembagian_kelompok.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'kelompok_1'},
+				{data: 'kelompok_2'},
+				{data: 'kelompok_3'},
+				{data: 'kelompok_4'},
+				{data: 'kelompok_5'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0, 1,2,3,4],
+					className: 'text-center'
+				},
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 
 
 	return {
@@ -3260,6 +3766,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable14();
 			initTable15();
 			initTable16();
+			initTable16_kepala_lab();
 			initTable17();
 			initTable18();
 			initTable19();
@@ -3270,6 +3777,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable24();
 			initTable25();
 			initTable26();
+			initTable_2_kelompok();
+			initTable_3_kelompok();
+			initTable_4_kelompok();
+			initTable_5_kelompok();
 		},
 
 	};
