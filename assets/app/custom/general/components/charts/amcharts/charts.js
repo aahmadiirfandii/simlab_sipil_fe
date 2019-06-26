@@ -456,7 +456,7 @@ var KTamChartsChartsDemo = function() {
                 "minorGridEnabled": true
             },
             "export": {
-                "enabled": true
+                "enabled": false
             },
             "dataProvider": [{
                 "date": "2012-07-27",
@@ -1025,13 +1025,7 @@ var KTamChartsChartsDemo = function() {
             }]
         });
 
-        chart.addListener("rendered", zoomChart);
-
-        zoomChart();
-
-        function zoomChart() {
-            chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
-        }
+        
     }
 
     var demo7 = function() {

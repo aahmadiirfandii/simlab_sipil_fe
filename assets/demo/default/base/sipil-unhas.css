@@ -33,21 +33,21 @@
 .ketengah {
 	align-content: center;
 }
-.gambar-lab {
+/*.gambar-lab {
 	width: inherit;
 	height: 160px;
-	background-color: #FB8C00;
+	background-color: #eb2629;
 	margin-bottom: 20px;
 	border-radius: 15px;
 	font-size: 1rem;
 	font-weight: 500;
 	color: white;
-}
+}*/
 .kt-scrolltop {
-	background: #FB8C00;
+	background: #eb2629;
 }
 .kt-footer .kt-footer__bottom .kt-footer__logo .kt-footer__copyright {
-	color: #FB8C00;
+	color: white;
 }
 .btn-secondary:active,
 .btn-secondary:focus {
