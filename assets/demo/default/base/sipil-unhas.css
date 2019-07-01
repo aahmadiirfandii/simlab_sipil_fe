@@ -33,7 +33,7 @@
 .ketengah {
 	align-content: center;
 }
-/*.gambar-lab {
+.gambar-lab {
 	width: inherit;
 	height: 160px;
 	background-color: #eb2629;
@@ -42,7 +42,7 @@
 	font-size: 1rem;
 	font-weight: 500;
 	color: white;
-}*/
+}
 .kt-scrolltop {
 	background: #eb2629;
 }
