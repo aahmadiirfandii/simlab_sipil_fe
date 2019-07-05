@@ -1,0 +1,42 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "checkbox": null,
+                 "no" : 1,
+                 "nim": "D42113016",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_kelompok": "-"
+             },
+             {
+                  "checkbox": null,
+                 "no" : 2,
+                 "nim": "D42113016",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_kelompok": "-"
+             },
+             {
+                  "checkbox": null,
+                 "no" : 3,
+                 "nim": "D42113016",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_kelompok": "-"
+             },
+             {
+                  "checkbox": null,
+                 "no" : 4,
+                 "nim": "D42113016",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_kelompok": "1"
+             },
+             {
+                  "checkbox": null,
+                 "no" : 5,
+                 "nim": "D42113016",
+                 "nama": "Ahmad Rifaldi",
+                 "nama_kelompok": "1"
+             }
+]
+}

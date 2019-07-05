@@ -1096,6 +1096,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'tanggal_mulai'},
 				{data: 'tanggal_selesai'},
 				{data: 'status'},
+				{data: 'status_publikasi'},
 				{data: 'Aksi', responsivePriority: -1},
 			],
 
@@ -1109,7 +1110,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1, 2, 3, 4,5,6,7,8],
+					targets: [0, 1, 2, 3, 4,5,6,7,8,9],
 					className: 'text-center'
 				},
 				{
@@ -1118,12 +1119,26 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button type="button" class="btn btn-warning btn-custom" id="kt_sweetalert_demo_4">published</button>` 
-                        	+ '<a style="margin-top:5px" href="rincian_kegiatan.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>';
+                        <a style="margin-top:5px" href="rincian_kegiatan.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
 					},
 				},
 				{
-					targets: 7,
+					targets: -2,
+					title: 'Status Publikasi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+						<label style="display:none" id="status_publikasi_tampilkan">Sembunyikan</label>
+						<span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--primary">
+						<label>
+						<input type="checkbox" name="status_publikasi_switch">
+						<span></span>
+						</label>
+						</span>`;
+					},
+				},
+				{
+					targets: -3,
 					width: 200,
 					render: function(data, type, full, meta) {
 						var status = {
@@ -1560,7 +1575,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'durasi'},
 				{data: 'deskripsi'},
 				{data: 'harga'},
-				{data: 'status'},
+				{data: 'status_publikasi'},
 				{data: 'aksi'},
 			],
 
@@ -1589,16 +1604,28 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				},
 				{
 					targets: -2,
-					width: 200,
+					title: 'Status Publikasi',
+					orderable: false,
 					render: function(data, type, full, meta) {
-						var status = {
-							published: {'title': 'published', 'class': ' btn-label-success'},
-							unpublished: {'title': 'unpublished', 'class': ' btn-label-dark'},
-						};
-						if (typeof status[data] === 'undefined') {
-							return data;
-						}
-						return '<span class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+						return `
+						<div class="row">
+							<div style="padding-right:0px" class="col-4">
+								<label>Sembunyikan</label>
+							</div>
+							<div style="padding-right:0px;padding-left:0px" class="col-4">
+								<label style="display:none" id="status_publikasi_tampilkan">Sembunyikan</label>
+								<span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--primary">
+								<label>
+								<input style="width:100%" type="checkbox" name="status_publikasi_switch">
+								<span></span>
+								</label>
+								</span>
+							</div>
+							<div style="padding-left:0px" class="col-4">
+								<label>Tampilkan</label>
+							</div>
+						</div>
+						`;
 					},
 				},
 				
@@ -1696,7 +1723,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0],
+					targets: [0,1,2,3,4,5],
 					className: 'text-center',
 				},
 				{
@@ -1707,7 +1734,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					render: function(data, type, full, meta) {
 						return `
                         <button class="btn btn-sm btn-warning" style="margin-right:5px">Pengujian Selesai</button>` +
-                        '<a href="rincian_kegiatan.html" class="btn btn-sm btn-info">Edit</a>';
+                        '<a href="rincian_kegiatan.html" class="btn btn-sm btn-info">Rincian</a>';
 					},
 				},
 
@@ -3286,6 +3313,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'lokasi'},
 				{data: 'jumlah_peserta'},
 				{data: 'biaya_kegiatan'},
+				{data: 'link'},
+				{data: 'status_publikasi'},
 				{data: 'aksi'},
 
 			],
@@ -3311,8 +3340,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					},
 				},
 				{
-					targets: [0,1,2,3,4,5,6,7,8],
+					targets: [0,1,2,3,4,5,6,7,8,9,10],
 					className: 'text-center',
+				},
+				{
+					targets: -2,
+					title: 'Status Publikasi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+						<label style="display:none" id="status_publikasi_tampilkan">Sembunyikan</label>
+						<span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--primary">
+						<label>
+						<input type="checkbox" name="status_publikasi_switch">
+						<span></span>
+						</label>
+						</span>`;
+					},
 				},
 				
 			],
@@ -3743,6 +3787,118 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable27 = function() {
+		// begin first table
+		var table = $('#tbl_list_nama_praktikan').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/praktikan.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'checkbox'},
+				{data: 'no'},
+				{data: 'nim'},
+				{data: 'nama'},
+				{data: 'nama_kelompok'},
+
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: 0,
+					title: '#',
+					width: 50,
+					className: 'text-center',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+						<label class="kt-checkbox kt-checkbox--solid kt-checkbox--success">
+						<input type="checkbox">
+						<span></span>
+						</label>`;
+					},
+				},
+				{
+					targets: [0,1,2,3,4],
+					className: 'text-center',
+				},
+				
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 
 
 	return {
@@ -3781,6 +3937,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable_3_kelompok();
 			initTable_4_kelompok();
 			initTable_5_kelompok();
+			initTable27();
 		},
 
 	};

@@ -10,6 +10,7 @@
                  "deskripsi": "Lorem ipsum dolor sit amet",
                  "harga": "Rp250.000",
                  "status": "published",
+                 "status_publikasi": "published",
                  "aksi":null
              },
              {
@@ -19,6 +20,7 @@
                  "deskripsi": "Lorem ipsum dolor sit amet",
                  "harga": "Rp250.000",
                  "status": "unpublished",
+                 "status_publikasi": "unpublished",
                  "aksi":null
              },
              {
@@ -28,6 +30,7 @@
                  "deskripsi": "Lorem ipsum dolor sit amet",
                  "harga": "Rp250.000",
                  "status": "published",
+                 "status_publikasi": "published",
                  "aksi":null
              }
 ]

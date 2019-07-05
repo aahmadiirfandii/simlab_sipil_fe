@@ -12,6 +12,8 @@
                  "lokasi":"Lab A",
                  "jumlah_peserta":"50",
                   "biaya_kegiatan": "Rp150.000",
+                  "link" : "bit.ly/pelatihan_1",
+                  "status_publikasi":null,
                  "aksi": null
              },
              {
@@ -23,6 +25,8 @@
                  "lokasi":"Lab B",
                  "jumlah_peserta":"25",
                   "biaya_kegiatan": "Rp250.000",
+                  "link" : "bit.ly/pelatihan_2",
+                  "status_publikasi":null,
                  "aksi": null
              },
              {
@@ -34,6 +38,8 @@
                  "lokasi":"Lab B",
                  "jumlah_peserta":"70",
                   "biaya_kegiatan": "Rp300.000",
+                  "link" : "bit.ly/pelatihan_3",
+                  "status_publikasi":null,
                  "aksi": null
              }
 ]
