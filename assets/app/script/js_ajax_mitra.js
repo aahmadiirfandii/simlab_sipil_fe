@@ -2053,6 +2053,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'tanggal_mulai'},
 				{data: 'tanggal_selesai'},
 				{data: 'jumlah_layanan'},
+				{data: 'detail_layanan'},
 				{data: 'status'},
 			],
 
@@ -2066,8 +2067,17 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5,6,7,8],
+					targets: [0,1,2,3,4,5,6,7,8,9],
 					className: 'text-center'
+				},
+				{
+					targets: -2,
+					width: 200,
+					className:'text-center',
+					render: function(data, type, full, meta) {
+			
+						return '<p>Detail 1</p><p>Detail 2</p><p>Detail 3</p>';
+					},
 				},
 				{
 					targets: -1,

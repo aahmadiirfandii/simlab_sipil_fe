@@ -407,7 +407,12 @@
 													<img style="height: auto;width: inherit;" src="http://tsipil.ugm.ac.id/wp-content/uploads/2016/02/kunj_lab_hidro_3.jpg">
 												</div>
 												<div class="col-8 deskripsi">
-													<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+													<form>
+														<textarea disabled="" style="resize: none" class="form-control" id="informasi_umum" rows="10">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+														<div align="right" style="margin-top: 20px">
+															<button id="btn_edit_informasi" type="button" class="btn btn-warning">Edit Informasi</button>
+														</div>
+													</form>
 												</div>
 												<div style="margin-top: 30px " class="col-12" >
 													<table style="width: 100%;height: 170px" class="tg">
@@ -467,6 +472,7 @@
 														<th>Tangal Mulai</th>
 														<th>Tanggal Selesai</th>
 														<th>Status</th>
+														<th>Status Publikasi</th>
 														<th>Aksi</th>
 													</tr>
 												</thead>
@@ -983,6 +989,9 @@
 	jQuery(document).ready(function() {
 		KTSweetAlert2Demo.init();
 	});
+</script>
+<script>
+	
 </script>
 
 </body>

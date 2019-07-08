@@ -24,6 +24,7 @@
                  "status_kerjasama": "selesai",
                  "region":"Dalam Negeri",
                   "lokasi":"Lab A",
+                  "detail_layanan" : null,
                   "jumlah_peserta":"30",
                  "Aksi": null
              },
@@ -48,6 +49,7 @@
                  "status_kerjasama": "selesai",
                  "region":"Luar Negeri",
                  "lokasi":"Lab A dan Lab B",
+                 "detail_layanan" : null,
                  "jumlah_peserta":"50",
                  "Aksi": null
              },
@@ -72,6 +74,7 @@
                  "status_kerjasama": "selesai",
                  "region":"Dalam Negeri",
                  "lokasi":"Lab C",
+                 "detail_layanan" : null,
                  "jumlah_peserta":"20",
                  "Aksi": null
              }
