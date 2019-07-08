@@ -925,7 +925,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="#" class="btn btn-sm btn-success" style="color:white;margin-bottom:5px" target="_blank">Modul</a>`+' <a href="#" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Format Laporan</a>';
+                        <a href="#" class="btn btn-sm btn-success" style="color:white;margin-bottom:5px" target="_blank">Modul</a>`+' <a href="#" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Pembagian Kelompok</a>';
 					},
 				},
 				{
@@ -1715,6 +1715,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'jam_selesai'},
 				{data: 'kondisi'},
 				{data: 'catatan'},
+				{data: 'aksi'},
 
 
 				],
@@ -1729,10 +1730,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5],
+					targets: [0,1,2,3,4,5,6],
 					className: 'text-center'
 				},
-				
+				{
+					targets: -1,
+					title: 'Aksi',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <button data-toggle="modal" data-target="#kt_modal_rincian_alat" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</button>`;
+					},
+				},
 				
 				
 			],
@@ -2793,6 +2802,102 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 
 	};
+	var initTable24 = function() {
+		// begin first table
+		var table = $('#pemakaian_alat').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: true,
+			ajax: {
+				url: '../source/pemakaian_alat.json',
+				type: 'POST',
+				
+			},
+			columns: [
+				{data: 'no'},
+				{data: 'alat'},
+				{data: 'kondisi_alat'},
+				{data: 'catatan'},
+			],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+				
+				});
+			},
+
+			columnDefs: [
+				{
+					targets: [0,1,2,3],
+					className: 'text-center'
+				},
+				
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search').on('click', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_datepicker').datepicker({
+			todayHighlight: true,
+			templates: {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>',
+			},
+		});
+
+	};
 
 	return {
 
@@ -2823,6 +2928,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable21();
 			initTable22();
 			initTable23();
+			initTable24();
 		},
 
 	};

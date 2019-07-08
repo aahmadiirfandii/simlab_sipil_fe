@@ -7,19 +7,22 @@
                  "no": 1,
                  "alat": "Alat 1",
                  "kondisi": null,
-                 "catatan": "Alat 1"
+                 "kondisi_alat": "Baik",
+                 "catatan": "-"
              },
              {
                  "no": 2,
                  "alat": "Alat 2",
                  "kondisi": null,
-                 "catatan": "Alat 1"
+                 "kondisi_alat": "Baik",
+                 "catatan": "Lorem ipsum dolor sit amet"
              },
              {
                  "no": 3,
                  "alat": "Alat 3",
                  "kondisi": null,
-                 "catatan": "Alat 1"
+                 "kondisi_alat": "Rusak",
+                 "catatan": "Lorem ipsum dolor sit amet"
              }
 ]
 }
