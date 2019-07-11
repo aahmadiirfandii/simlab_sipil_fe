@@ -68,6 +68,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
 		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
 			border-radius: 4px;
@@ -213,21 +214,6 @@
 			}
 			.deskripsi p {
 				font-size: 1.1rem;
-			}
-			.kt-header-menu-wrapper {
-				background: white;
-				-webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-				box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-			}
-			.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
-				background-color: #f4f4f7 !important;
-			}
-			.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
-				color: #282829;
-			}
-			.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-				color: #444441;
-				font-size: 1.3rem;
 			}
 			.dataTables_wrapper .dataTable th {
 				font-size: 1.1rem;
@@ -461,22 +447,24 @@
 													</div>
 												</div>
 											</form>
-											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kegiatan">
-												<thead>
-													<tr>
-														<th>No.</th>
-														<th>Nama</th>
-														<th>Nama Kegiatan</th>
-														<th>Jenis Kegiatan</th>
-														<th>Instansi</th>
-														<th>Tangal Mulai</th>
-														<th>Tanggal Selesai</th>
-														<th>Status</th>
-														<th>Status Publikasi</th>
-														<th>Aksi</th>
-													</tr>
-												</thead>
-											</table>
+											<div class="kt-portlet__body kt-portlet__body--fit">
+												<table style="width: 100% !important;" class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kegiatan">
+													<thead>
+														<tr>
+															<th>No.</th>
+															<th>Nama</th>
+															<th>Nama Kegiatan</th>
+															<th>Jenis Kegiatan</th>
+															<th>Instansi</th>
+															<th>Tangal Mulai</th>
+															<th>Tanggal Selesai</th>
+															<th>Status</th>
+															<th>Status Publikasi</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+												</table>
+											</div>
 										</div>
 									</div>
 									<div class="tab-pane" id="kt_tabs_alat" role="tabpanel">
@@ -494,24 +482,26 @@
 													</div>
 												</div>
 											</form>
-											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_peralatan">
-												<thead>
-													<tr>
-														<th>No.</th>
-														<th>No. Inventaris</th>
-														<th>Tahun Pengadaan</th>
-														<th>Gambar</th>
-														<th>Nama Alat</th>
-														<th>Spesifikasi/Merk/Tipe</th>
-														<th>Sumber Biaya</th>
-														<th>Fungsi Utama</th>
-														<th>Jumlah</th>
-														<th>Kondisi</th>
-														<th>Harga Sewa</th>
-														<th>Aksi</th>
-													</tr>
-												</thead>
-											</table>
+											<div class="kt-portlet__body kt-portlet__body--fit">
+												<table style="width: auto;" class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_peralatan">
+													<thead>
+														<tr>
+															<th>No.</th>
+															<th>No. Inventaris</th>
+															<th>Tahun Pengadaan</th>
+															<th>Gambar</th>
+															<th>Nama Alat</th>
+															<th>Spesifikasi/Merk/Tipe</th>
+															<th>Sumber Biaya</th>
+															<th>Fungsi Utama</th>
+															<th>Jumlah</th>
+															<th>Kondisi</th>
+															<th>Harga Sewa</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+												</table>
+											</div>
 										</div>
 									</div>
 									<div class="tab-pane" id="kt_tabs_layanan_lab" role="tabpanel">
@@ -528,7 +518,7 @@
 												</div>
 											</form>
 											<div class="kt-portlet__body kt-portlet__body--fit">
-												<table class="table" id="tbl_layanan_lab">
+												<table style="width: inherit;" class="table" id="tbl_layanan_lab">
 													<thead>
 														<tr>
 															<th>No</th>

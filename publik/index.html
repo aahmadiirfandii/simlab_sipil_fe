@@ -143,29 +143,23 @@
 			background-color:#0b2e63 ;
 			border-color:#0b2e63 ;
 		}
-		
-		.gambar-lab {
-			width: inherit;
-			height: 15vw;
-			
-			margin-bottom: 20px;
-			border-radius: 15px;
-		}
 		.layer {
+			position: absolute;
+			top: 0px;
 			background-color: rgba(0,0,0,.4);
 			height: inherit;
-			width: inherit;
+			width:205px;
 			border-radius: 15px;
 		}
 		.layer:hover {
 			background-color: rgba(0,0,0,.2	)
 		}
 		.layer p {
-			font-size: 1.3rem;
-			position: absolute;
-			bottom: 15px;
-			right: 1px;
-			left: 1px;
+			width: 100%;
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: white;
+			
 		}
 		.card-informasi {
 			padding: 8px;
@@ -176,6 +170,50 @@
 		}
 		.gambar-organisasi {
 			height: 400px;
+		}
+		.box{
+			position: relative;
+			display: inline-block; /* Make the width of box same as image */
+			height: 15vw;
+			margin-bottom: 15px;
+		}
+		.foto_lab {
+			width:205px;
+			height:15vw;
+			object-fit:cover;
+			border-radius: 15px;
+		}
+		.centered {
+			width: 95%;
+			position: absolute;
+			bottom: 0%;
+		}
+		
+
+		@media (min-width: 576px){
+			.foto_lab,
+			.layer {
+				width: 80vw
+			}
+		}
+		@media (max-width: 1024px){
+			.foto_lab,
+			.layer {
+				width: 90%
+			}
+		}
+
+		@media (min-width: 1024px){
+			.foto_lab,
+			.layer {
+				width: 180px
+			}
+		}
+		@media (min-width: 1124px){
+			.foto_lab,
+			.layer {
+				width: 200px
+			}
 		}
 	</style>
 </head>
@@ -302,46 +340,51 @@
 												</div>
 											</div>
 											<div class="kt-portlet__body row kt-portlet-anormal" >
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" name="laboratorim[]" class="gambar-lab">
-														<img style="width: inherit;" src="../assets/media/bg/bg-5.jpg">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Ukur Tanah</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" id="lab-mekanika" class="gambar-lab">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Mekanika Tanah</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" id="lab-hidro" class="gambar-lab">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Hidrolika</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" id="lab-perkerasan-jalan" class="gambar-lab">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Perkerasan Jalan</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" id="lab-struktur-bahan" class="gambar-lab">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Struktur dan Bahan</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>
-												<div onclick="location.href='informasi_lab.html';" class="col-sm-3 ">
-													<div align="center" id="lab-teknik-sungai" class="gambar-lab">
-														<div class="layer">
-															<p style="padding: 0px 20px">Lab Teknik Sungai</p>
+												<div onclick="location.href='informasi_lab.html';" class="box col-sm-3">
+													<img id="foto_lab[]" class="foto_lab" src="../assets/media/misc/lab_1.jpg" width="400" height="500">
+													<div class="layer">
+														<div class="centered">
+															<p style="text-align: center;">Lab Hidrolika</p>
 														</div>
 													</div>
 												</div>

@@ -4,7 +4,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Tambah Pengujian Mitra | Laboran</title>
+	<title>Laboratorium | Kepala Lab</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -66,10 +66,13 @@
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
-	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
+		body{
+			color: #212121
+		}
 		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
 			border-radius: 4px;
 			padding: 0.75rem 0.75rem;
@@ -77,11 +80,171 @@
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 			font-size: 1rem;
 		}
+		.kt-container {
+			padding: 0 10px !important;
+		}
+		.dropdown-inline {
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.dropdown-inline:hover {
+			background-color: #252338;
+		}
+		.dropdown-menu {
+			padding: 5px !important;
+		}
+		.kt-subheader__title {
+			font-size: 2rem !important;
+		}
+		.nav-item  a {
+			font-size: 1.2rem !important;
+			color: #1f1e2e !important;
+		}
+		.nav-tabs .nav-item .nav-link.active {
+			font-weight: 500 !important;
+			font-size: 1.3rem !important;
+		}
+		.alamat_sipil p{
+			margin-bottom: 0.4rem !important;
+			font-size: 14px;
+		}
+		.deskripsi p{
+			font-size: 14px;
+		}
+		.kt-content {
+			padding-bottom: 0px;
+		}
+		.nav-pills, .nav-tabs {
+			margin-bottom: 0px !important;
+		}
+		.informasi {
+			margin-top: 25px;
+		}
+		.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__head .kt-datatable__row > .kt-datatable__cell {
+			font-size: 1.2rem !important;
+		}
+		.kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__body .kt-datatable__row > .kt-datatable__cell {
+			font-size: 1.1rem !important;
+		}
+		.drop_D {
+			top: 0vh!important;
+			left: -5vw !important;
+			background-color: #2c2d3a;
+			color: white;
+			font-weight: 600;
+			width: 70vw;
+		}
+		.height_link {
+			min-height: 25px;
+			border : .5px solid rgba(255,255,255,.2);
+		}
+		a {
+			text-decoration: none !important;
+			color: white;
+		}
+		.kt-header-mobile {
+			min-height: 60px;
+		}
+		.custom-file {
+			font-size: 0.5rem;
+		}
+		.choose_file {
+			font-size: 0.5rem !important;
+			height: 100px;
+		}
+		.dataTables_wrapper .dataTables_info {
+			display: none;
+		}
+		.modal-lg {
+			max-width: 860px;
+		}
+		.kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+			font-size: 1.8rem;
+		}
+		.dataTables_wrapper .dataTable th {
+			font-size: 1.2rem;
+		}
+		.dataTables_wrapper .dataTable td {
+			font-size: 1.1rem;
+		}
+	</style>
+	<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:rgba(0,0,0,.2);}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:rgba(0,0,0,.2);}
+		.tg .tg-s268{text-align:left}
+		.tg .tg-0lax{text-align:left;vertical-align:top;font-size: 1.3rem;padding-left: 20px}
+		.head-table {
+			background-color: #0e3e87;
+			font-size: 1.2rem !important;
+			color: white;
+			text-align: center !important;
+		}
+	</style>
+	<style type="text/css">
+		.ts  {border-collapse:collapse;border-spacing:0;}
+		.ts td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.ts th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.ts .ts-xldj{border-color:inherit;text-align:left;font-weight: 600}
+		.ts .ts-0pky{border-color:inherit;text-align:left;vertical-align:top}
+	</style>
+	<style>
+		@media (max-width: 1024px) {
+			.kt-header .kt-header__top {
+				height: 0px;
+			}
+			.nav-item  a {
+				font-size: 1rem !important;
+				color: #1f1e2e !important;
+			}
+			.nav-tabs .nav-item .nav-link.active {
+				font-weight: 500 !important;
+				font-size: 1.1rem !important;
+			}
+			.nav-tabs .nav-item .nav-link {
+				padding : 0.75rem 0.25rem !important;
+			}
+			.header-mobile {
+				display: none;
+			}
+		}
+		@media (max-width: 720px) {
+			.head-table{
+				font-size: 1.1rem !important;
+			}
+			.tg .tg-0lax { 
+				font-size: 1.1rem !important;
+			}
+			.deskripsi p {
+				font-size: 1.1rem;
+			}
+			.kt-header-menu-wrapper {
+				background: white;
+				-webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+				box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+			}
+			.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
+				background-color: #f4f4f7 !important;
+			}
+			.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
+				color: #282829;
+			}
+			.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+				color: #444441;
+				font-size: 1.3rem;
+			}
+			.dataTables_wrapper .dataTable th {
+				font-size: 1.1rem;
+			}
+			.dataTables_wrapper .dataTable td {
+				font-size: 1rem;
+			}	
+		}
 	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
-<body class="kt-page--loading-enabled kt-page--loading kt-page--fixed  kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+<body class="kt-page--loading-enabled kt-page--loading kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 	<!-- begin::Page loader -->
 	<!-- end::Page Loader -->
 	<!-- begin:: Page -->
@@ -98,7 +261,7 @@
 					<span class="kt-menu__link-text registration flaticon2-user">
 					</span> 
 					<span style="margin-left: 5px" class="kt-menu__link-text registration">
-						Laboran
+						Kepala Lab
 					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
@@ -139,7 +302,7 @@
 											<span class="kt-menu__link-text registration flaticon2-user">
 											</span> 
 											<span style="margin-left: 5px" class="kt-menu__link-text registration">
-												Laboran
+												Kepala Lab
 											</span>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right">
@@ -151,7 +314,6 @@
 											</a>
 										</div>
 									</div>
-									
 								</div>
 							</div>
 						</div>
@@ -163,20 +325,48 @@
 							<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 								<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
 									<ul class="kt-menu__nav ">
-										<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										<li class="kt-menu__item   kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
 											<a href="index.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Beranda</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
 											<a href="laboratorium.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="jadwal_layanan.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Jadwal Layanan</span>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-text ">Layanan Laboratorium</span><span class="badge">5</span>
 											</a>
+											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+												<ul class="kt-menu__subnav">
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="daftar_permohonan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Daftar Permohonan</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="verifikasi_invoice.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Verifikasi Invoice</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="jadwal_layanan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Jadwal Layanan</span>
+														</a>
+													</li>
+												</ul>
+											</div>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -207,6 +397,11 @@
 											<a href="appointment.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Appointment</span><span class="badge">5</span>
 											</a>
+										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+											<a href="Pelatihan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Pelatihan</span>
+											</a>
 										</li>	
 									</ul>
 								</div>
@@ -217,409 +412,323 @@
 				</div>
 
 				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<div class="col-sm-12">
-						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							<div class="kt-subheader__main">
-								<a href="verifikasi.html"><h3 class="kt-subheader__title">Jadwal Pengujian</h3></a>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="daftar_permohonan.html"><span class="kt-subheader__desc">Daftar Pengujian Baru</span></a>
-							</div>
-						</div>
-					</div>
 					<div class="kt-portlet">
 						<div class="kt-portlet__head">
 							<div class="kt-portlet__head-label">
 								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Input Pengujian Baru</h3>
+									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Tambah Alat</h3>
 								</div>
 							</div>
 						</div>
 						<div class="kt-portlet__body">
 							<div class="row">
 								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											No Registrasi
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="A0011111" id="no_registrasi">
+									<div class="form-group">
+										<label>No. Inventaris</label>
+										<input disabled="" type="text" class="form-control" id="no_inventaris" value="001/inv-hid/2018">
+									</div>
+									<div class="form-group">
+										<label>Tahun Pengadaan</label>
+										<input type="text" class="form-control" id="tahun_pengadaan" placeholder="input tahun pengadaan">
+									</div>
+									<div class="form-group">
+										<label>Nama Alat</label>
+										<input type="text" class="form-control" id="nama_alat" placeholder="input nama alat">
+									</div>
+									<div class="form-group">
+										<label>Gambar alat</label>
+										<div class="custom-file">
+											<input type="file" class="custom-file-input" id="customFile">
+											<label class="custom-file-label" for="customFile">pilih file gambar</label>
 										</div>
 									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Permohonan
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_permohonan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Nama
-										</label>
-										<div class="col-8">
-											<input  class="form-control" type="text" placeholder="input nama pemohon" id="nama_pemohon">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											E-mail
-										</label>
-										<div class="col-8">
-											<input  class="form-control" type="e-mail" placeholder="input email pemohon" id="email_pemohon">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Instansi
-										</label>
-										<div class="col-8">
-											<input  class="form-control" type="text" placeholder="input instansi" id="instansi">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Judul Penelitian
-										</label>
-										<div class="col-8">
-											<textarea  style="resize: none" class="form-control" id="judul_penelitian" placeholder="input judul penelitian" rows="3"></textarea>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Jenis Kegiatan
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Layanan Mitra" id="jenis_kegiatan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Mulai
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="13 Maret 2019" id="tanggal_mulai">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Selesai
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="13 Maret 2019" id="tanggal_selesai">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Upload Berkas</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input choose_file" id="upload_sk_penelitan">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Upload SK</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input choose_file" id="upload_sk_penelitan">
-												<label class="custom-file-label" for="customFile">Choose file</label>
-											</div>
-										</div>
+									<div class="form-group">
+										<label>Spesifikasi/Merk/Tipe</label>
+										<select class="form-control" id="spesifikasi">
+											<option value="0">-Pilih Spesifikasi-</option>
+											<option value="1">Spek 1</option>
+											<option value="2">Spek 2</option>
+											<option value="3">Spek 3</option>
+											<option value="4">Spek 4</option>
+										</select>
 									</div>
 								</div>
 								<div class="col-sm-6">
-									<div class="row">
-										<div class="col-sm-8">
-											<h4>Pilih Lab/Layanan</h4>
-										</div>
-										<div align="right" class="col-sm-4">
-											<button class="btn btn-success">
-												<span class="fa fa-plus"> </span> Tambah Lab/Layanan
-											</button>
-										</div>
-									</div><hr>
-									<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="320" data-scrollbar-shown="true" style="height: 320px; overflow: hidden;">
-										<div id="lab[0]" class="list_lab">
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Laboratorium</label>
-												<div class="col-9">
-													<select class="form-control" id="laboratorium">
-														<option value="0">--Pilih Laboratorium--</option>
-														<option value="1">Lab 1</option>
-														<option value="2">Lab 2</option>
-														<option value="3">Lab 3</option>
-														<option value="4">Lab 4</option>
-														<option value="5">Lab 5</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Layanan Lab</label>
-												<div class="col-9">
-													<select class="form-control" id="laboratorium">
-														<option value="0">--Pilih Layanan--</option>
-														<option value="1">Layanan 1</option>
-														<option value="2">Layanan 2</option>
-														<option value="3">Layanan 3</option>
-														<option value="4">Layanan 4</option>
-														<option value="5">Lainnya</option>
-													</select>
-												</div>
-											</div>
-											<div style="display: none" class="form-group row">
-												<div class="offset-3 col-9">
-													<input class="form-control" type="text" placeholder="input nama pengujian" id="input_nama_pengujian">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Pilih Tanggal</label>
-												<div class="col-9">
-													<input class="form-control" type="date" value="2011-08-19" id="pilih_tanggal">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Waktu Mulai</label>
-												<div class="col-9">
-													<input class="form-control" type="time" value="13:45:00" id="waktu_mulai">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Waktu Selesai</label>
-												<div class="col-9">
-													<input class="form-control" type="time" value="13:45:00" id="waktu_selesai">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Alat yang digunakan :</label>
-												<div style="display: none" class="col-9">
-													<ol>
-														<li>Alat 1</li>
-														<li>Alat 2</li>
-														<li>Alat 3</li>
-														<li>Alat 4</li>
-													</ol>
-												</div>
-											</div>
-											<div style="display: none" class="form-group row">
-												<div class="col-sm-9">
-													<label for="example-text-input" class="col-3 col-form-label">Alat yang digunakan :</label> 
-												</div>
-												<div class="col-sm-3">
-													<button class="btn btn-success">
-														<span class="fa fa-plus"> </span> Tambah Alat
-													</button>	
-												</div>	
-												<div class="col-sm-12">
-													<select class="form-control" id="list_alat">
-														<option value="0">--Pilih Alat--</option>
-														<option value="1">Alat 1</option>
-														<option value="2">Alat 2</option>
-														<option value="3">Alat 3</option>
-														<option value="4">Alat 4</option>
-														<option value="5">Lainnya</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div id="lab[1]" class="list_lab">
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Laboratorium</label>
-												<div class="col-9">
-													<select class="form-control" id="laboratorium">
-														<option value="0">--Pilih Laboratorium--</option>
-														<option value="1">Lab 1</option>
-														<option value="2">Lab 2</option>
-														<option value="3">Lab 3</option>
-														<option value="4">Lab 4</option>
-														<option value="5">Lab 5</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Layanan Lab</label>
-												<div class="col-9">
-													<select class="form-control" id="laboratorium">
-														<option value="0">--Pilih Layanan--</option>
-														<option value="1">Layanan 1</option>
-														<option value="2">Layanan 2</option>
-														<option value="3">Layanan 3</option>
-														<option value="4">Layanan 4</option>
-														<option selected="" value="5">Lainnya</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-group row">
-												<div class="offset-3 col-9">
-													<input class="form-control" type="text" placeholder="input nama pengujian" id="input_nama_pengujian">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Pilih Tanggal</label>
-												<div class="col-9">
-													<input class="form-control" type="date" value="2011-08-19" id="pilih_tanggal">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Waktu Mulai</label>
-												<div class="col-9">
-													<input class="form-control" type="time" value="13:45:00" id="waktu_mulai">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Waktu Selesai</label>
-												<div class="col-9">
-													<input class="form-control" type="time" value="13:45:00" id="waktu_selesai">
-												</div>
-											</div>
-											<div style="display: none;" class="form-group row">
-												<label for="example-text-input" class="col-3 col-form-label">Alat yang digunakan :</label>
-												<div class="col-9">
-													<ol>
-														<li>Alat 1</li>
-														<li>Alat 2</li>
-														<li>Alat 3</li>
-														<li>Alat 4</li>
-													</ol>
-												</div>
-											</div>
-											<div class="form-group row">
-												<div class="col-sm-9">
-													<label for="example-text-input" class="col-3 col-form-label">Alat yang digunakan :</label> 
-												</div>
-												<div class="col-sm-3">
-													<button class="btn btn-success">
-														<span class="fa fa-plus"> </span> Tambah Alat
-													</button>	
-												</div>	
-												<div class="col-sm-12">
-													<select class="form-control" id="list_alat">
-														<option value="0">--Pilih Alat--</option>
-														<option value="1">Alat 1</option>
-														<option value="2">Alat 2</option>
-														<option value="3">Alat 3</option>
-														<option value="4">Alat 4</option>
-														<option value="5">Lainnya</option>
-													</select>
-												</div>
-											</div>
+									<div class="form-group">
+										<label>Sumber Biaya</label>
+										<input type="text" class="form-control" id="sumber_biaya" placeholder="input sumber biaya">
+									</div>
+									<div class="form-group">
+										<label>Fungsi Utama</label>
+										<input type="text" class="form-control" id="fungsi_utama_alat" placeholder="input fungsi utama">
+									</div>
+									<div class="form-group">
+										<label>Kondisi Alat</label>
+										<div class="kt-radio-inline">
+											<label class="kt-radio">
+												<input type="radio" name="kondisi_alat"> Baik
+												<span></span>
+											</label>
+											<label class="kt-radio">
+												<input type="radio" name="kondisi_alat"> Rusak
+												<span></span>
+											</label>
 										</div>
 									</div>
-									<h4>Pembayaran</h4>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Jenis Pembayaran
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Cash" id="jenis_pembayaran">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Total Harga Normal
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Rp-" id="total_harga_normal">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Diskon
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Rp-" id="diskon">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Total Pembayaran
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Rp-" id="diskon">
+									<div class="form-group">
+										<label>Harga Sewa</label>
+										<div class="input-group">
+											<div class="input-group-prepend"><span class="input-group-text">Rp.</span></div>
+											<input type="text" class="form-control" placeholder="input harga sewa" aria-describedby="basic-addon1">
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div align="right" class="col-sm-12">
-									<button class="btn btn-info">Konfirmasi</button>
-									<a href="daftar_permohonan.html" class="btn btn-warning">Kembali</a>
-								</div>
-							</div>	
+						</div>
+						<div align="right" class="kt-portlet__foot">
+							<a href="laboratorium.html" class="btn btn-warning">Kembali</a>
+							<button class="btn btn-success sweetalert2_simpan">Simpan</button>
 						</div>
 					</div>
 				</div>
-				<!--begin::Modal-->
-				<div class="modal fade" id="kt_modal_rincian_kegiatan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
+
+				<!-- Rincian Kegiatan -->
+				<div class="modal fade" id="rincian_kegiatan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Pemakaian Alat</h5>
+								<h5 class="modal-title" id="exampleModalLabel">Rincian Kegiatan</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
 							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Laboratorium</label>
-									<div class="col-8">
-										<input disabled="" class="form-control" type="text" value="Laboratorium A" id="laboratorium">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Layanan Laboratorium</label>
-									<div class="col-8">
-										<input disabled="" class="form-control" type="text" value="Pengujian 1" id="laboratorium">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
-									<div class="col-8">
-										<input class="form-control" type="date" value="2011-08-19" id="tanggal">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Jam Mulai</label>
-									<div class="col-8">
-										<input class="form-control" type="time" value="13:45:00" id="jam_mulai">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Jam Selesai</label>
-									<div class="col-8">
-										<input class="form-control" type="time" value="14:45:00" id="jam_selesai">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Status</label>
-									<div class="col-8">
-										<span style="font-size: 1rem;padding: 15px" class="kt-badge kt-badge--success kt-badge--inline kt-badge--pill kt-badge--rounded">Terkonfirmasi</span>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-4 col-form-label">Petugas</label>
-									<div class="col-8">
-										<input disabled="" class="form-control" type="text" value="Ai (Laboran)" id="petugas_lab">
-									</div>
-								</div>
-								<table class="table table-striped- table-bordered table-hover table-checkable" id="pemakaian_alat">
-									<thead>
-										<tr>
-											<th>No.</th>
-											<th>Alat</th>
-											<th>Kondisi</th>
-											<th>Catatan</th>
-										</tr>
-									</thead>
+								<table style="width: 100%;" class="ts">
+									<tr>
+										<th class="ts-xldj">Nama Kegiatan</th>
+										<th class="ts-0pky">Analisis Desain Balok Kopel Hibrida</th>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Jenis</td>
+										<td class="ts-0pky">Penelitian</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Waktu</td>
+										<td class="ts-0pky">19 Maret</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Penanggung Jawab</td>
+										<td class="ts-0pky">Darnilia/11140930000019</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Kontak</td>
+										<td class="ts-0pky">085298xxx</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Deskripsi</td>
+										<td class="ts-0pky">Dalam rangka penyusunan disertasi</td>
+									</tr>
 								</table>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary"  data-dismiss="modal">Simpan</button>
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!--end::Modal-->
+				<!-- Pesanan -->
+				<div class="modal fade" id="pesan_paket_pengujian" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Formulir Permohonan Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Penanggung Jawab</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="penanggung_jawab">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Paket Pengujian</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Paket Pengujian 1" id="jenis_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jumlah</label>
+											<div class="col-8">
+												<input  class="form-control" type="number" value="2" id="jumlah_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Nama Kegiatan</label>
+											<div class="col-8">
+												<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
+											<div class="col-8">
+												<select class="form-control" id="exampleSelectd">
+													<option value="">--Pilih Jenis Kegiatan--</option>
+													<option value="1">Pengabdian Masyarakat</option>
+													<option value="2">Penelitan</option>
+													<option value="3">Umum</option>
+												</select>
+											</div>
+										</div>
+
+
+									</div>
+									<div class="col-sm-6">	
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+											<div class="col-8">
+												<input class="form-control" type="date" value="2011-08-19" id="tanggal_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Durasi</label>
+											<div class="col-8">
+												<div class="input-group">
+													<input type="text" disabled="" class="form-control" value="2" id="durasi_kegiatan" aria-describedby="basic-addon2">
+													<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Sampel</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="80gr" id="sampel_kegiatan">
+											</div>
+										</div>		
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Kontak(Hp)</label>
+											<div class="col-8">
+												<input class="form-control" type="tel" placeholder="input no. telpon" id="kontak_pemesan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Surat Kegiatan Penelitan</label>
+											<div class="col-8">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input choose_file" id="customFile">
+													<label class="custom-file-label" for="customFile">Choose file</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-primary">Proses</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Tambah Paket Pengujian -->
+				<div class="modal fade" id="tambah_paket_pengujian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tambah Paket Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Paket Pengujian</label>
+										<div class="col-9">
+											<input class="form-control" type="text" id="nama_paket_pengujian">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Durasi (hari)</label>	
+										<div class="col-9">
+											<div class="input-group">
+												<input id="durasi_pengujian" type="text" class="form-control" aria-describedby="basic-addon2">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Deskripsi Singkat</label>
+										<div class="col-9">
+											<textarea style="resize: none" class="form-control" id="deskripsi_pengujian" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Harga</label>
+										<div class="col-9">
+											<div class="input-group">
+												<div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+												<input id="harga_paket_pengujian" type="text" class="form-control" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-primary" id="kt_sweetalert_tambah_paket" data-dismiss="modal">Tambah Paket</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Edit Paket Pengujian -->
+				<div class="modal fade" id="edit_paket_pengujian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Paket Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Paket Pengujian</label>
+										<div class="col-9">
+											<input value="Paket A" class="form-control" type="text" id="nama_paket_pengujian">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Durasi (hari)</label>	
+										<div class="col-9">
+											<div class="input-group">
+												<input value="2" id="durasi_pengujian" type="text" class="form-control" aria-describedby="basic-addon2">
+												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Deskripsi Singkat</label>
+										<div class="col-9">
+											<textarea style="resize: none" class="form-control" id="deskripsi_pengujian" rows="3">Lorem ipsum dolor sit amet</textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Harga</label>
+										<div class="col-9">
+											<div class="input-group">
+												<div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+												<input value="250000" id="harga_paket_pengujian" type="text" class="form-control" aria-describedby="basic-addon1">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" id="kt_sweetalert_simpan" class="btn btn-primary" data-dismiss="modal">Simpan</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 					<div class="kt-footer__bottom">
@@ -749,44 +858,66 @@
 	</script>
 	<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 
-	<!--end::Page Scripts -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_aslab.js" type="text/javascript"></script>
 
+	<!--end::Page Scripts -->
+
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+
 	<!--end::Global App Bundle -->
+
+	<!-- SweetAlert2 -->
+	<!-- SweetAlert2 -->
 	<script>
-		var Select2 = function() {
-			var demos = function(){
-				$('.dropdown_search, .dropdown_search_validate').select2({
-					placeholder: "Select a state"
-				});
-			}
-			var modalDemos = function(){
-				$('#m_select2_modal').on('shown.bs.modal', function () {
-					$('.dropdown_search_modal').select2({
-						placeholder: "Select a state"
-					});
-				});
-			}
-			return {
-				init: function() {
-					demos();
-					modalDemos();
-				}
-			};
-		}();
+		// Class definition
+		var KTSweetAlert2Demo = function() {
+
+	    // Demos
+	    var initDemos = function() {
+	    	$('.sweetalert2_simpan').click(function(e) {
+	    		swal.fire("Berhasil!", "Data yang anda input telah tersimpan!", "success");
+	    	});
+	    	$('.sweetalert2_import').click(function(e) {
+	    		swal.fire("Berhasil!", "File anda berhasil diimport!", "success");
+	    	});
+	    	$('.sweetalert2_hapus').click(function(e) {
+	    		swal.fire("Berhasil!", "Data anda telah dihapus!", "success");
+	    	});
+
+	        // Sweetalert Demo 5
+	        $('#kt_sweetalert_demo_5').click(function(e) {
+	        	swal.fire({
+	        		title: "Good job!",
+	        		text: "You clicked the button!",
+	        		type: "success",
+
+	        		confirmButtonText: "<span><i class='la la-headphones'></i><span>I am game!</span></span>",
+	        		confirmButtonClass: "btn btn-danger--pill--air--icon",
+
+	        		showCancelButton: true,
+	        		cancelButtonText: "<span><i class='la la-thumbs-down'></i><span>No, thanks</span></span>",
+	        		cancelButtonClass: "btn btn-secondary--pill--icon"
+	        	});
+	        });
+	    };
+
+	    return {
+	        // Init
+	        init: function() {
+	        	initDemos();
+	        },
+	    };
+	}();
+
+		// Class Initialization
 		jQuery(document).ready(function() {
-			Select2.init();
+			KTSweetAlert2Demo.init();
 		});
 	</script>
-	<script>
-		function goBack() {
-			window.history.back();
-		}
-	</script>
+
 </body>
 
 <!-- end::Body -->

@@ -27,7 +27,7 @@ color: white;
 }
 .flaticon2-user,.registration {
 	color: white;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 600;
 
 }
@@ -46,7 +46,9 @@ color: white;
 i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	color: white;
 }
-
+.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link .kt-menu__link-text {
+    color: white;
+}
 .badge {
 	position: absolute;
 	top: 0px;
@@ -78,5 +80,8 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	}
 	.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
 		color: #ffffff;
+	}
+	.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link .kt-menu__link-text {
+		color: white;
 	}
 }

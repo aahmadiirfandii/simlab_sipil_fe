@@ -244,7 +244,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	var initTable2 = function() {
 		// begin first table
 		var table = $('#tbl_list_peralatan').DataTable({
-			responsive: true,
+			responsive: false,
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
@@ -1481,7 +1481,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			columns: [
 				{data: 'no'},
 				{data: 'tanggal_permohonan'},
-				{data: 'nama_pemohon'},
 				{data: 'judul_kegiatan'},
 				{data: 'status'},
 				{data: 'aksi'},
@@ -1497,7 +1496,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0,1,2,3,4,5],
+					targets: [0,1,2,3,4],
 					className: 'text-center'
 				},
 				{
@@ -1506,11 +1505,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="rincian_riwayat.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
+                        <a href="rincian_penelitian.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>`;
 					},
 				},
 				{
-					targets: 4,
+					targets: -2,
 					width: 200,
 					render: function(data, type, full, meta) {
 						var status = {
@@ -1628,8 +1627,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					title: 'Aksi',
 					orderable: false,
 					render: function(data, type, full, meta) {
-						return `
-                        <a class="btn btn-sm btn-warning" style="color:white;">Pengujian Selesai</a>`;
+						return `<button data-toggle="modal" data-target="#kt_modal_rincian_alat" style="margin-right:5px" class="btn btn-sm btn-primary">Rincian</button>` 
+                        +'<a class="btn btn-sm btn-warning" style="color:white;">Pengujian Selesai</a>';
 					},
 				},
 				

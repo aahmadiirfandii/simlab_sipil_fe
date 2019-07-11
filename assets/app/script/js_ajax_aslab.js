@@ -179,8 +179,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-bottom:5px">Rincian</a>` +
-                        '<button href="#" class="btn btn-sm btn-danger" style="margin-bottom:5px">Hapus</button>' +
+                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-right:5px">Rincian</a>` +
+                        '<button data-toggle="modal" data-target=".hapus" class="btn btn-sm btn-danger" style="margin-right:5px">Hapus</button>' +
                         '<button data-toggle="modal" data-target="#edit_praktikum" class="btn btn-sm btn-primary">Edit</button>';
 					},
 				},
@@ -419,7 +419,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button data-toggle="modal" data-target="#kt_modal_alasan_penolakan" class="btn btn-sm btn-danger" style="margin-right:5px">Tolak</button>` +
+                        <button data-toggle="modal" data-target="#kt_modal_alasan_penolakan" class="btn btn-sm btn-danger" style="margin-bottom:5px">Tolak</button>` +
                         '<button class="btn btn-sm btn-success" >Terima</button>';
 					},
 				},
@@ -1243,7 +1243,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'jumlah_alat'},
 				{data: 'kondisi_alat'},
 				{data: 'harga_sewa'},
-				{data: 'aksi'},
+				{data: 'aksi', responsivePriority: -1},
 			],
 
 			initComplete: function() {

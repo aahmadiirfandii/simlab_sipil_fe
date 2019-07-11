@@ -68,6 +68,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -124,7 +125,7 @@
 								<!-- Header Sebelah Kanan -->
 								<div align="right" style="margin-bottom: 0.5vw;margin-left: 80%;" class="offset-md-10 col-md-2">
 									
-									<div style="width: 150px" class="dropdown dropdown-inline">
+									<div style="width: 120px" class="dropdown dropdown-inline">
 										<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<span class="kt-menu__link-text registration flaticon2-user">
 											</span> 
@@ -166,7 +167,7 @@
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
 													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi.html" class="kt-menu__link ">
+														<a href="registrasi.html" class="kt-menu__link ">
 															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 																<span></span>
 															</i>
@@ -174,7 +175,7 @@
 														</a>
 													</li>
 													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="praktikum.html" class="kt-menu__link ">
+														<a href="jadwal_praktikum.html" class="kt-menu__link ">
 															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 																<span></span>
 															</i>
@@ -196,9 +197,9 @@
 					<div class="col-sm-12">
 						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 							<div class="kt-subheader__main">
-								<a href="verifikasi.html"><h3 class="kt-subheader__title">Registrasi</h3></a>
+								<a href="registrasi.html"><h3 class="kt-subheader__title">Registrasi</h3></a>
 								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="ambil_praktikum.html"><span class="kt-subheader__desc">Rincian verifikasi praktikum</span></a>
+								<a href="ambil_jadwal_praktikum.html"><span class="kt-subheader__desc">Rincian verifikasi praktikum</span></a>
 							</div>
 						</div>
 					</div>
@@ -206,86 +207,88 @@
 						<div class="kt-portlet__head">
 							<div class="kt-portlet__head-label">
 								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Verifikasi Praktikum Mahasiswa</h3>
+									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Verifikasi praktikum Mahasiswa</h3>
 								</div>
 							</div>
 						</div>
-						<div class="kt-portlet__body">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											Status
-										</label>
-										<div class="col-10">
-											<a class="btn btn-label-success">Terverifikasi</a>
+						<form class="kt-form">
+							<div class="kt-portlet__body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												Status
+											</label>
+											<div class="col-10">
+												<a class="btn btn-label-success">Terverifikasi</a>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												Nama
+											</label>
+											<div class="col-10">
+												<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												NIM
+											</label>
+											<div class="col-10">
+												<input disabled="" class="form-control" type="text" value="D42113016" id="nim">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												Semester
+											</label>
+											<div class="col-10">
+												<input disabled="" class="form-control" type="text" value="2" id="semester">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												Tahun Ajaran
+											</label>
+											<div class="col-10">
+												<input disabled="" class="form-control" type="text" value="2018/2019" id="tahun_ajaran">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-2 col-form-label">
+												Nama praktikum
+											</label>
+											<div class="col-10">
+												<input disabled="" class="form-control" type="text" value="Mekanika Tanah 1" id="nama_praktikum">
+											</div>
 										</div>
 									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											Nama
-										</label>
-										<div class="col-10">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama">
+									<div class="col-sm-6">
+										<div class="row">
+											<div align="center" class="col-sm">
+												<h4>KRS</h4><hr>
+												<a href="http://stth-medan.ac.id//img/konsep-krsol-new-contoh.jpg" target="_blank">
+													<img class="gambar-krs" src="http://stth-medan.ac.id//img/konsep-krsol-new-contoh.jpg">
+												</a>
+											</div>
+											<div align="center" class="col-sm">
+												<h4>Surat Pernyataan</h4><hr>
+												<a href="https://i.pinimg.com/originals/fb/01/8c/fb018ccd3b2f44237c30789f76922411.jpg" target="_blank">
+													<img class="gambar-krs" src="https://i.pinimg.com/originals/fb/01/8c/fb018ccd3b2f44237c30789f76922411.jpg">
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											NIM
-										</label>
-										<div class="col-10">
-											<input disabled="" class="form-control" type="text" value="D42113016" id="nim">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											Semester
-										</label>
-										<div class="col-10">
-											<input disabled="" class="form-control" type="text" value="2" id="semester">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											Tahun Ajaran
-										</label>
-										<div class="col-10">
-											<input disabled="" class="form-control" type="text" value="2018/2019" id="tahun_ajaran">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">
-											Nama Praktikum
-										</label>
-										<div class="col-10">
-											<input disabled="" class="form-control" type="text" value="Mekanika Tanah 1" id="nama_praktikum">
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="row">
-										<div align="center" class="col-sm">
-											<h4>KRS</h4><hr>
-											<a href="http://stth-medan.ac.id//img/konsep-krsol-new-contoh.jpg" target="_blank">
-												<img class="gambar-krs" src="http://stth-medan.ac.id//img/konsep-krsol-new-contoh.jpg">
-											</a>
-										</div>
-										<div align="center" class="col-sm">
-											<h4>Surat Pernyataan</h4><hr>
-											<a href="https://i.pinimg.com/originals/fb/01/8c/fb018ccd3b2f44237c30789f76922411.jpg" target="_blank">
-												<img class="gambar-krs" src="https://i.pinimg.com/originals/fb/01/8c/fb018ccd3b2f44237c30789f76922411.jpg">
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>	
-						</div>
-						<div class="kt-portlet__foot">
-							<div align="right">
-								<button class="btn btn-success btn_proses">Proses</button>
-								<button onclick="goBack()" class="btn btn-warning">Kembali</button>
+								</div>	
 							</div>
-						</div>
+							<div class="kt-portlet__foot">
+								<div align="right">
+									<button class="btn btn-success btn_proses">Proses</button>
+									<a href="registrasi.html" class="btn btn-warning">Kembali</a>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				
@@ -455,6 +458,55 @@
 		function goBack() {
 			window.history.back();
 		}
+	</script>
+	<!-- SweetAlert2 -->
+	<script>
+		// Class definition
+		var KTSweetAlert2Demo = function() {
+
+	    // Demos
+	    var initDemos = function() {
+	    	 $('#kt_sweetalert_simpan').click(function(e) {
+	            swal.fire("Tersimpan!", "Data Berhasil Disimpan!", "success");
+	        });
+
+	    	  $('.kt_sweetalert_hapus').click(function(e) {
+	            swal.fire("Dihapus!", "Data Berhasil Dihapus!", "success");
+	        });
+
+	    	 $('#kt_sweetalert_tambah_paket').click(function(e) {
+	            swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
+	        });
+
+	        // Sweetalert Demo 5
+	        $('#kt_sweetalert_demo_5').click(function(e) {
+	        	swal.fire({
+	        		title: "Good job!",
+	        		text: "You clicked the button!",
+	        		type: "success",
+
+	        		confirmButtonText: "<span><i class='la la-headphones'></i><span>I am game!</span></span>",
+	        		confirmButtonClass: "btn btn-danger--pill--air--icon",
+
+	        		showCancelButton: true,
+	        		cancelButtonText: "<span><i class='la la-thumbs-down'></i><span>No, thanks</span></span>",
+	        		cancelButtonClass: "btn btn-secondary--pill--icon"
+	        	});
+	        });
+	    };
+
+	    return {
+	        // Init
+	        init: function() {
+	        	initDemos();
+	        },
+	    };
+		}();
+
+		// Class Initialization
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
 	</script>
 </body>
 

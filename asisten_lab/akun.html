@@ -68,6 +68,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/aslab.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
 		
 		.drop_D {
@@ -167,7 +168,7 @@
 								<!-- Header Sebelah Kanan -->
 								<div align="right" style="margin-bottom: 0.5vw;margin-left: 80%;" class="offset-md-10 col-md-2">
 									
-									<div style="width: 150px" class="dropdown dropdown-inline">
+									<div style="width: 120px" class="dropdown dropdown-inline">
 										<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<span class="kt-menu__link-text registration flaticon2-user">
 											</span> 
@@ -209,7 +210,7 @@
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
 													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi.html" class="kt-menu__link ">
+														<a href="registrasi.html" class="kt-menu__link ">
 															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 																<span></span>
 															</i>
@@ -217,7 +218,7 @@
 														</a>
 													</li>
 													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="praktikum.html" class="kt-menu__link ">
+														<a href="jadwal_praktikum.html" class="kt-menu__link ">
 															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 																<span></span>
 															</i>
@@ -246,78 +247,80 @@
 											</div>
 										</div>
 									</div>
-									<div class="kt-portlet__body">
-										<div class="row">
-											<div align="center" style="margin-top:15px" class="col-sm-4">
-												<img id="blah" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" alt="your image" />
-												<input type='file' onchange="readURL(this);" />
-											</div>
-											<div style="margin-top:15px" class="col-sm-4">
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">
-														Nama
-													</label>
-													<div class="col-8">
-														<input class="form-control" type="text" value="Darnilia Nurulsakina" id="nama_pengguna">
-													</div>
+									<form class="kt-form">
+										<div class="kt-portlet__body">
+											<div class="row">
+												<div align="center" style="margin-top:15px" class="col-sm-4">
+													<img id="blah" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" alt="your image" />
+													<input type='file' onchange="readURL(this);" />
 												</div>
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">
-														Email
-													</label>
-													<div class="col-8">
-														<input class="form-control" type="email" value="darnilia.nurul@gmail.com" id="email_pengguna">
+												<div style="margin-top:15px" class="col-sm-4">
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">
+															Nama
+														</label>
+														<div class="col-8">
+															<input class="form-control" type="text" value="Darnilia Nurulsakina" id="nama_pengguna" name="nama_pengguna">
+														</div>
 													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">
-														Pekerjaan
-													</label>
-													<div class="col-8">
-														<input class="form-control" type="text" value="Pelajar (S1)" id="pekerjaan_pengguna">
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">
+															Email
+														</label>
+														<div class="col-8">
+															<input class="form-control" type="email" value="darnilia.nurul@gmail.com" id="email_pengguna" name="email_pengguna">
+														</div>
 													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">
-														Jenis Kelamin
-													</label>
-													<div class="col-9">
-														<div class="kt-radio-inline">
-															<label class="kt-radio kt-radio--solid kt-radio--success">
-																<input type="radio" name="jenis_kelamin"> Laki-Laki
-																<span></span>
-															</label>
-															<label class="kt-radio kt-radio--solid kt-radio--danger">
-																<input checked="" type="radio" name="jenis_kelamin"> Perempuan
-																<span></span>
-															</label>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">
+															Pekerjaan
+														</label>
+														<div class="col-8">
+															<input class="form-control" type="text" value="Pelajar (S1)" id="pekerjaan_pengguna" name="pekerjaan_pengguna">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">
+															Jenis Kelamin
+														</label>
+														<div class="col-9">
+															<div class="kt-radio-inline">
+																<label class="kt-radio kt-radio--solid kt-radio--success">
+																	<input type="radio" name="jenis_kelamin"> Laki-Laki
+																	<span></span>
+																</label>
+																<label class="kt-radio kt-radio--solid kt-radio--danger">
+																	<input checked="" type="radio" name="jenis_kelamin"> Perempuan
+																	<span></span>
+																</label>
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div style="margin-top:15px" class="col-sm-4">
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">
-														Instansi
-													</label>
-													<div class="col-9">
-														<input class="form-control" type="text" value="UIN Syarif Hidayatullah Jakarta" id="nama_instansi_pengguna">
+												<div style="margin-top:15px" class="col-sm-4">
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">
+															Instansi
+														</label>
+														<div class="col-9">
+															<input class="form-control" type="text" value="UIN Syarif Hidayatullah Jakarta" id="nama_instansi_pengguna" name="nama_instansi_pengguna">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-12 col-form-label">
+															Alamat Instansi
+														</label>
+														<div class="col-12">
+															<textarea style="resize: none" class="form-control" id="alamat_instansi" rows="2" name="alamat_instansi"></textarea>
+														</div>
 													</div>
 												</div>
-												<div class="form-group row">
-													<label for="example-text-input" class="col-12 col-form-label">
-														Alamat Instansi
-													</label>
-													<div class="col-12">
-														<textarea style="resize: none" class="form-control" id="exampleTextarea" rows="2"></textarea>
-													</div>
+												<div align="right" class="col-sm-12 btn_simpan">
+													<button class="btn btn-success ">Simpan</button>
 												</div>
-											</div>
-											<div align="right" class="col-sm-12 btn_simpan">
-												<button class="btn btn-success ">Simpan</button>
 											</div>
 										</div>
-									</div>
+									</form>
 								</div>
 							</div>
 						</div>

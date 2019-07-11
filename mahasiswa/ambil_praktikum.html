@@ -66,7 +66,8 @@
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">  
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
 		.kt-container {
 			padding: 0 10px !important;
@@ -289,208 +290,213 @@
 								</div>
 							</div>
 						</div>
-						<div class="kt-portlet__body">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-3 col-form-label">Nama</label>
-										<div class="col-9">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_mahasiswa">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-3 col-form-label">NIM</label>
-										<div class="col-9">
-											<input disabled="" class="form-control" type="text" value="D42113016" id="nim_mahasiswa">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-3 col-form-label">Semester</label>
-										<div class="col-9">
-											<select class="form-control" id="smester_mahasiswa">
-												<option value="1">Semester 1</option>
-												<option value="2">Semester 2</option>
-												<option value="3">Semester 3</option>
-												<option value="4">Semester 4</option>
-												<option value="5">Semester 5</option>
-												<option value="6">Semester 6</option>
-												<option value="7">Semester 7</option>
-												<option value="8">Semester 8</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
-										<div class="col-9">
-											<select class="form-control" id="smester_mahasiswa">
-												<option value="1">2018/2019</option>
-												<option value="2">2019/2020</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">KRS</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="customFile">
-												<label class="custom-file-label" for="customFile">upload file KRS</label>
+						<form class="kt-form">
+							<div class="kt-portlet__body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-3 col-form-label">Nama</label>
+											<div class="col-9">
+												<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_mahasiswa" name="nama_mahasiswa">
 											</div>
 										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Surat Pernyataan</label>
-										<div class="col-8">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="customFile">
-												<label class="custom-file-label" for="customFile">upload surat pernyataan</label>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-3 col-form-label">NIM</label>
+											<div class="col-9">
+												<input disabled="" class="form-control" type="text" value="D42113016" id="nim_mahasiswa" name="nim_mahasiswa">
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="row">
-										<div class="col-sm-8">
-											<h4>Pilih Praktikum</h4>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-3 col-form-label">Semester</label>
+											<div class="col-9">
+												<select class="form-control" id="semester_mahasiswa" name="semester_mahasiswa">
+													<option value="1">Semester 1</option>
+													<option value="2">Semester 2</option>
+													<option value="3">Semester 3</option>
+													<option value="4">Semester 4</option>
+													<option value="5">Semester 5</option>
+													<option value="6">Semester 6</option>
+													<option value="7">Semester 7</option>
+													<option value="8">Semester 8</option>
+													<option value="9">Semester 9</option>
+													<option value="10">Semester 10</option>
+													<option value="11">Semester 11</option>
+													<option value="12">Semester 12</option>
+													<option value="13">Semester 13</option>
+													<option value="14">Semester 14</option>
+												</select>
+											</div>
 										</div>
-										<div align="right" class="col-sm-4">
-											<button class="btn btn-success">
-												<span class="fa fa-plus"> </span> Tambah Praktikum
-											</button>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
+											<div class="col-9">
+												<input class="form-control" type="text" placeholder="input tahun ajaran 20xx/20xx" id="tahun_ajaran" name="tahun_ajaran">
+											</div>
 										</div>
-									</div><hr>
-									<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="320" data-scrollbar-shown="true" style="height: 320px; overflow: hidden;">
-										<div id="praktikum[0]">
-											<div class="row pilihan-praktikum">
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Laboratorium</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search " id="laboratorium[0]">
-															<option value="1">Lab Mekanika Tanah</option>
-															<option value="2">Lab Struktur dan Bahan</option>
-															<option value="3">Lab Ukur Tanah</option>
-															<option value="4">Lab Jalan dan Aspal</option>
-															<option value="5">Lab Riset Pantai</option>
-															<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
-															<option value="7">Lab Riset Eco Material</option>
-															<option value="8">Lab Riset Gempa</option>
-														</select>
-													</div>
-												</div>
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Mata Kuliah</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[0]">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-														</select>
-													</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">KRS</label>
+											<div class="col-8">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input" id="customFile">
+													<label class="custom-file-label" for="customFile">upload file KRS</label>
 												</div>
 											</div>
 										</div>
-										<div id="praktikum[1]">
-											<div class="row pilihan-praktikum-2">
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Laboratorium</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[1]">
-															<option value="1">Lab Mekanika Tanah</option>
-															<option value="2">Lab Struktur dan Bahan</option>
-															<option value="3">Lab Ukur Tanah</option>
-															<option value="4">Lab Jalan dan Aspal</option>
-															<option value="5">Lab Riset Pantai</option>
-															<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
-															<option value="7">Lab Riset Eco Material</option>
-															<option value="8">Lab Riset Gempa</option>
-														</select>
-													</div>
-												</div>
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Mata Kuliah</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[1]">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-														</select>
-													</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Surat Pernyataan</label>
+											<div class="col-8">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input" id="customFile">
+													<label class="custom-file-label" for="customFile">upload surat pernyataan</label>
 												</div>
 											</div>
 										</div>
-										<div id="praktikum[2]">
-											<div class="row pilihan-praktikum-2">
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Laboratorium</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[2]">
-															<option value="1">Lab Mekanika Tanah</option>
-															<option value="2">Lab Struktur dan Bahan</option>
-															<option value="3">Lab Ukur Tanah</option>
-															<option value="4">Lab Jalan dan Aspal</option>
-															<option value="5">Lab Riset Pantai</option>
-															<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
-															<option value="7">Lab Riset Eco Material</option>
-															<option value="8">Lab Riset Gempa</option>
-														</select>
+									</div>
+									<div class="col-sm-6">
+										<div class="row">
+											<div class="col-sm-8">
+												<h4>Pilih Praktikum</h4>
+											</div>
+											<div align="right" class="col-sm-4">
+												<button class="btn btn-success">
+													<span class="fa fa-plus"> </span> Tambah Praktikum
+												</button>
+											</div>
+										</div><hr>
+										<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="320" data-scrollbar-shown="true" style="height: 320px; overflow: hidden;">
+											<div id="praktikum[0]">
+												<div class="row pilihan-praktikum">
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Laboratorium</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search " id="laboratorium[0]">
+																<option value="1">Lab Mekanika Tanah</option>
+																<option value="2">Lab Struktur dan Bahan</option>
+																<option value="3">Lab Ukur Tanah</option>
+																<option value="4">Lab Jalan dan Aspal</option>
+																<option value="5">Lab Riset Pantai</option>
+																<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
+																<option value="7">Lab Riset Eco Material</option>
+																<option value="8">Lab Riset Gempa</option>
+															</select>
+														</div>
 													</div>
-												</div>
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Mata Kuliah</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[2]">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-														</select>
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Mata Kuliah</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[0]">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+															</select>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										<div id="praktikum[3]">
-											<div class="row pilihan-praktikum-2">
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Laboratorium</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[3]">
-															<option value="1">Lab Mekanika Tanah</option>
-															<option value="2">Lab Struktur dan Bahan</option>
-															<option value="3">Lab Ukur Tanah</option>
-															<option value="4">Lab Jalan dan Aspal</option>
-															<option value="5">Lab Riset Pantai</option>
-															<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
-															<option value="7">Lab Riset Eco Material</option>
-															<option value="8">Lab Riset Gempa</option>
-														</select>
+											<div id="praktikum[1]">
+												<div class="row pilihan-praktikum-2">
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Laboratorium</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[1]">
+																<option value="1">Lab Mekanika Tanah</option>
+																<option value="2">Lab Struktur dan Bahan</option>
+																<option value="3">Lab Ukur Tanah</option>
+																<option value="4">Lab Jalan dan Aspal</option>
+																<option value="5">Lab Riset Pantai</option>
+																<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
+																<option value="7">Lab Riset Eco Material</option>
+																<option value="8">Lab Riset Gempa</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Mata Kuliah</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[1]">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+															</select>
+														</div>
 													</div>
 												</div>
-												<div class="col-sm">
-													<div class="form-group">
-														<label for="exampleSelect1">Mata Kuliah</label>
-														<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[3]">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-														</select>
+											</div>
+											<div id="praktikum[2]">
+												<div class="row pilihan-praktikum-2">
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Laboratorium</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[2]">
+																<option value="1">Lab Mekanika Tanah</option>
+																<option value="2">Lab Struktur dan Bahan</option>
+																<option value="3">Lab Ukur Tanah</option>
+																<option value="4">Lab Jalan dan Aspal</option>
+																<option value="5">Lab Riset Pantai</option>
+																<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
+																<option value="7">Lab Riset Eco Material</option>
+																<option value="8">Lab Riset Gempa</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Mata Kuliah</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[2]">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="praktikum[3]">
+												<div class="row pilihan-praktikum-2">
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Laboratorium</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="laboratorium[3]">
+																<option value="1">Lab Mekanika Tanah</option>
+																<option value="2">Lab Struktur dan Bahan</option>
+																<option value="3">Lab Ukur Tanah</option>
+																<option value="4">Lab Jalan dan Aspal</option>
+																<option value="5">Lab Riset Pantai</option>
+																<option value="6">Lab Riset Sungai dan Sumber Daya Air</option>
+																<option value="7">Lab Riset Eco Material</option>
+																<option value="8">Lab Riset Gempa</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-sm">
+														<div class="form-group">
+															<label for="exampleSelect1">Mata Kuliah</label>
+															<select style="width: 100%" class="form-control m-select2 dropdown_search" id="nama_praktikum[3]">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+															</select>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -498,12 +504,12 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="kt-portlet__foot">
-							<div align="center">
-								<button class="btn btn-success btn_proses">Proses</button>
+							<div class="kt-portlet__foot">
+								<div align="center">
+									<button class="btn btn-success btn_proses">Proses</button>
+								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 				
