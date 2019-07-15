@@ -1,9 +1,9 @@
 .kt-header .kt-header__top {
 	height: 70px;
 }
-.kt-container {
+/*.kt-container {
 	padding: 0 10px !important;
-}
+}*/
 .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 	color: #f7df3a;
 	font-size: 1.3rem;

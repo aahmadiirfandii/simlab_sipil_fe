@@ -1,9 +1,5 @@
 {
-    "iTotalRecords": 5,
-    "iTotalDisplayRecords": 5,
-    "sEcho": 0,
-    "sColumns": "",
-    "aaData": [{
+    "data": [{
                  "id_pengujian": 1,
                  "nama_paket_pengujian": "Paket Pengujian 1",
                  "jenis_paket_pengujian": "Pekerjaan Lab",

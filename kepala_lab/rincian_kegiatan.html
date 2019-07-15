@@ -70,10 +70,6 @@
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
-		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
-			border-radius: 4px;
-			padding: 0.75rem 0.75rem;
-		}
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 			font-size: 1rem;
 		}
@@ -248,158 +244,190 @@
 						</div>
 					</div>
 				</div>
-				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<div class="col-sm-12">
-						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							<div class="kt-subheader__main">
-								<h3 class="kt-subheader__title">Lab Hidrolika</h3>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="#"><span class="kt-subheader__desc">Kegiatan</span></a>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="#"><span class="kt-subheader__desc">Rincian Kegiatan</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="kt-portlet">
-						<div class="kt-portlet__head">
-							<div class="kt-portlet__head-label">
-								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Rincian Kegiatan</h3>
-								</div>
-							</div>
-						</div>
-						<div class="kt-portlet__body">
-							<div class="row">
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+					<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+						<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+							<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 								<div class="col-sm-12">
-									<label><h4>Informasi Surat</h4></label>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Tanggal Surat</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_surat">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Tujuan</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="tujuan_surat">
+									<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+										<div class="kt-subheader__main">
+											<h3 class="kt-subheader__title">Lab Hidrolika</h3>
+											<span class="kt-subheader__separator kt-subheader__separator--v"></span>
+											<a href="#"><span class="kt-subheader__desc">Kegiatan</span></a>
+											<span class="kt-subheader__separator kt-subheader__separator--v"></span>
+											<a href="#"><span class="kt-subheader__desc">Rincian Kegiatan</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Perihal</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="perihal_surat">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Pengirim/Instansi</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Upana Studio Internasional" id="pengirim_surat">
-										</div>
-									</div>
-								</div>
-								<div align="center" class="offset-6 col-sm-6">
-									<button onclick=" window.open('http://google.com','_blank')" style="width: 70%" class="btn btn-primary">Lihat Surat</button>
-								</div>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-sm-12">
-									<label><h4>Informasi Kegiatan</h4></label>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">No Registrasi</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="A0011903017" id="no_registrasi">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Tanggal Permohonan</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="no_registrasi">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Nama</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pemohon">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">NIM</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="D42113016" id="nim_pemohon">
-										</div>
-									</div>  
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Judul Penelitan</label>
-										<div class="col-8">
-											<textarea disabled="" style="resize: none" class="form-control" id="judul_penelitian" rows="2">Analisi Power Level Kebisingan Kendaraan Sepeda Motor di Kota Makassar</textarea>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Penelitian Tugas Akhir(S1)" id="jenis_kegiatan">
-										</div>
-									</div> 
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Dosen Pembimbing 1</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="nama dosen A" id="dosen_pembimbing_1">
-										</div>
-									</div> 
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Dosen Pembimbing 2</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="nama dosen B" id="dosen_pembimbing_2">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">Rekap Hasil</label>
-										<div class="col-8">
-											<div class=" custom-file">
-												<input type="file" class="custom-file-input choose_file" id="rekap_hasil">
-												<label class="custom-file-label" for="customFile">Choose file</label>
+								<div class="kt-portlet">
+									<form class="kt-form">
+										<div class="kt-portlet kt-portlet--last kt-portlet--head-lg " id="kt_page_portlet">
+											<div class="kt-portlet__head">
+												<div style="width: 100%" class="kt-portlet__head-label">
+													<div style="width: 100%" class="row">
+														<div class="col-sm-6">
+															<div class="kt-portlet__head-label">
+																<h3 style="margin-top: 5px" class="kt-portlet__head-title">Rincian Kegiatan</h3>
+															</div>
+														</div>
+														<div align="right" class="col-sm-6">
+															<a href="daftar_permohonan.html" class="btn btn-clean kt-margin-r-10">
+																<i class="la la-arrow-left"></i>
+																<span class="kt-hidden-mobile">Back</span>
+															</a>
+															<button class="btn btn-danger"><i class="fa fa-times"></i>Batalkan</button>
+															<button class="btn btn-info"><i class="fa fa-save"></i>Simpan</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="kt-portlet__body">
+												<div class="row">
+													<div class="col-sm-12">
+														<label><h4>Informasi Surat</h4></label>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Tanggal Surat</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_surat" name="tanggal_surat">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Tujuan</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="tujuan_surat" name="tujuan_surat">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Lampiran Surat</label>
+															<div class="col-8">
+																<button onclick=" window.open('http://google.com','_blank')" class="btn btn-primary" name="btn_lihat_surat"><i class="flaticon-eye"></i> Lihat</button>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Perihal</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="perihal_surat" name="perihal_surat">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Pengirim/Instansi</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="Upana Studio Internasional" id="pengirim_surat" name="pengirim_surat">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+												<div class="row">
+													<div class="col-sm-12">
+														<label><h4>Informasi Kegiatan</h4></label>
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">No Registrasi</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="A0011903017" id="no_registrasi">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Tanggal Permohonan</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="no_registrasi">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Nama</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pemohon">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">NIM</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="D42113016" id="nim_pemohon">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">
+																Lampiran SK Penelitian
+															</label>
+															<div class="col-8">
+																<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;"><i class="flaticon-eye" name="btn_lihat_sk_penelitian"></i>lihat</button>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">
+																Lampiran Proposal Penelitian
+															</label>
+															<div class="col-8">
+																<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;" name="btn_lihat_proposal_penelitian"><i class="flaticon-eye"></i>lihat</button>
+															</div>
+														</div> 
+													</div>
+													<div class="col-sm-6">
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Judul Penelitan</label>
+															<div class="col-8">
+																<textarea disabled="" style="resize: none" class="form-control" id="judul_penelitian" rows="2">Analisi Power Level Kebisingan Kendaraan Sepeda Motor di Kota Makassar</textarea>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="Penelitian Tugas Akhir(S1)" id="jenis_kegiatan">
+															</div>
+														</div> 
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Dosen Pembimbing 1</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="nama dosen A" id="dosen_pembimbing_1">
+															</div>
+														</div> 
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Dosen Pembimbing 2</label>
+															<div class="col-8">
+																<input disabled="" class="form-control" type="text" value="nama dosen B" id="dosen_pembimbing_2">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label for="example-text-input" class="col-4 col-form-label">Rekap Hasil</label>
+															<div class="col-8">
+																<div class=" custom-file">
+																	<input type="file" class="custom-file-input choose_file" id="rekap_hasil">
+																	<label class="custom-file-label" for="customFile">Choose file</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+												<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_rincian_kegiatan">
+													<thead>
+														<tr>
+															<th>No.</th>
+															<th>Laboratorium</th>
+															<th>Layanan Laboratorium</th>
+															<th>Tanggal</th>
+															<th>Jam Mulai</th>
+															<th>Jam Selesai</th>
+															<th>Status</th>
+															<th>Aksi</th>
+														</tr>
+													</thead>
+												</table>
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_rincian_kegiatan">
-								<thead>
-									<tr>
-										<th>No.</th>
-										<th>Laboratorium</th>
-										<th>Layanan Laboratorium</th>
-										<th>Tanggal</th>
-										<th>Jam Mulai</th>
-										<th>Jam Selesai</th>
-										<th>Status</th>
-										<th>Aksi</th>
-									</tr>
-								</thead>
-							</table>
-							<div class="row">
-								<div class="col-sm-6">
-									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">SK Penelitian</button>
-									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">Proposal Penelitian</button>
-								</div>
-								<div align="right" class="col-sm-6">
-									<button class="btn btn-danger">Batalkan</button>
-									<button id="kt_sweetalert_simpan" class="btn btn-primary">Simpan</button>
-									<a onclick="goBack()" class="btn btn-warning">Kembali</a>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<!--begin::Modal-->
 				<div class="modal fade" id="kt_modal_rincian_kegiatan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
@@ -586,16 +614,11 @@
 
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 
 	<!--end::Page Vendors -->
 
 	<!--begin::Page Scripts(used by this page) -->
 	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<script src="../assets/app/custom/general/crud/metronic-datatable/base/data-local.js" type="text/javascript">
-	</script>
-	<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 
 	<!--end::Page Scripts -->
 	<!-- AJAX -->
@@ -607,19 +630,19 @@
 	<!--end::Global App Bundle -->
 
 	<!-- SweetAlert2 -->
-<script>
+	<script>
 	// Class definition
 	var KTSweetAlert2Demo = function() {
 
     // Demos
     var initDemos = function() {
-    	 $('#kt_sweetalert_simpan').click(function(e) {
-            swal.fire("Tersimpan!", "Data Berhasil Disimpan!", "success");
-        });
+    	$('#kt_sweetalert_simpan').click(function(e) {
+    		swal.fire("Tersimpan!", "Data Berhasil Disimpan!", "success");
+    	});
 
-    	 $('#kt_sweetalert_tambah_paket').click(function(e) {
-            swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
-        });
+    	$('#kt_sweetalert_tambah_paket').click(function(e) {
+    		swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
+    	});
 
         // Sweetalert Demo 5
         $('#kt_sweetalert_demo_5').click(function(e) {
@@ -644,7 +667,7 @@
         	initDemos();
         },
     };
-	}();
+}();
 
 	// Class Initialization
 	jQuery(document).ready(function() {
@@ -656,7 +679,7 @@
 		window.history.back();
 	}
 </script>
-	
+
 </body>
 
 <!-- end::Body -->

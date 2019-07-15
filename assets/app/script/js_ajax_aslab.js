@@ -420,7 +420,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					render: function(data, type, full, meta) {
 						return `
                         <button data-toggle="modal" data-target="#kt_modal_alasan_penolakan" class="btn btn-sm btn-danger" style="margin-bottom:5px">Tolak</button>` +
-                        '<button class="btn btn-sm btn-success" >Terima</button>';
+                        '<button type="button" class="btn btn-sm btn-success kt_sweetalert_terima" >Terima</button>';
 					},
 				},
 	
@@ -716,6 +716,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'no_invoice'},
 				{data: 'total'},
 				{data: 'status'},
+				{data: 'lampiran'},
 				{data: 'aksi'},
 			],
 
@@ -734,8 +735,16 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a class="btn btn-sm btn-success" style="color:white;">Terima</a>`+' <a class="btn btn-sm btn-danger" style="color:white;">Tolak</a>'
-                        +' <a class="btn btn-sm btn-warning" style="color:white;">Rincian</a>'+' <a class="btn btn-sm btn-info" style="color:white;">Bukti Transfer</a>';
+                        <a class="btn btn-sm btn-success" style="color:white;"><i class="fa fa-check"></i> Terima</a>`+' <a class="btn btn-sm btn-danger" style="color:white;"><i class="fa fa-times"></i>Tolak</a>';
+					},  
+				},
+				{
+					targets: -2,
+					title: 'lampiran',
+					orderable: false,
+					render: function(data, type, full, meta) {
+						return `
+                        <a class="btn btn-sm btn-warning" style="color:white;">Rincian</a>`+' <a class="btn btn-sm btn-brand" style="color:white;">Bukti Transfer</a>';
 					},  
 				},
 				{
@@ -757,7 +766,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					},
 				},
 				{
-					targets: [0,1,2,3,4,5,6],
+					targets: [0,1,2,3,4,5,6,7],
 					className: 'text-center'
 				},
 				
@@ -864,7 +873,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan" class="btn btn-primary">Rincian</button>`;
+                        <button type="button" data-toggle="modal" data-target="#kt_modal_rincian_kegiatan" class="btn btn-primary">Rincian</button>`;
 					},
 				},
 				{
@@ -1971,9 +1980,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button  class="btn btn-sm btn-danger" >Tolak</button>` +
-                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" >Terima</button>'+
-                        '<button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
+                        <button  class="btn btn-sm btn-danger" ><i class="fa fa-times"></i>Tolak</button>` +
+                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" ><i class="fa fa-check"></i>Terima</button>'+
+                        '<button type="button" data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
 					},
 				},
 				{
@@ -2101,7 +2110,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>`;
+                        <button type="button" data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>`;
 					},
 				},
 				{
@@ -2356,9 +2365,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button  class="btn btn-sm btn-danger" >Tolak</button>` +
-                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" >Terima</button>'+
-                        '<button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
+                        <button  class="btn btn-sm btn-danger" ><i class="fa fa-times"></i>Tolak</button>` +
+                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" ><i class="fa fa-check"></i>Terima</button>'+
+                        '<button type="button" data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
 					},
 				},
 				{
@@ -2613,9 +2622,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button  class="btn btn-sm btn-danger" >Tolak</button>` +
-                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" >Terima</button>'+
-                        '<button data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
+                        <button  class="btn btn-sm btn-danger" ><i class="fa fa-times"></i>Tolak</button>` +
+                        '<button style="margin:0px 5px" class="btn btn-sm btn-success" ><i class="fa fa-check"></i>Terima</button>'+
+                        '<button type="button" data-toggle="modal" data-target="#kt_modal_rincian_kegiatan"  class="btn btn-sm btn-warning">Rincian</button>';
 					},
 				},
 				
