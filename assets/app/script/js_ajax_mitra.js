@@ -185,8 +185,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a class="btn btn-sm btn-warning btn_rincian" style="color:white;">Published</a>` 
-					+ '<a href="rincian_kegiatan.html" class="btn btn-sm btn-primary btn_rincian" style="color:white;">Rincian</a>';
+					<a class="btn btn-sm btn-warning btn_rincian" style="color:white;">Published</a> &nbsp;` 
+					+ '<button type="button" data-toggle="modal" data-target="#rincian_kegiatan"  class="btn btn-sm btn-primary">Rincian</button>';
 				},
 			},
 
@@ -705,7 +705,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a data-toggle="modal" data-target="#upload_bukti_pembayaran" class="btn btn-sm btn-success" style="color:white;">Upload</a>`+' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank">Cetak</a>';
+					<a data-toggle="modal" data-target="#upload_bukti_pembayaran" class="btn btn-sm btn-success" style="color:white;"> <i class="fa fa-file-upload"></i> Upload</a>`+
+					' <a href="print_invoice.html" class="btn btn-sm btn-warning" style="color:white;" target="_blank"> <i class="fa fa-print"></i> Cetak</a>';
 				},  
 			},
 			{
@@ -1308,7 +1309,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						ditolak: {'title': 'Ditolak', 'class': ' btn-label-danger'},
 						konfirmasi: {'title': 'Menunggu Konfirmasi', 'class': ' btn-label-info'},
 						expired: {'title': 'Expired', 'class': ' btn-label-dark'},
-						persetujuan: {'title': 'Menunggu Persetujuan', 'class': ' btn-label-primary'},
+						batal: {'title': 'Batal', 'class': ' btn-label-danger'},
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -1634,8 +1635,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Aksi',
 				orderable: false,
 				render: function(data, type, full, meta) {
-					return `<button data-toggle="modal" data-target="#kt_modal_rincian_alat" style="margin-right:5px" class="btn btn-sm btn-primary">Rincian</button>` 
-					+'<a class="btn btn-sm btn-warning" style="color:white;">Pengujian Selesai</a>';
+					return `<button data-toggle="modal" data-target="#kt_modal_rincian_alat" style="margin-right:5px" class="btn btn-sm btn-warning">Rincian</button> &nbsp;` 
+					+'<a class="btn btn-sm btn-primary" style="color:white;"> <i class="fa fa-check"></i> Pengujian Selesai</a>';
 				},
 			},
 

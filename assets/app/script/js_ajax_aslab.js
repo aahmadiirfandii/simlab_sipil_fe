@@ -179,8 +179,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-right:5px">Rincian</a>` +
-                        '<button data-toggle="modal" data-target=".hapus" class="btn btn-sm btn-danger" style="margin-right:5px">Hapus</button>' +
+                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-right:5px">Rincian</a> &nbsp;` +
+                        '<button data-toggle="modal" data-target=".hapus" class="btn btn-sm btn-danger" style="margin-right:5px">Hapus</button> &nbsp;' +
                         '<button data-toggle="modal" data-target="#edit_praktikum" class="btn btn-sm btn-primary">Edit</button>';
 					},
 				},
@@ -1249,7 +1249,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				{data: 'tipe'},
 				{data: 'sumber_biaya'},
 				{data: 'fungsi_utama'},
-				{data: 'jumlah_alat'},
 				{data: 'kondisi_alat'},
 				{data: 'harga_sewa'},
 				{data: 'aksi', responsivePriority: -1},
@@ -1265,7 +1264,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			columnDefs: [
 				{
-					targets: [0, 1, 2, 3, 4,5,6,7,8,9,10,11],
+					targets: [0, 1, 2, 3, 4,5,6,7,8,9,10],
 					className: 'text-center',
 				},
 				{
@@ -1499,8 +1498,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a href="/books/a-great-book.pdf" target="_blank" class="btn btn-sm btn-warning" style="color:#212121;">View</a>`+
-                        ' <a  class="btn btn-sm btn-secondary" style="color:#212121;">Hapus</a>';
+                        <a href="/books/a-great-book.pdf" target="_blank" class="btn btn-sm btn-warning" style="color:#212121;"><i class="fa fa-eye"></i>View</a>`+
+                        ' <a  class="btn btn-sm btn-secondary" style="color:#212121;"><i class="fa fa-times"></i> Hapus</a>';
 					},
 				},
 				
@@ -1608,7 +1607,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <a data-toggle="modal" data-target="#edit_paket_pengujian" class="btn btn-sm btn-warning" style="color:#212121;">Edit</a>`;
+                        <a data-toggle="modal" data-target="#edit_paket_pengujian" class="btn btn-sm btn-warning" style="color:#212121;"> <i class="fa fa-edit"></i> Edit</a>`;
 					},
 				},
 				{
@@ -1742,7 +1741,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					orderable: false,
 					render: function(data, type, full, meta) {
 						return `
-                        <button class="btn btn-sm btn-warning" style="margin-right:5px">Pengujian Selesai</button>` +
+                        <button class="btn btn-sm btn-warning" style="margin-right:5px">Pengujian Selesai</button> &nbsp;` +
                         '<a href="rincian_kegiatan.html" class="btn btn-sm btn-info">Rincian</a>';
 					},
 				},

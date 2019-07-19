@@ -57,6 +57,7 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	border-radius: 50%;
 	background: white;
 	color: #212121;
+	z-index: 999;
 }
 .dropdown-inline {
 	padding: 10px;
@@ -106,6 +107,13 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
     height: 66px;
     min-height: 66px;
 }
+.kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username {
+	color: #212121;
+	font-size: 1.2rem;
+}
+.kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__text {
+	font-size: 0.8rem;
+}
 @media (max-width: 1024px) {
 	.badge{
 		top: 0px;
@@ -148,5 +156,12 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	}
 	.kt-portlet.kt-portlet--sticky .kt-portlet__head {
 		height: 95px;
+		left: 0px !important;
+	}
+	.kolom-menu-2 {
+		margin-top: 15px
+	}
+	.btn_rincian {
+		margin-left: -13px;
 	}
 }

@@ -70,57 +70,14 @@
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
 	<style>
-		.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
-			border-radius: 4px;
-			padding: 0.75rem 0.75rem;
-		}
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 			font-size: 1rem;
 		}
 		.select2-container {
 			width: 100% !important;
 		}
-		@media (max-width: 1024px) {
-			.kt-header .kt-header__top {
-				height: 0px;
-			}
-			.nav-item  a {
-				font-size: 1rem !important;
-				color: #1f1e2e !important;
-			}
-			.nav-tabs .nav-item .nav-link.active {
-				font-weight: 500 !important;
-				font-size: 1.1rem !important;
-			}
-			.header-mobile {
-				display: block;
-			}
-			/*MENU kecil*/
-			.kt-header-menu-wrapper {
-				background: white;
-				-webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-				box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
-			}
-			.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
-				background-color: #f4f4f7 !important;
-			}
-			.kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
-				color: #282829;
-			}
-			.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-				color: #444441;
-				font-size: 1.3rem;
-			}
 
-		}
 	}
-</style>
-<style type="text/css">
-	.ts  {border-collapse:collapse;border-spacing:0;}
-	.ts td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-	.ts th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-	.ts .ts-xldj{border-color:inherit;text-align:left;font-weight: 600}
-	.ts .ts-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 </head>
 <!-- end::Head -->
@@ -133,7 +90,7 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
 			<a href="index.html">
-				<img style="height: 45px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
+				<img style="height: 40px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
@@ -142,7 +99,7 @@
 					<span class="kt-menu__link-text registration flaticon2-user">
 					</span> 
 					<span style="margin-left: 5px" class="kt-menu__link-text registration">
-						Kepala Lab
+						Laboran
 					</span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
@@ -178,7 +135,7 @@
 								<!-- Header Sebelah Kanan -->
 								<div align="right" style="margin-bottom: 0.5vw;margin-left: 80%;" class="offset-md-10 col-md-2">
 									
-									<div style="width: 150px" class="dropdown dropdown-inline">
+									<div class="dropdown dropdown-inline">
 										<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<span class="kt-menu__link-text registration flaticon2-user">
 											</span> 
@@ -217,38 +174,10 @@
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-												<span class="kt-menu__link-text ">Layanan Laboratorium</span><span class="badge">5</span>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
+											<a href="jadwal_layanan.html" class="kt-menu__link">
+												<span class="kt-menu__link-text ">Jadwal Layanan</span>
 											</a>
-											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
-												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="daftar_permohonan.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Daftar Permohonan</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="verifikasi_invoice.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Verifikasi Invoice</span>
-														</a>
-													</li>
-													<li class="kt-menu__item " aria-haspopup="true">
-														<a href="jadwal_layanan.html" class="kt-menu__link ">
-															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-																<span></span>
-															</i>
-															<span class="kt-menu__link-text">Jadwal Layanan</span>
-														</a>
-													</li>
-												</ul>
-											</div>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -275,16 +204,11 @@
 												</ul>
 											</div>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
 											<a href="appointment.html" class="kt-menu__link">
 												<span class="kt-menu__link-text ">Appointment</span><span class="badge">5</span>
 											</a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="true">
-											<a href="Pelatihan.html" class="kt-menu__link">
-												<span class="kt-menu__link-text ">Pelatihan</span>
-											</a>
-										</li>	
 									</ul>
 								</div>
 							</div>
@@ -292,71 +216,76 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<div class="col-sm-12">
-						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							<div class="kt-subheader__main">
-								<h3 class="kt-subheader__title">Praktikum</h3>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="ambil_praktikum.html"><span class="kt-subheader__desc">Jadwal praktikum</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="kt-portlet">
-						<div class="kt-portlet__head">
-							<div class="kt-portlet__head-label">
-								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Jadwal Praktikum</h3>
-								</div>
-							</div>
-						</div>
-						<div class="kt-portlet__body">
-							<form class="kt-form kt-form--fit ">
-								<div class="row">
-									<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-										<label>Semester :</label>
-										<select class="form-control kt-input" data-col-index="3">
-											<option active value="">--Pilih Semester--</option>
-											<option value="1">Semester 1</option>
-											<option value="2">Semester 2</option>
-											<option value="3">Semester 3</option>
-											<option value="4">Semester 4</option>
-											<option value="5">Semester 5</option>
-											<option value="6">Semester 6</option>
-											<option value="7">Semester 7</option>
-											<option value="8">Semester 8</option>
-											<option value="9">Semester 9</option>
-											<option value="10">Semester 10</option>
-											<option value="11">Semester 11</option>
-											<option value="12">Semester 12</option>
-										</select>
-									</div>
-									<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
-										<label>Tahun Ajaran :</label>
-										<select class="form-control kt-input" data-col-index="4">
-											<option active value="">--Pilih Tahun Ajaran--</option>
-											<option value="1">2018/2019</option>
-											<option value="2">2019/2020</option>
-										</select>
-									</div>
-									<div align="right" class="offset-3 col-lg-3">
-										<a data-toggle="modal" data-target="#tambah_praktikum" style="color: white" class="btn btn-primary">Tambah Praktikum</a>
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+					<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+						<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+							<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+								<div class="col-sm-12">
+									<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+										<div class="kt-subheader__main">
+											<h3 class="kt-subheader__title">Praktikum</h3>
+											<span class="kt-subheader__separator kt-subheader__separator--v"></span>
+											<a href="ambil_praktikum.html"><span class="kt-subheader__desc">Jadwal praktikum</span></a>
+										</div>
 									</div>
 								</div>
-							</form>
-							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_jadwal_praktikum">
-								<thead>
-									<tr>
-										<th>No.</th>
-										<th>Matakuliah</th>
-										<th>Tempat</th>
-										<th>Semester</th>
-										<th>Tahun Ajaran</th>
-										<th>Aksi</th>
-									</tr>
-								</thead>
-							</table>
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<div class="kt-portlet__head-label">
+												<h3 style="margin-top: 5px" class="kt-portlet__head-title">Jadwal Praktikum</h3>
+											</div>
+										</div>
+									</div>
+									<div class="kt-portlet__body">
+										<form class="kt-form kt-form--fit ">
+											<div class="row">
+												<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+													<label>Semester :</label>
+													<select class="form-control kt-input" data-col-index="3" name="semester">
+														<option active value="">--Pilih Semester--</option>
+														<option value="1">Semester 1</option>
+														<option value="2">Semester 2</option>
+														<option value="3">Semester 3</option>
+														<option value="4">Semester 4</option>
+														<option value="5">Semester 5</option>
+														<option value="6">Semester 6</option>
+														<option value="7">Semester 7</option>
+														<option value="8">Semester 8</option>
+														<option value="9">Semester 9</option>
+														<option value="10">Semester 10</option>
+														<option value="11">Semester 11</option>
+														<option value="12">Semester 12</option>
+													</select>
+												</div>
+												<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+													<label>Tahun Ajaran :</label>
+													<select class="form-control kt-input" data-col-index="4" name="tahun_ajaran">
+														<option active value="">--Pilih Tahun Ajaran--</option>
+														<option value="1">2018/2019</option>
+														<option value="2">2019/2020</option>
+													</select>
+												</div>
+												<div align="right" class="offset-3 col-lg-3">
+													<a data-toggle="modal" data-target="#tambah_praktikum" style="color: white" class="btn btn-primary">Tambah Praktikum</a>
+												</div>
+											</div>
+										</form>
+										<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_jadwal_praktikum">
+											<thead>
+												<tr>
+													<th>No.</th>
+													<th>Matakuliah</th>
+													<th>Tempat</th>
+													<th>Semester</th>
+													<th>Tahun Ajaran</th>
+													<th>Aksi</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -415,108 +344,110 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Mata Kuliah</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama praktikum" id="nama_praktikum">
+							<form class="kt-form">
+								<div class="modal-body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Mata Kuliah</label>
+										<div class="col-9">
+											<input class="form-control" type="text" placeholder="input nama praktikum" id="nama_praktikum" name="nama_praktikum">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input tempat praktikum" id="tempat_praktikum">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
+										<div class="col-9">
+											<input class="form-control" type="text" placeholder="input tempat praktikum" id="tempat_praktikum" name="tempat_praktikum">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Semester</label>
-									<div class="col-9">
-										<select class="form-control" id="semester">
-											<option value="0">1</option>
-											<option value="1">2</option>
-											<option value="2">3</option>
-											<option value="3">4</option>
-											<option value="4">6</option>
-											<option value="5">7</option>
-											<option value="6">8</option>
-											<option value="7">9</option>
-										</select>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Semester</label>
+										<div class="col-9">
+											<select class="form-control" id="semester" name="semester">
+												<option value="0">1</option>
+												<option value="1">2</option>
+												<option value="2">3</option>
+												<option value="3">4</option>
+												<option value="4">6</option>
+												<option value="5">7</option>
+												<option value="6">8</option>
+												<option value="7">9</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
-									<div class="col-9">
-										<select class="form-control" id="semester">
-											<option value="0">2017/2018</option>
-											<option value="1">2018/2019</option>
-											<option value="2">2019/2020</option>
-										</select>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
+										<div class="col-9">
+											<select class="form-control" id="tahun_ajaran" name="tahun_ajaran">
+												<option value="0">2017/2018</option>
+												<option value="1">2018/2019</option>
+												<option value="2">2019/2020</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
-									<div class="col-9">
-										<div class=" custom-file">
-											<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum">
-											<label class="custom-file-label" for="customFile">Choose file</label>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
+										<div class="col-9">
+											<div class=" custom-file">
+												<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum" name="upload_modul_praktikum">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
+										<div class="col-9">
+											<div class=" custom-file">
+												<input type="file" class="custom-file-input choose_file" id="upload_format_laporan" name="upload_format_laporan">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-sm-12" align="right">
+											<button class="btn btn-primary">Tambah Praktikum</button>
+										</div>
+										<div class="col-sm-12" style="margin-top:10px">
+											<table class="table table-striped- table-bordered table-hover table-checkable">
+												<thead>
+													<tr>
+														<th>No.</th>
+														<th>Nama Praktikum</th>
+														<th>Aksi</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td align="center">1</td>
+														<td>
+															<select class="form-control m-select2 kt_select2_1" name="praktikum">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+																<option value="9">Praktikum 9</option>
+																<option value="10">Praktikum 10</option>
+																<option value="11">Praktikum 11</option>
+																<option value="12">Praktikum 12</option>
+																<option value="13">Praktikum 13</option>
+															</select>
+														</td>
+														<td>
+															<button class="btn btn-secondary">hapus</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
 									</div>
 								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
-									<div class="col-9">
-										<div class=" custom-file">
-											<input type="file" class="custom-file-input choose_file" id="upload_format_laporan">
-											<label class="custom-file-label" for="customFile">Choose file</label>
-										</div>
-									</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+									<button type="button" class="btn btn-success kt_sweetalert_tambah">Tambahkan</button>
 								</div>
-								<div class="form-group row">
-									<div class="col-sm-12" align="right">
-										<button class="btn btn-primary">Tambah Praktikum</button>
-									</div>
-									<div class="col-sm-12" style="margin-top:10px">
-										<table class="table table-striped- table-bordered table-hover table-checkable">
-											<thead>
-												<tr>
-													<th>No.</th>
-													<th>Nama Praktikum</th>
-													<th>Aksi</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td align="center">1</td>
-													<td>
-														<select class="form-control m-select2 kt_select2_1" name="praktikum" name="param">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-															<option value="9">Praktikum 9</option>
-															<option value="10">Praktikum 10</option>
-															<option value="11">Praktikum 11</option>
-															<option value="12">Praktikum 12</option>
-															<option value="13">Praktikum 13</option>
-														</select>
-													</td>
-													<td>
-														<button class="btn btn-secondary">hapus</button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-success">Tambahkan</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -529,108 +460,110 @@
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
-							<div class="modal-body">
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Mata Kuliah</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input nama praktikum" id="nama_praktikum">
+							<form class="kt-form">
+								<div class="modal-body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Mata Kuliah</label>
+										<div class="col-9">
+											<input class="form-control" type="text" placeholder="input nama praktikum" id="nama_praktikum" name="nama_praktikum">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
-									<div class="col-9">
-										<input class="form-control" type="text" placeholder="input tempat praktikum" id="tempat_praktikum">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Tempat</label>
+										<div class="col-9">
+											<input class="form-control" type="text" placeholder="input tempat praktikum" id="tempat_praktikum" name="tempat_praktikum">
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Semester</label>
-									<div class="col-9">
-										<select class="form-control" id="semester">
-											<option value="0">1</option>
-											<option value="1">2</option>
-											<option value="2">3</option>
-											<option value="3">4</option>
-											<option value="4">6</option>
-											<option value="5">7</option>
-											<option value="6">8</option>
-											<option value="7">9</option>
-										</select>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Semester</label>
+										<div class="col-9">
+											<select class="form-control" id="semester" name="semester">
+												<option value="0">1</option>
+												<option value="1">2</option>
+												<option value="2">3</option>
+												<option value="3">4</option>
+												<option value="4">6</option>
+												<option value="5">7</option>
+												<option value="6">8</option>
+												<option value="7">9</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
-									<div class="col-9">
-										<select class="form-control" id="semester">
-											<option value="0">2017/2018</option>
-											<option value="1">2018/2019</option>
-											<option value="2">2019/2020</option>
-										</select>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Tahun Ajaran</label>
+										<div class="col-9">
+											<select class="form-control" id="tahun_ajaran" name="tahun_ajaran">
+												<option value="0">2017/2018</option>
+												<option value="1">2018/2019</option>
+												<option value="2">2019/2020</option>
+											</select>
+										</div>
 									</div>
-								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
-									<div class="col-9">
-										<div class=" custom-file">
-											<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum">
-											<label class="custom-file-label" for="customFile">Choose file</label>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Upload Modul Praktikum</label>
+										<div class="col-9">
+											<div class=" custom-file">
+												<input type="file" class="custom-file-input choose_file" id="upload_modul_praktikum" name="upload_modul_praktikum">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
+										<div class="col-9">
+											<div class=" custom-file">
+												<input type="file" class="custom-file-input choose_file" id="upload_format_laporan" name="upload_format_laporan">
+												<label class="custom-file-label" for="customFile">Choose file</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-sm-12" align="right">
+											<button class="btn btn-primary">Tambah Praktikum</button>
+										</div>
+										<div class="col-sm-12" style="margin-top:10px">
+											<table class="table table-striped- table-bordered table-hover table-checkable">
+												<thead>
+													<tr>
+														<th>No.</th>
+														<th>Nama Praktikum</th>
+														<th>Aksi</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td align="center">1</td>
+														<td>
+															<select class="form-control m-select2 kt_select2_1" name="praktikum">
+																<option value="1">Praktikum 1</option>
+																<option value="2">Praktikum 2</option>
+																<option value="3">Praktikum 3</option>
+																<option value="4">Praktikum 4</option>
+																<option value="5">Praktikum 5</option>
+																<option value="6">Praktikum 6</option>
+																<option value="7">Praktikum 7</option>
+																<option value="8">Praktikum 8</option>
+																<option value="9">Praktikum 9</option>
+																<option value="10">Praktikum 10</option>
+																<option value="11">Praktikum 11</option>
+																<option value="12">Praktikum 12</option>
+																<option value="13">Praktikum 13</option>
+															</select>
+														</td>
+														<td>
+															<button class="btn btn-secondary">hapus</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
 									</div>
 								</div>
-								<div class="form-group row">
-									<label for="example-text-input" class="col-3 col-form-label">Upload Format Laporan</label>
-									<div class="col-9">
-										<div class=" custom-file">
-											<input type="file" class="custom-file-input choose_file" id="upload_format_laporan">
-											<label class="custom-file-label" for="customFile">Choose file</label>
-										</div>
-									</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+									<button type="button" class="btn btn-success kt_sweetalert_simpan">Simpan</button>
 								</div>
-								<div class="form-group row">
-									<div class="col-sm-12" align="right">
-										<button class="btn btn-primary">Tambah Praktikum</button>
-									</div>
-									<div class="col-sm-12" style="margin-top:10px">
-										<table class="table table-striped- table-bordered table-hover table-checkable">
-											<thead>
-												<tr>
-													<th>No.</th>
-													<th>Nama Praktikum</th>
-													<th>Aksi</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td align="center">1</td>
-													<td>
-														<select class="form-control m-select2 kt_select2_1" name="praktikum" name="param">
-															<option value="1">Praktikum 1</option>
-															<option value="2">Praktikum 2</option>
-															<option value="3">Praktikum 3</option>
-															<option value="4">Praktikum 4</option>
-															<option value="5">Praktikum 5</option>
-															<option value="6">Praktikum 6</option>
-															<option value="7">Praktikum 7</option>
-															<option value="8">Praktikum 8</option>
-															<option value="9">Praktikum 9</option>
-															<option value="10">Praktikum 10</option>
-															<option value="11">Praktikum 11</option>
-															<option value="12">Praktikum 12</option>
-															<option value="13">Praktikum 13</option>
-														</select>
-													</td>
-													<td>
-														<button class="btn btn-secondary">hapus</button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-								<button type="button" class="btn btn-success">Tambahkan</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -752,16 +685,11 @@
 
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 
 	<!--end::Page Vendors -->
 
 	<!--begin::Page Scripts(used by this page) -->
 	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<script src="../assets/app/custom/general/crud/metronic-datatable/base/data-local.js" type="text/javascript">
-	</script>
-	<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 
 	<!--end::Page Scripts -->
 	<!-- AJAX -->
@@ -805,6 +733,36 @@
 		// Initialization
 		jQuery(document).ready(function() {
 			KTSelect2.init();
+		});
+	</script>
+
+	<!-- SweetAlert2 -->
+	<script>
+		// Class definition
+		var KTSweetAlert2Demo = function() {
+
+	    // Demos
+	    var initDemos = function() {
+	    	$('.kt_sweetalert_tambah').click(function(e) {
+	    		swal.fire("Berhasil!", "Praktikum Berhasil Ditambahkan!", "success");
+	    	});
+	    	$('.kt_sweetalert_simpan').click(function(e) {
+	    		swal.fire("Tersimpan!", "Data Berhasil Disimpan!", "success");
+	    	});
+
+	    };
+
+	    return {
+	        // Init
+	        init: function() {
+	        	initDemos();
+	        },
+	    };
+	}();
+
+		// Class Initialization
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
 		});
 	</script>
 </body>

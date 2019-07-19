@@ -173,6 +173,39 @@
 												<span class="kt-menu__link-text ">Laboratorium</span>
 											</a>
 										</li>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+												<span class="kt-menu__link-text ">Layanan Laboratorium</span><span class="badge">5</span>
+											</a>
+											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+												<ul class="kt-menu__subnav">
+													<li class="kt-menu__item kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
+														<a href="daftar_permohonan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Daftar Permohonan</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="verifikasi_invoice.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Verifikasi Invoice</span>
+														</a>
+													</li>
+													<li class="kt-menu__item " aria-haspopup="true">
+														<a href="jadwal_layanan.html" class="kt-menu__link ">
+															<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+																<span></span>
+															</i>
+															<span class="kt-menu__link-text">Jadwal Layanan</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
 											<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 												<span class="kt-menu__link-text">Praktikum</span><span class="badge">5</span>
@@ -210,133 +243,213 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<div class="col-sm-12">
-						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-							<div class="kt-subheader__main">
-								<a href="verifikasi.html"><h3 class="kt-subheader__title">Permohonan Pengujian</h3></a>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="daftar_permohonan.html"><span class="kt-subheader__desc">Daftar Permohonan</span></a>
-								<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-								<a href="#"><span class="kt-subheader__desc">Rincian Permohonan Dosen</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="kt-portlet">
-						<div class="kt-portlet__head">
-							<div class="kt-portlet__head-label">
-								<div class="kt-portlet__head-label">
-									<h3 style="margin-top: 5px" class="kt-portlet__head-title">Rincian Permohonan Dosen </h3>
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+					<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+						<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+							<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+								<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+									<div class="kt-subheader__main">
+										<a href="verifikasi.html"><h3 class="kt-subheader__title">Permohonan Pengujian</h3></a>
+										<span class="kt-subheader__separator kt-subheader__separator--v"></span>
+										<a href="daftar_permohonan.html"><span class="kt-subheader__desc">Daftar Permohonan</span></a>
+										<span class="kt-subheader__separator kt-subheader__separator--v"></span>
+										<a href="#"><span class="kt-subheader__desc">Rincian Permohonan Dosen</span></a>
+									</div>
+								</div>
+								<div class="kt-content kt-grid__item kt-grid__item--fluid" >
+									<div class="row">
+										<div class="col-sm-12">
+											<form class="kt-form">
+												<div class="kt-portlet kt-portlet--last kt-portlet--head-lg " id="kt_page_portlet">
+													<div class="kt-portlet__head">
+														<div style="width: 100%" class="kt-portlet__head-label">
+															<div style="width: 100%" class="row">
+																<div class="col-sm-6">
+																	<div class="kt-portlet__head-label">
+																		<h3 style="margin-top: 5px" class="kt-portlet__head-title">Rincian Permohonan Dosen </h3>
+																	</div>
+																</div>
+																<div align="right" class="col-sm-6">
+																	<a href="daftar_permohonan.html" class="btn btn-clean kt-margin-r-10">
+																		<i class="la la-arrow-left"></i>
+																		<span class="kt-hidden-mobile">Back</span>
+																	</a>
+																	<button class="btn btn-danger"><i class="fa fa-times"></i>Tolak</button>
+																	<button class="btn btn-info"><i class="fa fa-check"></i>Konfirmasi</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div class="row">
+															<div class="col-sm-12">
+																<label><h4>Informasi Surat</h4></label>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">Tanggal Surat</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_surat" name="tanggal_surat">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">Tujuan</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="tujuan_surat" name="tujuan_surat">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">Lampiran Surat</label>
+																	<div class="col-8">
+																		<button onclick=" window.open('http://google.com','_blank')" class="btn btn-primary" name="btn_lihat_surat"><i class="flaticon-eye"></i> Lihat</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">Perihal</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Lorem Ipsum Dolor Sit Amet" id="perihal_surat" name="perihal_surat">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">Pengirim/Instansi</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Upana Studio Internasional" id="pengirim_surat" name="pengirim_surat">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+														<div class="row">
+															<div class="col-sm-12">
+																<label><h4>Informasi Kegiatan</h4></label>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		No Registrasi
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="A0011111" id="no_registrasi" name="no_registrasi">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Tanggal Permohonan
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_permohonan" name="tanggal_permohonan">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Nama
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pemohon" name="nama_pemohon"> 
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		NIM
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="D42113016" id="nim_pemohon" name="nim_pemohon">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Judul Penelitian
+																	</label>
+																	<div class="col-8">
+																		<textarea disabled="" style="resize: none" class="form-control" id="judul_penelitian" rows="3" name="judul_penelitian">Analisis Power Level Kebisingan Kendaraan Sepeda Motor di Kota Makassar</textarea>
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Lampiran SK Penelitian
+																	</label>
+																	<div class="col-8">
+																		<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;"><i class="flaticon-eye" name="btn_lihat_sk_penelitian"></i>lihat</button>
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Lampiran Proposal Penelitian
+																	</label>
+																	<div class="col-8">
+																		<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;" name="btn_lihat_proposal_penelitian"><i class="flaticon-eye"></i>lihat</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Jenis Kegiatan
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Penelitian Tugas Akhir (S1)" id="jenis_kegiatan" name="jenis_kegiatan">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Dosen Pembimbing 1
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Dosen 1" id="dosen_pembimbing_1" name="dosen_pembimbing_1">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Dosen Pembimbing 2
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="Dosen 2" id="dosen_pembimbing_2" name="dosen_pembimbing_2">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Tanggal Mulai
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="13 Maret 2019" id="tanggal_mulai" name="tanggal_mulai">
+																	</div>
+																</div>
+																<div class="form-group row">
+																	<label for="example-text-input" class="col-4 col-form-label">
+																		Tanggal Selesai
+																	</label>
+																	<div class="col-8">
+																		<input disabled="" class="form-control" type="text" value="13 Maret 2019" id="tanggal_selesai" name="tanggal_selesai">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+														<div class="kt-portlet__head-label">
+															<h3 style="margin-top: 5px" class="kt-portlet__head-title">Layanan Laboratorium </h3>
+														</div>
+														<table class="table table-striped- table-bordered table-hover " id="tbl_layanan_lab_dosen">
+															<thead>
+																<tr>
+																	<th>No</th>
+																	<th>Laboratorium</th>
+																	<th>Layanan Lab</th>
+																	<th>Tanggal</th>
+																	<th>Jam Mulai</th>
+																	<th>Jam Selesai</th>
+																	<th>Aksi</th>
+																</tr>
+															</thead>
+														</table>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>	
 								</div>
 							</div>
-						</div>
-						<div class="kt-portlet__body">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											No Registrasi
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="A0011111" id="no_registrasi">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Permohonan
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="25 Maret 2019" id="tanggal_permohonan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Nama Pemohon
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="nama_pemohon">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Judul Penelitian
-										</label>
-										<div class="col-8">
-											<textarea disabled="" style="resize: none" class="form-control" id="judul_penelitian" rows="3">Analisis Power Level Kebisingan Kendaraan Sepeda Motor di Kota Makassar</textarea>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Jenis Kegiatan
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Penelitian Tugas Akhir (S1)" id="jenis_kegiatan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Sumber Pendanaan
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="Dana Pribadi" id="sumber_pendanaan">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Kontak
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="085145322xxx" id="kontak_dosen">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Mulai
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="-" id="tanggal_mulai">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">
-											Tanggal Selesai
-										</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="-" id="tanggal_selesai">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="kt-portlet__head-label">
-								<h3 style="margin-top: 5px" class="kt-portlet__head-title">Layanan Laboratorium </h3>
-							</div>
-							<table class="table table-striped- table-bordered table-hover " id="tbl_layanan_lab_dosen">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Laboratorium</th>
-										<th>Layanan Lab</th>
-										<th>Tanggal</th>
-										<th>Jam Mulai</th>
-										<th>Jam Selesai</th>
-										<th>Aksi</th>
-									</tr>
-								</thead>
-							</table>
-							<div class="row">
-								<div class="col-sm-6">
-									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">SK Penelitian</button>
-									<button class="btn btn-success" onclick=" window.open('file:////C:\Users\data'); return true;">Proposal Penelitian</button>
-								</div>
-								<div align="right" class="col-sm-6">
-									<button class="btn btn-danger">Tolak</button>
-									<button class="btn btn-info">Konfirmasi</button>
-									<a href="daftar_permohonan.html" class="btn btn-warning">Kembali</a>
-								</div>
-							</div>	
 						</div>
 					</div>
 				</div>
