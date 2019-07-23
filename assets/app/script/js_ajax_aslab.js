@@ -178,10 +178,21 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					className: 'text-center',
 					orderable: false,
 					render: function(data, type, full, meta) {
+						/*return `
+                        <div class="dropdown">` +
+                        '<a data-toggle="dropdown" class="btn btn-sm btn-clean btn-icon btn-icon-md" aria-expanded="false">' +
+                        '<i class="la la-ellipsis-h"></i>'+
+                        '</a>'+
+                        '<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="display: none; position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-25px, 30px, 0px);">'+
+                        '<a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit Details</a>'+
+                        '<a href="#" class="dropdown-item"><i class="la la-leaf"></i> Update Status</a>'+
+                        '<a href="#" class="dropdown-item"><i class="la la-print"></i>Generate Report</a>'+
+                         '</div>'+
+                         '</div';*/
 						return `
-                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-right:5px">Rincian</a> &nbsp;` +
-                        '<button data-toggle="modal" data-target=".hapus" class="btn btn-sm btn-danger" style="margin-right:5px">Hapus</button> &nbsp;' +
-                        '<button data-toggle="modal" data-target="#edit_praktikum" class="btn btn-sm btn-primary">Edit</button>';
+                        <a href="rincian_praktikum.html" class="btn btn-sm btn-warning" style="color:#212121;margin-bottom:5px">Rincian</a> &nbsp;` +
+                        '<button data-toggle="modal" data-target=".hapus" class="btn btn-sm btn-danger" style="margin-bottom:5px">Hapus</button> &nbsp;' +
+                        '<a href="edit_praktikum.html" class="btn btn-sm btn-brand" style="margin-bottom:5px">Edit</a>';
 					},
 				},
 				{
