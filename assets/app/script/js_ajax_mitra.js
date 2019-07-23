@@ -159,7 +159,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a class="btn btn-sm btn-warning btn_rincian" style="color:white;">Published</a> &nbsp;` 
+					<a class="btn btn-sm btn-warning btn_rincian" style="margin-bottom:5px;color:white;">Published</a> &nbsp;` 
 					+ '<button type="button" data-toggle="modal" data-target="#rincian_kegiatan"  class="btn btn-sm btn-primary">Rincian</button>';
 				},
 			},
@@ -250,7 +250,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<img style="max-width:130px" src="../assets/media/misc/lab_perkerasan_jalan.png">`;
+					<img class="gambar_peralatan" name="gambar_alat" src="../assets/media/misc/lab_perkerasan_jalan.png">`;
 				},
 			},
 			],

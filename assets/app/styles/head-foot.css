@@ -95,7 +95,7 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	color: #212121;
 }
 .kt-datatable.kt-datatable--default > .kt-datatable__table > .kt-datatable__body .kt-datatable__row > .kt-datatable__cell > span {
-    color: #212121;
+	color: #212121;
 }
 .kt-portlet-utama {
 	margin-top: 25px
@@ -104,8 +104,8 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	font-size: 1.6rem;
 }
 .kt-portlet.kt-portlet--sticky .kt-portlet__head {
-    height: 66px;
-    min-height: 66px;
+	height: 66px;
+	min-height: 66px;
 }
 .kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__username {
 	color: #212121;
@@ -114,6 +114,11 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 .kt-widget4 .kt-widget4__item .kt-widget4__info .kt-widget4__text {
 	font-size: 0.8rem;
 }
+
+.gambar_peralatan{
+	max-width: 130px;
+}
+
 @media (max-width: 1024px) {
 	.badge{
 		top: 0px;
@@ -163,5 +168,8 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 	}
 	.btn_rincian {
 		margin-left: -13px;
+	}
+	.gambar_peralatan{
+		max-width: 90px;
 	}
 }
