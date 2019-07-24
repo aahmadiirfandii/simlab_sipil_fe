@@ -1,0 +1,13 @@
+	.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+		font-size: 1.3rem;
+	}
+	#foto_user{
+		max-width:150px;
+	}
+	input[type=file]{
+		padding: 5px;
+		margin-top: 15px;
+		background: #dedede;
+		width: inherit;
+		max-width: 250px;
+	}

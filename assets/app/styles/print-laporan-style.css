@@ -1,0 +1,22 @@
+@media print {
+	.m-portlet .m-portlet__body {
+		color: #000000;
+	}
+	#btn_print,
+	#btn_kembali {
+		display: none;
+	}
+	.judul {
+		display: block !important;
+	}
+	@page { margin: 0; }
+	body { margin: 0.8cm; }
+}
+body{
+	background:white;
+}
+
+.dataTables_wrapper .dataTables_pager
+{
+	display: none;
+}

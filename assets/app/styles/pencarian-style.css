@@ -1,0 +1,34 @@
+.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+	font-size: 1rem;
+}
+.hasil_pencarian {
+	margin-bottom: 25px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding-bottom: 25px;
+}
+.badge-color-red {
+	background-color: #F50057 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-blue {
+	background-color: #1565C0 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-yellow {
+	background-color: #FFA000 !important;
+	color: white !important;
+	font-size: 1rem;
+}
+.badge-color-green {
+	background-color: #558B2F !important;
+	color: white !important;
+	font-size: 1rem;
+}
+@media (min-width: 1025px){
+	.kt-content {
+		padding: 0px 0;
+	}
+}
+

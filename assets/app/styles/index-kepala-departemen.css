@@ -1,0 +1,14 @@
+.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+	font-size: 1.25rem;
+}
+#praktikum {
+	width: 100%;
+	height: 500px;
+}
+#alat {
+	width: 100%;
+	height: 500px;
+}
+.card-info {
+	color: white;
+}

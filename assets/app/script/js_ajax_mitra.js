@@ -2470,10 +2470,20 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Aksi',
 				orderable: false,
 				render: function(data, type, full, meta) {
-					return `
-					<a href="rincian_daftar_permohonan.html" class="btn btn-sm btn-warning " style="color:white;">Rincian</a>` 
+					/*return `
+					<a  class="btn btn-sm btn-warning " style="color:white;">Rincian</a>` 
 					+ '<a class="btn btn-sm btn-success " style="color:white;margin-left:5px">Disposisi</a>'
-					+ '<a class="btn btn-sm btn-danger " style="color:white;margin-left:5px">Tolak</a>';
+					+ '<a class="btn btn-sm btn-danger " style="color:white;margin-left:5px">Tolak</a>';*/
+
+					return `
+					<button type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more-1"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+					<a href="rincian_daftar_permohonan.html" style="margin-bottom:5px" class="dropdown-item btn btn-primary" href="#"></i> Rincian</a>
+					<a style="margin-bottom:5px" class="dropdown-item btn btn-success" href="#"></i> Disposisi</a>
+					<a style="" class="dropdown-item btn btn-danger" href="#"> Tolak</a>` 
+					;
 				},
 			},
 			{
