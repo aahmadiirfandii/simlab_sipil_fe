@@ -3,10 +3,9 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Riwayat Layanan Lab  | Mitra</title>
+	<title>Laboratorium | Mitra</title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<!--begin::Fonts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 	<script>
@@ -19,19 +18,13 @@
 			}
 		});
 	</script>
-
 	<!--end::Fonts -->
-
 	<!--begin::Page Vendors Styles(used by this page) -->
 	<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-
 	<!--end::Page Vendors Styles -->
-
 	<!--begin:: Global Mandatory Vendors -->
 	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-
 	<!--end:: Global Mandatory Vendors -->
-
 	<!--begin:: Global Optional Vendors -->
 	<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
@@ -64,18 +57,19 @@
 	<!--end::Global Theme Styles -->
 	<!--begin::Layout Skins(used by all pages) -->
 	<!--end::Layout Skins -->
-	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css"> 
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" /> 
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/demo/default/base/sipil-unhas.css"> -->
+	<link rel="stylesheet" type="text/css" href="../assets/app/styles/head-foot.css">
 	<link rel="stylesheet" type="text/css" href="../assets/app/styles/text_black.css">
-	<style>
+	<style type="text/css">
 		.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
-<body class="kt-page--loading-enabled kt-page--loading kt-page--fixed kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+<body class="kt-page--loading-enabled kt-page--loading kt-header--minimize-topbar kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 	<!-- begin::Page loader -->
 	<!-- end::Page Loader -->
 	<!-- begin:: Page -->
@@ -107,7 +101,6 @@
 			<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
 		</div>
 	</div>
-
 	<!-- end:: Header Mobile -->
 	<div class="kt-grid kt-grid--hor kt-grid--root">
 		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
@@ -126,7 +119,7 @@
 							<!-- begin:: Header Topbar -->
 							<div class="kt-header__topbar kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid row" >
 								<!-- Header Sebelah Kanan -->
-								<div style="margin-bottom: 0.5vw;margin-left: 72vw;" class="offset-md-10 col-md-2">
+								<div align="right" style="margin-bottom: 0.5vw;margin-left: 80%;" class="offset-md-10 col-md-2">
 									
 									<div class="dropdown dropdown-inline">
 										<a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,14 +155,14 @@
 												<span class="kt-menu__link-text ">Beranda</span>
 											</a>
 										</li>
-										<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel " aria-haspopup="true">
+										<li class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here" aria-haspopup="true">
 											<a href="list_laboratorium.html" class="kt-menu__link">
 												<span class="kt-menu__link-text">Laboratorium</span>
 											</a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="true"><a href="daftar_pesanan.html" class="kt-menu__link "><span class="kt-menu__link-text">Daftar Pesanan</span></a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--open kt-menu__item--here"  aria-haspopup="true"><a href="invoice.html" class="kt-menu__link "><span class="kt-menu__link-text">Invoice</span><span class="badge">5</span></a>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="true"><a href="invoice.html" class="kt-menu__link "><span class="kt-menu__link-text">Invoice</span><span class="badge">5</span></a>
 										</li>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="true"><a href="riwayat_layanan_lab.html" class="kt-menu__link "><span class="kt-menu__link-text">Riwayat Layanan Lab</span><span class="badge">5</span></a>
 										</li>
@@ -180,33 +173,366 @@
 						</div>
 					</div>
 				</div>
-				<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-					<div class="kt-portlet">
-						<div class="kt-portlet__head">
-							<div class="kt-portlet__head-label">
-								<div style="margin-top:20px; color: #1f1e2e" class="kt-portlet__head-label">
-									<h4 class="kt-subheader__title">Riwayat Pengujian</h4>
+				
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+					<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+						<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+							<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+								<div class="kt-portlet kt-portlet-utama">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<div class="kt-portlet__head-label">
+												<h3 style="margin-top: 5px" class="kt-portlet__head-title">Lab Hidrolika</h3>
+											</div>
+										</div>
+									</div>
+									<div class="kt-portlet__body">
+										<div class="row">
+											<div class="col-sm-8">
+												<ul class="nav nav-tabs nav-fill" role="tablist" style="">
+													<li class="nav-item">
+														<a class="nav-link active" data-toggle="tab" href="#kt_tabs_informasi_umum">Informasi Umum</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" data-toggle="tab" href="#kt_tabs_kegiatan">Kegiatan</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" data-toggle="tab" href="#kt_tabs_alat">Alat</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link" data-toggle="tab" href="#kt_tabs_layanan_lab">Layanan Lab</a>
+													</li>
+												</ul>
+												<div class="tab-content">
+													<div class="tab-pane active" id="kt_tabs_informasi_umum" role="tabpanel">
+														<div class=" informasi">
+															<div class="row">
+																<div  class="col-4">
+																	<img style="height: auto;width: inherit;" src="http://tsipil.ugm.ac.id/wp-content/uploads/2016/02/kunj_lab_hidro_3.jpg">
+																</div>
+																<div class="col-8 deskripsi">
+																	<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+																</div>
+																<div style="margin-top: 30px " class="col-12" >
+																	<table style="width: 100%;height: 170px" class="tg">
+																		<tr>
+																			<th class="tg-s268 head-table">Penanggung Jawab</th>
+																			<th class="tg-0lax">Ahmad Rifaldi</th>
+																		</tr>
+																		<tr>
+																			<td class="tg-s268 head-table">Telepon</td>
+																			<td class="tg-0lax">+6285145322137</td>
+																		</tr>
+																		<tr>
+																			<td class="tg-s268 head-table">Lokasi</td>
+																			<td class="tg-0lax">Civil Engineering Building, Lt. Dasar, Fakultas Teknik, Kampus Gowa</td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="kt_tabs_kegiatan" role="tabpanel">
+														<div class="kt-portlet__body">
+															<form class="kt-form kt-form--fit ">
+																<div class="row">
+																	<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+																		<label>Bulan:</label>
+																		<select class="form-control kt-input" data-col-index="2" name="bulan">
+																			<option active value="">--Pilih Bulan--</option>
+																			<option value="1">Januari</option>
+																			<option value="2">Februari</option>
+																			<option value="3">Maret</option>
+																			<option value="4">April</option>
+																			<option value="5">Mei</option>
+																			<option value="6">Juni</option>
+																			<option value="7">Juli</option>
+																			<option value="8">Agustus</option>
+																			<option value="9">September</option>
+																			<option value="10">Oktober</option>
+																			<option value="11">November</option>
+																			<option value="12">Desember</option>
+																		</select>
+																	</div>
+																	<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+																		<label>Search:</label>
+																		<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#" name="searchbar">
+																	</div>
+																</div>
+															</form>
+															<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kegiatan_m">
+																<thead>
+																	<tr>
+																		<th>No.</th>
+																		<th>Nama Kegiatan</th>
+																		<th>Jenis Kegiatan</th>
+																		<th>Waktu</th>
+																		<th>Aksi</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+													</div>
+													<div class="tab-pane" id="kt_tabs_alat" role="tabpanel">
+														<div class="kt-portlet__body">
+															<form class="kt-form kt-form--fit ">
+																<div class="row ">
+																	<div class="col-lg-3 kt-margin-b-10-tablet-and-mobile">
+																		<label>Search:</label>
+																		<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#" name="searchbar">
+																	</div>
+																</div>
+															</form>
+															<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_peralatan">
+																<thead>
+																	<tr>
+																		<th>No.</th>
+																		<th>Gambar	</th>
+																		<th>Nama Alat</th>
+																		<th>Fungsi Utama</th>
+																		<th>Jumlah Alat</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+													</div>
+													<div class="tab-pane" id="kt_tabs_layanan_lab" role="tabpanel">
+														<div class="kt-portlet__body">	
+															<form class="kt-form kt-form--fit ">
+																<div class="row ">	
+																	<div class="col-sm-12 kt-margin-b-10-tablet-and-mobile">
+																		<label>Search:</label>
+																	</div>
+																	<div class="col-sm-9">
+																		<input type="text" class="form-control kt-input" placeholder="Search disini" data-col-index="#" name="searchbar">
+																	</div>
+																	<div align="right" class="col-sm-3">
+																		<a href="buat_pengujian_lain.html" style="color: white;width: 100%" class="btn btn-primary">Buat Pengujian Lain</a>
+																	</div>
+																</div>
+															</form>
+															<!-- <div style="margin-top: 20px" class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_pengujian_2"></div> -->
+															<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_pengujian">
+																<thead>
+																	<tr>
+																		<th>No.</th>
+																		<th>Nama Paket Pengujian</th>
+																		<th>Jenis Paket Pengujian</th>
+																		<th>Durasi Paket Pengujian</th>
+																		<th>Harga Paket Pengujian</th>
+																		<th>Aksi</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="col-alamat" class="col-sm-4">
+												<div class="kt-portlet__head">
+													<div class="kt-portlet__head-label">
+														<h3 class="kt-portlet__head-title">
+															<span class="fa fa-map-marked-alt"></span> Alamat
+														</h3>
+													</div>
+												</div>
+												<div class=" alamat_sipil">
+													<p>Civil Engineering Building</p>
+													<p>Fakultas Teknik, Kampus Gowa</p>
+													<p>Jalan Poros Malino, KM 6, Bontomarannu, Gowa</p>
+													<p type="email">civil@eng.unhas.ac.id</p>
+													<div class="map_alamat">
+														<div  id="kt_gmap_1" style="height:300px;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Rincian Kegiatan -->
+									<div class="modal fade" id="rincian_kegiatan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Rincian Kegiatan</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													</button>
+												</div>
+												<div class="modal-body">
+													<table style="width: 100%;" class="ts">
+														<tr>
+															<th class="ts-xldj">Nama Kegiatan</th>
+															<th class="ts-0pky">Analisis Desain Balok Kopel Hibrida</th>
+														</tr>
+														<tr>
+															<td class="ts-xldj">Jenis</td>
+															<td class="ts-0pky">Penelitian</td>
+														</tr>
+														<tr>
+															<td class="ts-xldj">Waktu</td>
+															<td class="ts-0pky">19 Maret</td>
+														</tr>
+														<tr>
+															<td class="ts-xldj">Penanggung Jawab</td>
+															<td class="ts-0pky">Darnilia/11140930000019</td>
+														</tr>
+														<tr>
+															<td class="ts-xldj">Kontak</td>
+															<td class="ts-0pky">085298xxx</td>
+														</tr>
+														<tr>
+															<td class="ts-xldj">Deskripsi</td>
+															<td class="ts-0pky">Dalam rangka penyusunan disertasi</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="kt-portlet__body">
-							
-							<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_riwayat_b">
-								<thead>
+					</div>
+				</div>
+				
+				<!-- Rincian Kegiatan -->
+				<div class="modal fade" id="rincian_kegiatan" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Rincian Kegiatan</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<table style="width: 100%;" class="ts">
 									<tr>
-										<th>No.</th>
-										<th>Tanggal Permohonan</th>
-										<th>No. Invoice</th>
-										<th>Total</th>
-										<th>Status</th>
-										<th>Aksi</th>
+										<th class="ts-xldj">Nama Kegiatan</th>
+										<th class="ts-0pky">Analisis Desain Balok Kopel Hibrida</th>
 									</tr>
-								</thead>
-							</table>
-							
+									<tr>
+										<td class="ts-xldj">Jenis</td>
+										<td class="ts-0pky">Penelitian</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Waktu</td>
+										<td class="ts-0pky">19 Maret</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Penanggung Jawab</td>
+										<td class="ts-0pky">Darnilia/11140930000019</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Kontak</td>
+										<td class="ts-0pky">085298xxx</td>
+									</tr>
+									<tr>
+										<td class="ts-xldj">Deskripsi</td>
+										<td class="ts-0pky">Dalam rangka penyusunan disertasi</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
+				<!-- Pesanan -->
+				<!-- <div class="modal fade" id="pesan_paket_pengujian" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Formulir Permohonan Pengujian</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Penanggung Jawab</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Ahmad Rifaldi" id="penanggung_jawab">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Paket Pengujian</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="Paket Pengujian 1" id="jenis_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jumlah</label>
+											<div class="col-8">
+												<input  class="form-control" type="number" value="2" id="jumlah_paket_pengujian">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Nama Kegiatan</label>
+											<div class="col-8">
+												<input class="form-control" type="text" placeholder="input nama kegiatan" id="nama_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Jenis Kegiatan</label>
+											<div class="col-8">
+												<select class="form-control" id="exampleSelectd">
+													<option value="">--Pilih Jenis Kegiatan--</option>
+													<option value="1">Pengabdian Masyarakat</option>
+													<option value="2">Penelitan</option>
+													<option value="3">Umum</option>
+												</select>
+											</div>
+										</div>
+										
+										
+									</div>
+									<div class="col-sm-6">	
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+											<div class="col-8">
+												<input class="form-control" type="date" value="2011-08-19" id="tanggal_kegiatan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Durasi</label>
+											<div class="col-8">
+												<div class="input-group">
+													<input type="text" disabled="" class="form-control" value="2" id="durasi_kegiatan" aria-describedby="basic-addon2">
+													<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Hari</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Sampel</label>
+											<div class="col-8">
+												<input disabled="" class="form-control" type="text" value="80gr" id="sampel_kegiatan">
+											</div>
+										</div>		
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Kontak(Hp)</label>
+											<div class="col-8">
+												<input class="form-control" type="tel" placeholder="input no. telpon" id="kontak_pemesan">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="example-text-input" class="col-4 col-form-label">Surat Kegiatan Penelitan</label>
+											<div class="col-8">
+												<div class="custom-file">
+													<input type="file" class="custom-file-input choose_file" id="customFile">
+													<label class="custom-file-label" for="customFile">Choose file</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-primary">Proses</button>
+							</div>
+						</div>
+					</div>
+				</div> -->
 				<!-- Footer -->
 				<div class="kt-footer  kt-footer--extended  kt-grid__item" id="kt_footer">
 					<div class="kt-footer__bottom">
@@ -248,9 +574,7 @@
 			}
 		};
 	</script>
-
 	<!-- end::Global Config -->
-
 	<!--begin:: Global Mandatory Vendors -->
 	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
@@ -261,9 +585,7 @@
 	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-
 	<!--end:: Global Mandatory Vendors -->
-
 	<!--begin:: Global Optional Vendors -->
 	<script src="../assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
@@ -315,29 +637,26 @@
 	<script src="../assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
-
 	<!--end:: Global Optional Vendors -->
-
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/demo2/base/scripts.bundle.js" type="text/javascript"></script>
-
 	<!--end::Global Theme Bundle -->
-
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-
 	<!--begin::Page Scripts(used by this page) -->
 	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-
-	<!--end::Page Scripts -->
+	
+	<script src="../assets/app/custom/general/components/maps/google-maps.js" type="text/javascript"></script>
 	<!-- AJAX -->
-	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script> 
+	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_mitra.js" type="text/javascript"></script>
+	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
 </body>
-
 <!-- end::Body -->
 </html>
