@@ -7,37 +7,56 @@
                  "no_praktikum": 1,
                  "nim_praktikan": "D42113016",
                  "nama_praktikan": "Ahmad Rifaldi",
+                 "nama_kelompok" : "kelompok 1",
                  "pertemuan_1": 1,
                  "pertemuan_2": 0,
                  "pertemuan_3": 1,
                  "pertemuan_4": 0,
                  "pertemuan_5": 1,
                  "pertemuan_6": 0,
-                 "pertemuan_7": 1
+                 "pertemuan_7": 1,
+                 "pengujian_1" : null,
+                 "pengujian_2" : null,
+                 "pengujian_3" : null,
+                 "pengujian_n" : null,
+                 "nilai" : null
+
              },
              {
                  "no_praktikum": 2,
                  "nim_praktikan": "D42113020",
                  "nama_praktikan": "Rahmat Hardian",
+                 "nama_kelompok" : "kelompok 1",
                  "pertemuan_1": 1,
                  "pertemuan_2": 0,
                  "pertemuan_3": 1,
                  "pertemuan_4": 1,
                  "pertemuan_5": 1,
                  "pertemuan_6": 1,
-                 "pertemuan_7": 1
+                 "pertemuan_7": 1,
+                 "pengujian_1" : null,
+                 "pengujian_2" : null,
+                 "pengujian_3" : null,
+                 "pengujian_n" : null,
+                 "nilai" : null
              },
              {
                  "no_praktikum": 3,
                  "nim_praktikan": "D42113008",
                  "nama_praktikan": "Surya Aditama",
+                 "nama_kelompok" : "kelompok 1",
                  "pertemuan_1": 1,
                  "pertemuan_2": 0,
                  "pertemuan_3": 0,
                  "pertemuan_4": 1,
                  "pertemuan_5": 0,
                  "pertemuan_6": 1,
-                 "pertemuan_7": 1
+                 "pertemuan_7": 1,
+                 "pengujian_1" : null,
+                 "pengujian_2" : null,
+                 "pengujian_3" : null,
+                 "pengujian_n" : null,
+                 "nilai" : null
              }
 ]
 }

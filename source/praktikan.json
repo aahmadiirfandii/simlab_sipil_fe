@@ -8,35 +8,45 @@
                  "no" : 1,
                  "nim": "D42113016",
                  "nama": "Ahmad Rifaldi",
-                 "nama_kelompok": "-"
+                 "nama_kelompok": "-",
+                 "status_kehadiran" : null,
+                 "input_nilai" : null
              },
              {
                   "checkbox": null,
                  "no" : 2,
                  "nim": "D42113016",
                  "nama": "Ahmad Rifaldi",
-                 "nama_kelompok": "-"
+                 "nama_kelompok": "-",
+                 "status_kehadiran" : null,
+                 "input_nilai" : null
              },
              {
                   "checkbox": null,
                  "no" : 3,
                  "nim": "D42113016",
                  "nama": "Ahmad Rifaldi",
-                 "nama_kelompok": "-"
+                 "nama_kelompok": "-",
+                 "status_kehadiran" : null,
+                 "input_nilai" : null
              },
              {
                   "checkbox": null,
                  "no" : 4,
                  "nim": "D42113016",
                  "nama": "Ahmad Rifaldi",
-                 "nama_kelompok": "1"
+                 "nama_kelompok": "1",
+                 "status_kehadiran" : null,
+                 "input_nilai" : null
              },
              {
                   "checkbox": null,
                  "no" : 5,
                  "nim": "D42113016",
                  "nama": "Ahmad Rifaldi",
-                 "nama_kelompok": "1"
+                 "nama_kelompok": "1",
+                 "status_kehadiran" : null,
+                 "input_nilai" : null
              }
 ]
 }

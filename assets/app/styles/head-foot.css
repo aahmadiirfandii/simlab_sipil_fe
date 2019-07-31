@@ -118,7 +118,14 @@ i .kt-menu__link-bullet .kt-menu__link-bullet--dot {
 .gambar_peralatan{
 	max-width: 130px;
 }
-
+.form-control {
+	border: 1px solid #8c8c8c;
+}
+.form-control:disabled, .form-control[readonly] {
+	background-color: #f7f8fa;
+	opacity: 1;
+	border: 1px solid #c7c7c7;
+}
 @media (max-width: 1024px) {
 	.badge{
 		top: 0px;
